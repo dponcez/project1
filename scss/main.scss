@@ -1,0 +1,322 @@
+@import 'components/variables';
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.container {
+    width: $size;
+    height: $v-height ;
+    background: $bg-color-dark;    
+    padding: 0     
+}   
+
+.header {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+h1.heading {
+    font: 2.8659rem $font-stack;
+    color: $bg-color-dark-blue;
+    letter-spacing: 1px;
+}
+
+/* =================================================
+                                                Audio container
+================================================= */
+.audio--container {
+    width: var(--size);
+    max-width: calc(var(--size) - 320px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color-dark);
+    border-radius: 0 var(--pos);
+
+    .audio--player {
+        position: relative;
+    }
+
+    /* =================================================
+                                                    Controls
+    ================================================= */
+    .audio--controls {
+        width: var(--size);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+         .progress--bar {
+            width: calc(var(--size) - 320px);
+            height: 10px;
+            position: absolute;
+            left: 50%;
+            background: var(--bg-alpha);
+            border-radius: 0 var(--pos) 0 0;
+            transform: translateX(-50%);
+
+            .progress {
+                width: 10%;
+                height: inherit;
+                background: var(--bg-color-dark-red);
+                z-index: 3
+            }
+        }
+
+        /* =================================================
+                                                        Audio button
+        ================================================= */
+        .audio--buttons {
+            width: var(--size);
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(4, 1fr);
+        
+            .player {
+                width: 130px;
+                height: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--pos);
+                border: 1px var(--bg-alpha);
+                background: var(--bg-color-dark);
+                box-shadow: 1px 0 3px rgba(0,0,0,.3),
+                                        -1px 0 1px #999 inset
+                                        -1px 0 3px var(--bg-color-dark) inset;
+                margin-left: -150px;
+                grid-column: 1;
+                z-index: 3;
+                
+                &::before {
+                    content: '';
+                    width: 120px;
+                    height: 120px;
+                    position: absolute;
+                    border-radius: var(--pos);
+                    background: rgba(144,5,5,.5);
+                    border: 1px solid rgba(144,5,5,.3);
+                    box-shadow: 1px 1px 3px 0  #b90808, 
+                    -1px -2px 10px 0 #bf0909 inset,
+                    1px 0 3px var(--white) inset;
+                    z-index: 1
+                }
+        
+                .lg-play {
+                    font-size: 4.534rem;
+                    position: absolute;
+                    align-self: center;
+                    z-index: 5
+                }
+            }
+        
+            .muted {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                grid-column: 2;
+                left: -20px;
+            
+                .md-mute {
+                    font-size: 2.534rem;
+                }
+            }
+        
+            .slide--control {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                display: flex;
+                align-self: center;
+                left: -60px;
+                grid-column: 3
+            }
+        
+            .counters {
+                display: block;
+                grid-column: 4;
+            
+                span {
+                    font-size: 1rem;
+                    font-family: var(--font-stack);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+
+.fas {
+    color: var(--white);
+    position: relative;
+    cursor: pointer;
+}
+
+input[type='range'] {
+    width: 150px;
+    height: 5px;
+    -webkit-appearance: none;
+    border-radius: 25px;
+    outline: none;
+    background: var(--white);
+}
+
+/* Works on Mozilla */
+input[type='range']::-moz-range-progress {
+    height: 5px;
+    border-radius: 25px;
+    background: var(--bg-color-light-blue);
+}
+
+/* Works on Chrome */
+input[type='range']::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: var(--white);
+    border-radius: var(--pos);
+    cursor: pointer
+}
+
+/* =================================================
+                                                Media queries
+================================================= */
+/* tables */
+@media screen and (max-width: 834px){
+    .container {
+        height: 50vh;
+
+        .audio--container {
+            width: var(--size);
+            max-width: calc(var(--size) - 230px);
+            border-radius: 0 80px 0 100px;
+
+            .audio--controls {
+                position: relative;
+
+                .progress--bar  {
+                    width: inherit;
+                    margin-left: -15px;
+                    border-radius: 0 100px 0 100px
+                }
+            
+                .player {
+                    position: relative;
+                    display: flex;
+                    align-items: inherit;
+                    justify-content: center;
+                }
+            
+                .muted {
+                    left: -50%
+                }
+            
+                .slide--control {
+                    left: -70%
+                }
+            
+                .counters {
+                    margin-left: -40%
+                }
+            }
+        }
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 375px){
+    .container {
+        height: var(--v-height);
+
+        .audio--container {
+            max-width: calc(var(--size) - 50px);
+            height: 30vh;
+            border-radius: var(--pos);
+            margin: auto;
+            
+            .progress--bar {
+                display: none;
+            }
+
+            .audio--buttons {
+                width: var(--size);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                .player {
+                    position: absolute;
+                    top: 12%;
+                }
+            
+                .muted {
+                    bottom: -25px
+                    md-mute {
+                        font-size: 2rem;
+                    }
+                }
+
+                .slide--control {
+                    left: 30px;
+                    top: 7px
+                }
+            
+                .counters {
+                    position: absolute;
+                    top: 25%;
+                    left: 90%;
+
+                    span {
+                        display: inline;
+                        font-size: .75rem;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1.heading {
+        font-size: 2rem
+    }
+
+    .player {
+        width: 110px;
+        height: 110px;
+
+        &::before {
+            width: 100px;
+            height: 100px;
+        }
+
+        .lg-play {
+            font-size: 3.825rem;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Audio Player</title>
+
+    <!-- ==================== Fonts ==================== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap">
+    
+    <!-- ==================== CSS ==================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="heading">Audio Player</h1>
+        </header>
+        <div class="audio--container">
+            <div class="audio--player">
+                <audio src="" class="audio"></audio>
+            </div>
+            <div class="audio--controls">
+                <div class="progress--bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="audio--buttons">
+                    <div class="player">
+                        <i class="fas fa-play lg-play"></i>
+                    </div>
+                    <div class="muted">
+                        <i class="fas fa-volume-up md-mute"></i>
+                    </div>
+                    <div class="slide--control">
+                        <input type="range" min="0" max="100" value="10" step="1.2">
+                    </div>
+                    <div class="counters">
+                        <span class="current--text">00:00</span>/<span class="duration--text">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <!-- =============== end audio controls =============== -->
+        </div>
+        <!-- =============== end audio container =============== -->
+    </div>
+    <!-- =============== end container =============== -->
+    <script src="js/main.js"></script>
+</body>
+</html>
