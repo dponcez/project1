@@ -7,7 +7,9 @@ const init = () => {
     const player = document.querySelector('.player');
     const muted = document.querySelector('.muted');
     const slide__control = document.querySelector('input[type=range');
-    let current__text, duration__tex;
+    let current__text = document.querySelector('.current--text'), 
+        duration__tex = document.querySelector('.duration--text'), cursecs, curmins, dursecs, durmins;
+
     let paused = '<i class="fas fa-pause lg-play"></i>';
     let played = '<i class="fas fa-play lg-play"></i>'
 
@@ -15,6 +17,27 @@ const init = () => {
     const progressLoop = () => {
         let pCounter = (audio.currentTime / audio.duration) * 100;
         progress.style.width = pCounter + '%';
+
+        // get the currentTime and duration of the audio
+        durmins = Math.floor(audio.duration  / 60);
+        curmins = Math.floor(audio.currentTime / 60);
+
+        dursecs = Math.floor(audio.duration - durmins * 60);
+        cursecs = Math.floor(audio.currentTime - curmins * 60);
+
+        // this help us to know what is the current time
+        if(durmins < 10){
+            durmins = '0' + durmins
+        }else if(dursecs < 10){
+            dursecs = '0' + dursecs
+        }else if(curmins < 10){
+            curmins = '0' + curmins
+        }else if(cursecs < 10){
+            cursecs = '0' + cursecs
+        }
+
+        current__text.innerHTML = `${curmins} : ${cursecs}`;
+        duration__tex.innerHTML = `${durmins} : ${dursecs}`;
     }
 
     const playPause = () => {
