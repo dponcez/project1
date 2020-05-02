@@ -12,6 +12,11 @@ const init = () => {
     let played = '<i class="fas fa-play lg-play"></i>'
 
     // Functions
+    const progressLoop = () => {
+        let pCounter = (audio.currentTime / audio.duration) * 100;
+        progress.style.width = pCounter + '%';
+    }
+
     const playPause = () => {
         if(audio.paused){
             audio.play();
@@ -24,6 +29,7 @@ const init = () => {
 
     // Event handler
     player.addEventListener('click', playPause);
+    audio.addEventListener('timeupdate', progressLoop);
 }
 
 window.addEventListener('load', init);
