@@ -8,7 +8,8 @@ const init = () => {
     const muted = document.querySelector('.muted');
     const slide__control = document.querySelector('input[type=range');
     let current__text = document.querySelector('.current--text'), 
-        duration__tex = document.querySelector('.duration--text'), cursecs, curmins, dursecs, durmins;
+        duration__text = document.querySelector('.duration--text'), 
+        cursecs, curmins, dursecs, durmins;
 
     let paused = '<i class="fas fa-pause lg-play"></i>';
     let played = '<i class="fas fa-play lg-play"></i>'
