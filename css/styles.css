@@ -94,7 +94,7 @@ h1.heading {
 }
 
 .progress {
-    width: 10%;
+    width: 0;
     height: inherit;
     background: var(--bg-color-dark-red);
     z-index: 3
