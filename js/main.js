@@ -10,6 +10,7 @@ const init = () => {
     let current__text = document.querySelector('.current--text'), 
         duration__text = document.querySelector('.duration--text'), 
         cursecs, curmins, dursecs, durmins;
+    let mousedown = false;
 
     let paused = '<i class="fas fa-pause lg-play"></i>';
     let played = '<i class="fas fa-play lg-play"></i>';
@@ -61,18 +62,27 @@ const init = () => {
 
     const handleMuted = () => {
         if(audio.muted){
-            audio.mute = false;
+            audio.muted = false;
             muted.innerHTML = loud;
         }else{
-            audio.mute = true;
+            audio.muted = true;
             muted.innerHTML = mute;
         }
+    }
+
+    const scrub = (e) => {
+        const slide = (e.offsetX / progress__bar.offsetWIdth) * audio.duration;
+        audio.currentTime = slide;
     }
 
     // Event handler
     audio.addEventListener('timeupdate', progressLoop);
     player.addEventListener('click', playPause);
     muted.addEventListener('click', handleMuted);
+    progress__bar.addEventListener('click', scrub);
+    progress__bar.addEventListener('mousedown', () => mousedown = true );
+    progress__bar.addEventListener('mouseup', () => mousedown = false);
+    progress__bar.addEventListener('mousemove', (e) => mousedown && scrub(e))
 }
 
 window.addEventListener('load', init);
