@@ -12,7 +12,9 @@ const init = () => {
         cursecs, curmins, dursecs, durmins;
 
     let paused = '<i class="fas fa-pause lg-play"></i>';
-    let played = '<i class="fas fa-play lg-play"></i>'
+    let played = '<i class="fas fa-play lg-play"></i>';
+    let loud = '<i class="fas fa-volume-up md-mute"></i>';
+    let mute = '<i class="fas fa-volume-mute md-mute"></i>';
 
     // Functions
     const progressLoop = () => {
@@ -57,9 +59,20 @@ const init = () => {
         }
     }
 
+    const handleMuted = () => {
+        if(audio.muted){
+            audio.mute = false;
+            muted.innerHTML = loud;
+        }else{
+            audio.mute = true;
+            muted.innerHTML = mute;
+        }
+    }
+
     // Event handler
-    player.addEventListener('click', playPause);
     audio.addEventListener('timeupdate', progressLoop);
+    player.addEventListener('click', playPause);
+    muted.addEventListener('click', handleMuted);
 }
 
 window.addEventListener('load', init);
