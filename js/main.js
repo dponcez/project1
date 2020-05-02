@@ -28,16 +28,22 @@ const init = () => {
         // this help us to know what is the current time
         if(durmins < 10){
             durmins = '0' + durmins
-        }else if(dursecs < 10){
+        }
+        
+        if(dursecs < 10){
             dursecs = '0' + dursecs
-        }else if(curmins < 10){
+        }
+        
+        if(curmins < 10){
             curmins = '0' + curmins
-        }else if(cursecs < 10){
+        }
+        
+        if(cursecs < 10){
             cursecs = '0' + cursecs
         }
 
         current__text.innerHTML = `${curmins} : ${cursecs}`;
-        duration__tex.innerHTML = `${durmins} : ${dursecs}`;
+        duration__text.innerHTML = `${durmins} : ${dursecs}`;
     }
 
     const playPause = () => {
