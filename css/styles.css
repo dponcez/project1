@@ -232,9 +232,10 @@ input[type='range']::-webkit-slider-thumb {
     }
 
     .progress--bar  {
-        width: inherit;
+        width: 500px !important;
         margin-left: -15px;
-        border-radius: 0 100px 0 100px
+        border-radius: 0 100px 0 100px;
+        top: 0
     }
 
     .player {
@@ -265,7 +266,7 @@ input[type='range']::-webkit-slider-thumb {
 
     .audio--container {
         max-width: calc(var(--size) - 50px);
-        height: 30vh;
+        height: 15vh;
         border-radius: var(--pos);
         margin: auto;
     }
@@ -284,10 +285,11 @@ input[type='range']::-webkit-slider-thumb {
 
     .player {
         position: absolute;
-        top: 12%;
+        bottom: 50%;
     }
 
     .muted {
+        left: -25%;
         bottom: -25px
     }
 
@@ -302,7 +304,7 @@ input[type='range']::-webkit-slider-thumb {
 
     .counters {
         position: absolute;
-        top: 25%;
+        top: 5%;
         left: 90%;
     }
 
