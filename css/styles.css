@@ -216,6 +216,10 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--white);
 }
 
+.slashes {
+    color: var(--white)
+}
+
 /* =================================================
                                                 Media queries
 ================================================= */
