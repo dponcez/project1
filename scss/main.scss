@@ -106,7 +106,6 @@ h1.heading {
                 margin-left: -150px;
                 grid-column: 1;
                 z-index: 3;
-                
                 &::before {
                     content: '';
                     width: 120px;
@@ -220,26 +219,30 @@ input[type='range']::-webkit-slider-thumb {
                 .progress--bar  {
                     width: inherit;
                     margin-left: -15px;
-                    border-radius: 0 100px 0 100px
+                    border-radius: 0 100px 0 100px;
                 }
-            
-                .player {
+
+                .audio--buttons {
                     position: relative;
-                    display: flex;
-                    align-items: inherit;
-                    justify-content: center;
-                }
-            
-                .muted {
-                    left: -50%
-                }
-            
-                .slide--control {
-                    left: -70%
-                }
-            
-                .counters {
-                    margin-left: -40%
+
+                    .player {
+                        position: relative;
+                        display: flex;
+                        align-items: inherit;
+                        justify-content: center;
+                    }
+                
+                    .muted {
+                        left: -50%
+                    }
+                
+                    .slide--control {
+                        left: -70%
+                    }
+                
+                    .counters {
+                        margin-left: -40%
+                    }
                 }
             }
         }
@@ -256,47 +259,52 @@ input[type='range']::-webkit-slider-thumb {
             height: 30vh;
             border-radius: var(--pos);
             margin: auto;
-            
-            .progress--bar {
-                display: none;
-            }
 
-            .audio--buttons {
-                width: var(--size);
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
+            .audio--controls {
+                position: relative;
 
-                .player {
-                    position: absolute;
-                    top: 12%;
+                .progress--bar {
+                    display: none;
                 }
-            
-                .muted {
-                    bottom: -25px
-                    md-mute {
-                        font-size: 2rem;
+
+                .audio--buttons {
+                    width: var(--size);
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+    
+                    .player {
+                        position: absolute;
+                        top: 12%;
+                    }
+                
+                    .muted {
+                        bottom: -25px;
+
+                        .md-mute {
+                            font-size: 2rem;
+                        }
+                    }
+    
+                    .slide--control {
+                        left: 30px;
+                        top: 7px
+                    }
+                
+                    .counters {
+                        position: absolute;
+                        top: 25%;
+                        left: 90%;
+    
+                        span {
+                            display: inline;
+                            font-size: .75rem;
+                            letter-spacing: 1.5px;
+                        }
                     }
                 }
-
-                .slide--control {
-                    left: 30px;
-                    top: 7px
-                }
-            
-                .counters {
-                    position: absolute;
-                    top: 25%;
-                    left: 90%;
-
-                    span {
-                        display: inline;
-                        font-size: .75rem;
-                        letter-spacing: 1.5px;
-                    }
-                }
-            }
+            }      
         }
     }
 }
