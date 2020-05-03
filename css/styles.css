@@ -177,7 +177,6 @@ h1.heading {
     align-self: center;
     left: -60px;
     grid-column: 3;
-     cursor: pointer
 }
 
 input[type='range'] {
@@ -187,6 +186,7 @@ input[type='range'] {
     border-radius: 25px;
     outline: none;
     background: var(--white);
+    cursor: pointer;
 }
 
 /* Works on Mozilla */
