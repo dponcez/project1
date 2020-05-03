@@ -79,6 +79,13 @@ const init = () => {
         audio.volume = slide__control.value / 100;
     }
 
+    const handleEnd = () => {
+        if(audio.paused){
+            player.innerHTML = played;
+            audio.currentTime = 0;
+        }
+    }
+
     // Event handler
     audio.addEventListener('timeupdate', progressLoop);
     player.addEventListener('click', playPause);
@@ -89,6 +96,7 @@ const init = () => {
     progress__bar.addEventListener('mousemove', (e) => mousedown && scrub(e));
     slide__control.addEventListener('change', handleSlide);
     slide__control.addEventListener('mousemove', handleSlide);
+    audio.addEventListener('ended', handleEnd);
 }
 
 window.addEventListener('load', init);

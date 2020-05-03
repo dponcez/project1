@@ -176,7 +176,8 @@ h1.heading {
     display: flex;
     align-self: center;
     left: -60px;
-    grid-column: 3
+    grid-column: 3;
+     cursor: pointer
 }
 
 input[type='range'] {
@@ -202,7 +203,6 @@ input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: var(--white);
     border-radius: var(--pos);
-    cursor: pointer
 }
 
 .counters {
