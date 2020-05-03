@@ -236,10 +236,18 @@ input[type='range']::-webkit-slider-thumb {
     }
 
     .progress--bar  {
-        width: 500px !important;
-        margin-left: -15px;
-        border-radius: 0 100px 0 100px;
+        width: 530px !important;
+        margin-left: -21px;
+        border-top-right-radius: .7rem;
         top: 0
+    }
+
+    .progress {
+        border-top-right-radius: .7rem;
+        border-color: var(--bg-alpha);
+        border-right-width: 0;
+        border-style: solid;
+
     }
 
     .player {

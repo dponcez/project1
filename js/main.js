@@ -71,7 +71,7 @@ const init = () => {
     }
 
     const scrub = (e) => {
-        const slide = (e.offsetX / progress__bar.offsetWIdth) * audio.duration;
+        const slide = (e.offsetX / progress__bar.offsetWidth) * audio.duration;
         audio.currentTime = slide;
     }
 
