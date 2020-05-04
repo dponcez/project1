@@ -282,69 +282,14 @@ input[type='range']::-webkit-slider-thumb {
     }
 }
 
-/* Small devices */
-@media screen and (max-width: 375px){
-    .container {
-        height: var(--v-height);
-    }
-
-    .audio--container {
-        max-width: calc(var(--size) - 50px);
-        height: 35vh;
-        border-radius: var(--pos);
-        margin: auto;
-    }
-    
+@media screen and (max-width: 736px) {
     .progress--bar {
-        width: 150px !important;
-        display: block;
-        top: -100% !important;
-        left: 61% !important;
-        border-radius: 100px 0 100px 0 !important
-    }
-
-    .progress {
-        border-radius: 100px 0 100px 0 !important
-    }
-
-    .audio--buttons {
-        width: var(--size);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
-    .player {
-        position: absolute;
-        bottom: 50%;
+        width: 450px !important;
+        margin-left: 5%;
     }
 
     .muted {
-        left: -25%;
-        bottom: -25px
-    }
-
-    .muted .md-mute {
-        font-size: 2rem;
-    }
-
-    .slide--control {
-        left: 30px;
-        top: 7px
-    }
-
-    .counters {
-        position: absolute;
-        bottom: 35%;
-        left: 90%;
-    }
-
-    .counters span {
-        display: inline;
-        font-size: .55rem;
-        letter-spacing: 1.5px;
+        margin-left: -30%
     }
 }
 
@@ -436,6 +381,72 @@ input[type='range']::-webkit-slider-thumb {
         grid-row: 5;
         top: 50%;
         left: 100%
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 375px){
+    .container {
+        height: var(--v-height);
+    }
+
+    .audio--container {
+        max-width: calc(var(--size) - 50px);
+        height: 35vh;
+        border-radius: var(--pos);
+        margin: auto;
+    }
+    
+    .progress--bar {
+        width: 150px !important;
+        display: block;
+        top: -100% !important;
+        left: 61% !important;
+        border-radius: 100px 0 100px 0 !important
+    }
+
+    .progress {
+        border-radius: 100px 0 100px 0 !important
+    }
+
+    .audio--buttons {
+        width: var(--size);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .player {
+        position: absolute;
+        bottom: 50%;
+    }
+
+    .muted {
+        left: -25%;
+        bottom: -25px
+    }
+
+    .muted .md-mute {
+        font-size: 2rem;
+    }
+
+    .slide--control {
+        left: 30px;
+        top: 7px
+    }
+
+    .counters {
+        position: absolute;
+        bottom: 35%;
+        left: 90%;
+    }
+
+    .counters span {
+        display: inline;
+        font-size: .55rem;
+        letter-spacing: 1.5px;
     }
 }
 
