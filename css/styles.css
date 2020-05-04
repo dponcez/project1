@@ -87,9 +87,10 @@ h1.heading {
     width: calc(var(--size) - 320px);
     height: 10px;
     position: absolute;
-    left: 50%;
+    top: 10%;
+    left: 45%;
     background: var(--bg-alpha);
-    border-radius: 0 var(--pos) 0 0;
+    border-radius: 0 100px 0 100px;
     transform: translateX(-50%);
 }
 
@@ -97,6 +98,7 @@ h1.heading {
     width: 0;
     height: inherit;
     background: var(--bg-color-dark-red);
+    border-radius: 0 100px 0 100px;
     z-index: 3
 }
 
@@ -175,12 +177,12 @@ h1.heading {
     position: relative;
     display: flex;
     align-self: center;
-    left: -60px;
+    left: -100px;
     grid-column: 3;
 }
 
 input[type='range'] {
-    width: 150px;
+    width: 250px;
     height: 5px;
     -webkit-appearance: none;
     border-radius: 25px;
@@ -207,13 +209,15 @@ input[type='range']::-webkit-slider-thumb {
 
 .counters {
     display: block;
-    grid-column: 4;
+    position: relative;
+    right: 45px
 }
 
 .counters span {
     font-size: 1rem;
     font-family: var(--font-stack);
     color: var(--white);
+    letter-spacing: 2px;
 }
 
 .slashes {
