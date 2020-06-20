@@ -93,11 +93,11 @@ body {
 }
 
 .open .bar.start {
-    transform: rotate(270deg) translate(-1.8rem, 1.2rem);
+    transform: rotate(270deg) translate(-1.8rem, 1.3rem);
 }
 
 .open .bar.end {
-    transform: rotate(270deg) translate(1.8rem, -1.3rem);
+    transform: rotate(270deg) translate(1.8rem, -1.23rem);
 }
 
 .open.toggler {
