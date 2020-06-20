@@ -7,7 +7,7 @@ function handleNavigation(){
         const app__toggle = document.querySelector(toggler);
         const nav = document.querySelector(app__nav);
         const logo = document.querySelector('.logo');
-        const app__menu = document.querySelector('.app--navigation');
+        const app__menu = document.querySelector('.app--navigation__menu');
         const items = document.querySelectorAll('.app--item');
 
         // create an empty object;
