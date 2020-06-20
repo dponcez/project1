@@ -160,7 +160,7 @@ body {
 
 .app--navigation__menu .app--item {
     display: block;
-    font-size: 2rem var(--font-stack);
+    font: 2rem var(--font-stack);
     margin: 0;
     padding: 0;
     transform: translateX(-100%) scaleX(0);
