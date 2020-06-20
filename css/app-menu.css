@@ -1,0 +1,209 @@
+/* =============== Breakpoint ===============  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --size: 100%;
+    --height: 100vh;
+    
+    --font-color: #2c3e50;
+    --primary-color: #ecf0f1;
+    --dark: #000;
+
+    --font-stack: 'Abel', sans-serif;
+}
+
+/* =============== General styles ===============  */
+html,
+body {
+    width: var(--size);
+    height: var(--size);
+    background: var(--primary-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.app--container {
+    width: var(--size);
+    display: block;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    background: url('..images/header.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* =============== Navigation & toggler ===============  */
+.app--navigation {
+    width: inherit;
+    height: var(--height);
+    display: flex;
+    background: rgba(0,0,0,.3);
+}
+
+.toggler {
+    width: 2.5rem;
+    height: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+
+    transition: transform 350ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    cursor: pointer;
+    z-index: 120;
+}
+
+.bar {
+    width: var(--size);
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 5px;;
+}
+
+.bar.half {
+    width: 50%;
+}
+
+.bar.start {
+    transform-origin: left;
+    transition: transform 350ms cubic-bezier(0.6, -0.28, 0.735, 0.045)
+}
+
+.bar.end {
+    align-self: flex-end;
+    transform-origin: right;
+    transition: transform 350ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.open .bar.start {
+    transform: rotate(270deg) translate(-1.8rem, 1.2rem);
+}
+
+.open .bar.end {
+    transform: rotate(270deg) translate(1.8rem, -1.3rem);
+}
+
+.open.toggler {
+    transform: rotate(-45deg);
+}
+
+.app--navigation,
+.app--navigation::before,
+.app--navigation::after {
+    content: '';
+    width: var(--size);
+    height: var(--height);
+    position: relative;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+.app--navigation::before,
+.app--navigation::after {
+    position: absolute;
+    z-index: 100;
+}
+
+.app--navigation::before {
+    width: 50%;
+    background: var(--dark);
+    left: 0;
+    transform: translateX(0);
+}
+
+.app--navigation::after {
+    width: 50%;
+    background: var(--dark);
+    right: 0;
+    transform: translateX(0);
+}
+
+.app--navigation.active::before {
+    left: -50%;
+    opacity: 0;
+}
+
+.app--navigation.active::after {
+    right: -50%;
+    opacity: 0;
+}
+
+/* =============== Menu ===============  */
+.app--navigation__menu {
+    width: var(--size);
+    height: var(--height);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    list-style: none;
+}
+
+.app--navigation__menu .app--item {
+    display: block;
+    font-size: 2rem var(--font-stack);
+    margin: 0;
+    padding: 0;
+    transform: translateX(-100%) scaleX(0);
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.app--link {
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color) !important;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.app--link:hover {
+    color: var(--font-stack) !important;
+}
+
+/* =============== Logo ===============  */
+.logo {
+    width: var(--size);
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 3.82rem var(--font-stack);
+    color: var(--primary-color) !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+    pointer-events: none;
+    text-align: center;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1;
+    z-index: 110;
+}
+
+.logo.show {
+    opacity: 0
+}
+
+.app--navigation__menu.open .app--item {
+    transform: translateX(100%) scaleX(1); 
+    transition:  all 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
