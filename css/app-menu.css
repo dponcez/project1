@@ -176,7 +176,7 @@ body {
 }
 
 .app--link:hover {
-    color: var(--font-stack) !important;
+    color: var(--font-color) !important;
 }
 
 /* =============== Logo ===============  */
