@@ -29,7 +29,13 @@
             </nav>
         </header>
     </div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/single.js"></script>
+    <script>
+        const handle = new HandleToggler();
+        handle.update('open', 'active', 50, 0);
+        handle.handleNavigation('.togger', '.app--navigation', 'app--item')
+    </script>
 </body>
 
 </html>
