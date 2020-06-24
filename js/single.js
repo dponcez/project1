@@ -1,39 +1,49 @@
 function HandleToggle(){
     this.update = function(x, y, dx, dy){
-        this.method = {
-            click: 'clik',
-            property: 'property'
+        this.events = {
+            cl: 'click',
+            pr: 'property'
         };
-        this.x = x;
-        this.y = y;
-        this.dx = dx;
-        this.dy = dy;
-        this.object = {};
+        this.x = x; // open class
+        this.y = y; // active class
+        this.dx = dx; // distance in x axis
+        this.dy = dy; // distance in y axis
+        this.object = {}; // empty object
 
-        this.handleNavigation = function(toggler, app__navigation, app__menu){
-            // Reference of HTML elements
+        this.handleNavigation = function(toggler, app__navigation, app__menu, app__items){
+            // Getting the current HTML elements
             const handleToggler = document.querySelector(toggler);
-            const handleApplicationMenu = document.querySelector(app__navigation);
-            const items = document.querySelector(app__menu);
+            const handleNavigationMenu = document.querySelector(app__navigation);
+            const handle__menu = document.querySelector(app__menu);
+            const items = document.querySelectorAll(app__items);
+            //  This array contains all classes that HMTL has
+            let array = [
+                'home',
+                'about',
+                'info',
+                'blog',
+                'contact'
+            ];
 
-            //  Get the object of the toggler button
+            //  Convert the toggler button to an object
             this.object.property = handleToggler;
 
-            //  This allow us to know if the object is a boolean
-            if(typeof this.object.hasOwnProperty(this.method.property) !== true ){
+            //  typeof allow us to know if the property of the  any elements is a boolean, as long as, if this element has some property
+            if(typeof this.object.hasOwnProperty(this.events.pr) !== true ){
 
-                handleToggler.addEventListener(this.method.click, () => {
+                handleToggler.addEventListener(this.events.cl, () => {
                     handleToggler.classList.toggle(this.x);
 
-                    //  Iterate over the items and give them a simple animatiion
+                    //  Iterate over the items and give them a simple animatiion with the animate API
                     for(let i = 0; i < items.length; i++){
-                        if( items.classList.contains(items[i] ) === 'string' ){
+
+                        if ( items.classList.contains(array[0]) ){
                             items.animate({
                                 transform: [ 
                                     'translateX(' + this.dx +'%)',
-                                    'translateY(' + this.dy + ')'
+                                    'translateY(' + this.dy + '%)'
                                 ],
-                                opacity: [1, 0],
+                                opacity: [0, 1],
                             }, {
                                 delay: this.dx,
                                 duration: (this.dx * 20),
@@ -41,13 +51,80 @@ function HandleToggle(){
                                 iterationStart: 0.25,
                                 direction: 'alternate',
                                 endDelay: -(this.dx * 10),
+                                easing: 'ease-in'
+                            })
+                        }else if( items.classList.contains(array[1]) ){
+                            items.animate({
+                                transform: [
+                                    'translateX(' + this.dx + '%)',
+                                    'translateY(' + this.dy + '%)'
+                                ],
+                                opacity: [0, 1],
+                            }, {
+                                delay: this.dx,
+                                duration: (this.dx * 21),
+                                iterations: (this.dy + 2),
+                                iterationStart: 0.35,
+                                direction: 'alternate',
+                                endDelay: -(this.dx * 10),
                                 easing: 'ease-in-out'
+                            })
+                        } else if ( items.classList.contains(array[2]) ) {
+                            items.animate({
+                                transform: [
+                                    'translateX(' + this.dx + '%)',
+                                    'translateY(' + this.dy + '%)'
+                                ],
+                                opacity: [0, 1],
+                            }, {
+                                delay: this.dx,
+                                duration: (this.dx * 22),
+                                iterations: (this.dy + 2),
+                                iterationStart: 0.45,
+                                direction: 'alternate',
+                                endDelay: -(this.dx * 10),
+                                easing: 'ease-in'
+                            })
+                        } else if ( items.classList.contains(array[3]) ) {
+                            items.animate({
+                                transform: [
+                                    'translateX(' + this.dx + '%)',
+                                    'translateY(' + this.dy + '%)'
+                                ],
+                                opacity: [0, 1],
+                            }, {
+                                delay: this.dx,
+                                duration: (this.dx * 23),
+                                iterations: (this.dy + 2),
+                                iterationStart: 0.55,
+                                direction: 'alternate',
+                                endDelay: -(this.dx * 10),
+                                easing: 'ease-in-out'
+                            })
+                        } else if ( items.classList.contains(array[4] )) {
+                            items.animate({
+                                transform: [
+                                    'translateX(' + this.dx + '%)',
+                                    'translateY(' + this.dy + '%)'
+                                ],
+                                opacity: [0, 1],
+                            }, {
+                                delay: this.dx,
+                                duration: (this.dx * 24),
+                                iterations: (this.dy + 2),
+                                iterationStart: 0.65,
+                                direction: 'alternate',
+                                endDelay: -(this.dx * 10),
+                                easing: 'ease-in'
                             })
                         }
                     }
 
-                    if( toggler && handleNavigation ){
-                        handleApplicationMenu.classList.toggle(this.y)
+                    if( toggler && app__navigation ){
+                        handleNavigationMenu.classList.toggle(this.y)
+                        //  Animation on logo
+
+                        handle__menu.classList.toggle(this.x)
                     }
                 })
             }

@@ -16,7 +16,7 @@ function handleNavigation(){
         // convert the toggle button to an abject
         object.property = app__toggle;
 
-        // if the typeof of the toggle button is an object, so we use the event handler to our button and give to this a class list 
+        // if the typeof of the toggle button property is a boolean, so we use an event handler in the button to give each elements an animation
         if(typeof object.hasOwnProperty('property')){
             app__toggle.addEventListener('click', () => {
                 app__toggle.classList.toggle('open');
