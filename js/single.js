@@ -45,8 +45,8 @@ function HandleToggle(){
                         if ( items.classList.contains( home ) ){
                             items.animate({
                                 transform: [ 
-                                    'translateX(' + this.dx +'%)',
-                                    'translateY(' + this.dy + '%)'
+                                   `translateX(${this.dx}%)`,
+                                    `translateY(${this.dy}%)`
                                 ],
                                 opacity: [0, 1],
                             }, {
@@ -61,8 +61,8 @@ function HandleToggle(){
                         }else if( items.classList.contains( about ) ){
                             items.animate({
                                 transform: [
-                                    'translateX(' + this.dx + '%)',
-                                    'translateY(' + this.dy + '%)'
+                                    `translateX(${this.dx}%)`,
+                                    `translateY(${this.dy}%)`
                                 ],
                                 opacity: [0, 1],
                             }, {
@@ -77,8 +77,8 @@ function HandleToggle(){
                         } else if ( items.classList.contains( info ) ) {
                             items.animate({
                                 transform: [
-                                    'translateX(' + this.dx + '%)',
-                                    'translateY(' + this.dy + '%)'
+                                    `translateX(${this.dx}%)`,
+                                    `translateY(${this.dy}%)`
                                 ],
                                 opacity: [0, 1],
                             }, {
@@ -93,8 +93,8 @@ function HandleToggle(){
                         } else if ( items.classList.contains( blog ) ) {
                             items.animate({
                                 transform: [
-                                    'translateX(' + this.dx + '%)',
-                                    'translateY(' + this.dy + '%)'
+                                    `translateX(${this.dx}%)`,
+                                    `translateY(${this.dy}%)`
                                 ],
                                 opacity: [0, 1],
                             }, {
@@ -109,8 +109,8 @@ function HandleToggle(){
                         } else if ( items.classList.contains( contact ) ) {
                             items.animate({
                                 transform: [
-                                    'translateX(' + this.dx + '%)',
-                                    'translateY(' + this.dy + '%)'
+                                    `translateX(${this.dx}%)`,
+                                    `translateY(${this.dy}%)`
                                 ],
                                 opacity: [0, 1],
                             }, {
@@ -132,8 +132,9 @@ function HandleToggle(){
                         //  Animation on logo
                         logo.animate({
                             transform: [
-                                'scale(' + this.sx +')',
-                                'scale(' + this.sy + ')'
+                                `transform(-${this.dx}, -${this.dx})`,
+                                `scale(${this.sx})`,
+                                `scale(${this.sy})`
                             ],
                             opacity: [this.sx, this.sy]
                         },{
