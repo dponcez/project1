@@ -17,13 +17,15 @@ function HandleToggle(){
             const handle__menu = document.querySelector(app__menu);
             const items = document.querySelectorAll(app__items);
             //  This array contains all classes that HMTL has
-            let array = [
-                'home',
-                'about',
-                'info',
-                'blog',
-                'contact'
-            ];
+            let options = {
+               home: 'home',
+               about: 'about',
+               info: 'info',
+               blog: 'blog',
+               contact: 'contact'
+        };
+
+        const {home, about, info, blog, contact} = options;
 
             //  Convert the toggler button to an object
             this.object.property = handleToggler;
@@ -37,7 +39,7 @@ function HandleToggle(){
                     //  Iterate over the items and give them a simple animatiion with the animate API
                     for(let i = 0; i < items.length; i++){
 
-                        if ( items.classList.contains(array[0]) ){
+                        if ( items.classList.contains( home ) ){
                             items.animate({
                                 transform: [ 
                                     'translateX(' + this.dx +'%)',
@@ -53,7 +55,7 @@ function HandleToggle(){
                                 endDelay: -(this.dx * 10),
                                 easing: 'ease-in'
                             })
-                        }else if( items.classList.contains(array[1]) ){
+                        }else if( items.classList.contains( about ) ){
                             items.animate({
                                 transform: [
                                     'translateX(' + this.dx + '%)',
@@ -69,7 +71,7 @@ function HandleToggle(){
                                 endDelay: -(this.dx * 10),
                                 easing: 'ease-in-out'
                             })
-                        } else if ( items.classList.contains(array[2]) ) {
+                        } else if ( items.classList.contains( info ) ) {
                             items.animate({
                                 transform: [
                                     'translateX(' + this.dx + '%)',
@@ -85,7 +87,7 @@ function HandleToggle(){
                                 endDelay: -(this.dx * 10),
                                 easing: 'ease-in'
                             })
-                        } else if ( items.classList.contains(array[3]) ) {
+                        } else if ( items.classList.contains( blog ) ) {
                             items.animate({
                                 transform: [
                                     'translateX(' + this.dx + '%)',
@@ -101,7 +103,7 @@ function HandleToggle(){
                                 endDelay: -(this.dx * 10),
                                 easing: 'ease-in-out'
                             })
-                        } else if ( items.classList.contains(array[4] )) {
+                        } else if ( items.classList.contains( contact ) ) {
                             items.animate({
                                 transform: [
                                     'translateX(' + this.dx + '%)',
