@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Audio Player</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container" role="group" data-state="container">
+        <div class="audio--box" role="contentinfo">
+            <audio class="audio" id="audio" role="dialog" data-state="audio">
+                Your browser does not support audio element
+            </audio>
+            <div class="controls" role="complementary" data-state="controllers">
+                <span class="dur--time" role="status">0:00</span>
+                <div class="player" role="button">
+                    <i class="fas fa-play play"></i>
+                </div>
+                <div class="progress" role="slider">
+                    <div class="slider--progress" role="progressbar"></div>
+                </div>
+                <div class="slide--volume" data-state="range container">
+                    <input type="range" min="0" max="100" value="10" role="slider">
+                    <div class="value">0</div>
+                </div>
+                <div class="skip" data-state="skip container">
+                    <div class="backward" title="backward" role="button">
+                        <div class="prev--arrow">
+                            <<
+                        </div>
+                    </div>
+                    <div class="forward" title="forward" role="button">
+                        <div class="next--arrow">
+                            >>
+                        </div>
+                    </div>
+                </div>
+                <div class="skip--players" data-state="skip container">
+                    <div class="prev" role="button" title="preview">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="next" role="button" title="next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                </div>
+                <span class="cur--time" role="status">0:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/play.js"></script>
+</body>
+</html>
