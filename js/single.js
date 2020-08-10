@@ -1,5 +1,5 @@
 function HandleToggle(){
-    this.update = function(x, y, dx, dy){
+    this.update = function(x, y, dx, dy, sx, sy){
         this.items = {
             cl: 'click',
             pr: 'property'
@@ -8,14 +8,17 @@ function HandleToggle(){
         this.y = y; // active class
         this.dx = dx; // distance in x axis
         this.dy = dy; // distance in y axis
+        this.sx = sx;// scale(0.5)
+        this.sy = sy;// scale(1)
         this.object = {}; // empty object
 
-        this.handleNavigation = function(toggler, app__navigation, app__menu, app__items){
+        this.handleNavigation = function( toggler, app__navigation, app__menu, app__items, app__logo ){
             // Getting the current HTML elements
             const handleToggler = document.querySelector(toggler);
             const handleNavigationMenu = document.querySelector(app__navigation);
             const handle__menu = document.querySelector(app__menu);
             const items = document.querySelectorAll(app__items);
+            const logo = document.querySelector(app__logo);
             //  This array contains all classes that HMTL has
             let options = {
                home: 'home',
@@ -123,10 +126,23 @@ function HandleToggle(){
                     }
 
                     if( toggler && app__navigation ){
-                        handleNavigationMenu.classList.toggle(this.y)
-                        //  Animation on logo
+                        handleNavigationMenu.classList.toggle(this.y);
+                        handle__menu.classList.toggle(this.x);
 
-                        handle__menu.classList.toggle(this.x)
+                        //  Animation on logo
+                        logo.animate({
+                            transform: [
+                                'scale(' + this.sx +')',
+                                'scale(' + this.sy + ')'
+                            ],
+                            opacity: [0, 1]
+                        },{
+                            delay: 100,
+                            duration: 2000,
+                            direction: 'alternate',
+                            easing: 'ease-in-out'
+                        })
+
                     }
                 })
             }
