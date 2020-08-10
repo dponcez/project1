@@ -135,12 +135,9 @@ function HandleToggle(){
                                 'scale(' + this.sx +')',
                                 'scale(' + this.sy + ')'
                             ],
-                            opacity: [0, 1]
+                            opacity: [this.sx, this.sy]
                         },{
-                            delay: 100,
-                            duration: 2000,
-                            direction: 'alternate',
-                            easing: 'ease-in-out'
+                            duration: 2000
                         })
 
                     }
