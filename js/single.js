@@ -1,6 +1,6 @@
 function HandleToggle(){
     this.update = function(x, y, dx, dy){
-        this.events = {
+        this.items = {
             cl: 'click',
             pr: 'property'
         };
@@ -31,9 +31,9 @@ function HandleToggle(){
             this.object.property = handleToggler;
 
             //  typeof allow us to know if the property of the  any elements is a boolean, as long as, if this element has some property
-            if(typeof this.object.hasOwnProperty(this.events.pr) !== true ){
+            if(typeof this.object.hasOwnProperty(this.items.pr) !== true ){
 
-                handleToggler.addEventListener(this.events.cl, () => {
+                handleToggler.addEventListener(this.items.cl, () => {
                     handleToggler.classList.toggle(this.x);
 
                     //  Iterate over the items and give them a simple animatiion with the animate API
