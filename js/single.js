@@ -1,11 +1,12 @@
 function HandleToggle(){
-    this.update = function(open, active, dx, dy, sx, sy){
+    this.update = function(open, active, show, dx, dy, sx, sy){
         this.items = {
             click: 'click',
             property: 'property'
         };
         this.open = open; // open class
         this.active = active; // active class
+        this.show = show; // show class
         this.dx = dx; // distance in x axis
         this.dy = dy; // distance in y axis
         this.sx = sx;// scale(0.5)
@@ -128,7 +129,7 @@ function HandleToggle(){
                     if( toggler && app__navigation ){
                         handleNavigationMenu.classList.toggle(this.active);
                         handle__menu.classList.toggle(this.open);
-                        logo.classList.toggle(this.open)
+                        logo.classList.toggle(this.show)
 
                         //  Animation on logo
                         logo.animate({
@@ -136,7 +137,7 @@ function HandleToggle(){
                                 `scale(${this.sx})`,
                                 `scale(${this.sy})`,
                                 'none',
-                                `transform(-${this.dx}, -${this.dx})`,
+                                `translate(-${this.dx}%, -${this.dx}%)`,
                             ],
                             opacity: [this.sx, this.sy]
                         },{

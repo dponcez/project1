@@ -117,22 +117,19 @@ body {
 
 .app--navigation::before,
 .app--navigation::after {
+    width: 50%;
+    background: var(--dark);
     position: absolute;
     z-index: 100;
+    transform: translateX(0);
 }
 
 .app--navigation::before {
-    width: 50%;
-    background: var(--dark);
     left: 0;
-    transform: translateX(0);
 }
 
 .app--navigation::after {
-    width: 50%;
-    background: var(--dark);
     right: 0;
-    transform: translateX(0);
 }
 
 .app--navigation.active::before {
