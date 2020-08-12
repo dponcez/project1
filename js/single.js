@@ -1,11 +1,11 @@
 function HandleToggle(){
-    this.update = function(x, y, dx, dy, sx, sy){
+    this.update = function(open, active, dx, dy, sx, sy){
         this.items = {
-            cl: 'click',
-            pr: 'property'
+            click: 'click',
+            property: 'property'
         };
-        this.x = x; // open class
-        this.y = y; // active class
+        this.open = open; // open class
+        this.active = active; // active class
         this.dx = dx; // distance in x axis
         this.dy = dy; // distance in y axis
         this.sx = sx;// scale(0.5)
@@ -34,10 +34,10 @@ function HandleToggle(){
             this.object.property = handleToggler;
 
             //  typeof allow us to know if the property of the  any elements is a boolean, as long as, if this element has some property
-            if(typeof this.object.hasOwnProperty(this.items.pr) !== true ){
+            if(typeof this.object.hasOwnProperty(this.items.property) !== true ){
 
-                handleToggler.addEventListener(this.items.cl, () => {
-                    handleToggler.classList.toggle(this.x);
+                handleToggler.addEventListener(this.items.click, () => {
+                    handleToggler.classList.toggle(this.open);
 
                     //  Iterate over the items and give them a simple animatiion with the animate API
                     for(let i = 0; i < items.length; i++){
@@ -126,19 +126,24 @@ function HandleToggle(){
                     }
 
                     if( toggler && app__navigation ){
-                        handleNavigationMenu.classList.toggle(this.y);
-                        handle__menu.classList.toggle(this.x);
+                        handleNavigationMenu.classList.toggle(this.active);
+                        handle__menu.classList.toggle(this.open);
+                        logo.classList.toggle(this.open)
 
                         //  Animation on logo
                         logo.animate({
                             transform: [
-                                `transform(-${this.dx}, -${this.dx})`,
                                 `scale(${this.sx})`,
-                                `scale(${this.sy})`
+                                `scale(${this.sy})`,
+                                'none',
+                                `transform(-${this.dx}, -${this.dx})`,
                             ],
                             opacity: [this.sx, this.sy]
                         },{
-                            duration: 2000
+                            fill: 'backwards',
+                            delay: 1000,
+                            duration: 2000,
+                            easing: 'ease-in-out'
                         })
 
                     }
