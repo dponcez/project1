@@ -10,21 +10,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="app--container">
-            <nav class="app--navigation">
-                <a href="#" class="logo">doggy´s world</a>
-                <div class="toggler">
+    <div class="container" data-state="container">
+        <header class="app--container" role="contentinfo">
+            <nav class="app--navigation" role="navigation">
+                <a href="#" class="logo" data-state="logo" role="link">doggy´s world</a>
+                <div class="toggler" data-state="menu button" role="button">
                     <div class="bar half start"></div>
                     <div class="bar"></div>
                     <div class="bar half end"></div>
                 </div>
-                <ul class="app--navigation__menu">
-                    <li class="home app--item"><a href="#" class="app--link">home</a></li>
-                    <li class="about app--item"><a href="#" class="app--link">about us</a></li>
-                    <li class="info app--item"><a href="#" class="app--link">info</a></li>
-                    <li class="blog app--item"><a href="#" class="app--link">blog</a></li>
-                    <li class="contact app--item"><a href="#" class="app--link">contact us</a></li>
+                <ul class="app--navigation__menu" role="menu">
+                    <li class="home app--item" role="listitem"><a href="#" class="app--link" role="link">home</a></li>
+                    <li class="about app--item" role="listitem"><a href="#" class="app--link" role="link">about us</a></li>
+                    <li class="info app--item" role="listitem"><a href="#" class="app--link" role="link">info</a></li>
+                    <li class="blog app--item" role="listitem"><a href="#" class="app--link" role="link">blog</a></li>
+                    <li class="contact app--item" role="listitem"><a href="#" class="app--link" role="link">contact us</a></li>
                 </ul>
             </nav>
         </header>

@@ -27,9 +27,9 @@ function HandleToggle(){
                info: 'info',
                blog: 'blog',
                contact: 'contact'
-        };
+            };
 
-        const {home, about, info, blog, contact} = options;
+            const { home, about, info, blog, contact } = options;
 
             //  Convert the toggler button to an object
             this.object.property = handleToggler;
