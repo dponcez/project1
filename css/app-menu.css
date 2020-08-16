@@ -227,3 +227,69 @@ body {
     transition:  all 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
+@media  screen and (min-width: 1024px){
+    html,
+    body {
+        width: inherit;
+        height: inherit;
+    }
+
+    .app--container {
+        height: var(--height);
+        position: relative;
+    }
+
+    /* =============== Navigation & toggler ===============  */
+    .app--navigation {
+        width: var(--size);
+        height: 150px;
+        display: flex;
+        position: relative;
+        background: rgba(0,0,0,.4);
+    }
+
+    .app--navigation::before,
+    .app--navigation::after {
+        width: 0;
+        height: 0;
+        background: none;
+        position: absolute;
+        z-index: 0;
+        transform: translateX(0);
+    }
+    
+    .toggler {
+        display: none;
+    }
+
+    /* =============== Menu ===============  */
+    .app--navigation__menu {
+        width: 45rem;
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        position: absolute;
+        right: 0;
+        border: 1px solid red;
+        z-index: 200;
+    }
+
+    .app--navigation__menu .app--item {
+        display: block;
+        position: absolute;
+        z-index: 200;
+    }
+
+    /* =============== Logo ===============  */
+    .logo {
+        position: fixed;
+        top: 50px;
+        left: 200px;
+        margin: auto;
+        font-size: 2.124rem;
+        text-align: center;
+        z-index: 100;
+    }
+
+}
