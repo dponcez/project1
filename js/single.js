@@ -20,7 +20,7 @@ function HandleToggle(){
             const handle__menu = document.querySelector(app__menu);
             const items = document.querySelectorAll(app__items);
             const logo = document.querySelector(app__logo);
-            //  This array contains all classes that HMTL has
+            //  The options object contains all properties  that the items variable has
             let options = {
                home: 'home',
                about: 'about',
@@ -31,16 +31,16 @@ function HandleToggle(){
 
             const { home, about, info, blog, contact } = options;
 
-            //  Convert the toggler button to an object
+            //  Convert the toggler button to an object.
             this.object.property = handleToggler;
 
-            //  typeof allow us to know if the property of the  any elements is a boolean, as long as, if this element has some property
+            //  typeof allow us to know if the property of any elements is a boolean, as long as, if this element has some property.
             if(typeof this.object.hasOwnProperty(this.items.property) !== true ){
-
+                // Open navigation menu
                 handleToggler.addEventListener(this.items.click, () => {
                     handleToggler.classList.toggle(this.open);
 
-                    //  Iterate over the items and give them a simple animatiion with the animate API
+                    //  Iterate over the items and give them a simple animation.
                     for(let i = 0; i < items.length; i++){
 
                         if ( items.classList.contains( home ) ){
@@ -126,6 +126,7 @@ function HandleToggle(){
                         }
                     }
 
+                        // Give an animation if the button and navigation has own identification
                     if( toggler && app__navigation ){
                         handleNavigationMenu.classList.toggle(this.active);
                         handle__menu.classList.toggle(this.open);
