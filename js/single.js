@@ -138,13 +138,14 @@ function HandleToggle(){
                                 `scale(${this.sx})`,
                                 `scale(${this.sy})`,
                                 'none',
-                                `translate(-${this.dx}%, -${this.dx}%)`,
+                                // `translate(-${this.dx}%, -${this.dx}%)`,
                             ],
                             opacity: [this.sx, this.sy]
                         },{
                             fill: 'backwards',
                             delay: 1000,
                             duration: 2000,
+                            endDelay: -1500,
                             easing: 'ease-in-out'
                         })
 
