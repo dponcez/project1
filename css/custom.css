@@ -1,0 +1,132 @@
+:root {
+    --size: 100%;
+    --height: 100vh;
+    --pos: 50%;
+
+    --cloud: #ecf0f1;
+    --dark: #2c3e50;
+    /* --green: #2ecc71; */
+    --red: #c0392b; 
+    --alpha: rgba(0,0,0,.5);
+     --outset: 3px 3px 6px rgba(0,0,0,.2), -3px -3px 6px rgba(255,255,255,.2);
+    --inset: 2px 2px 4px rgba(0,0,0,.2) inset, -2px -2px 4px rgba(255,255,255,.2) inset;
+
+    --font: 'Ubuntu', sans-serif;
+}
+
+body {
+    width: var(--size);
+    height: var(--height);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--dark);
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+}
+
+.container,
+.header,
+.slider {
+    position: relative;
+}
+
+.header .heading {
+    font-size: 2.85rem;
+}
+
+.heading,
+.indicator {
+     font-family: var(--font);
+     color: var(--cloud)
+}
+
+.slider {
+    width: 6.125em;
+    height: 5.125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator {
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    transition: .3s;
+}
+
+.indicator,
+span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+[type="checkbox"]{
+    width: var(--size);
+    height: var(--size);
+    -moz-appearance: none;
+    appearance: none;
+}
+
+[type="checkbox"]:focus {
+    outline: none
+}
+
+.progress {
+    width: var(--size);
+    height: var(--pos);
+    position: absolute;
+    top: var(--pos);
+    transform: translateY(-100%);
+    border-radius: 2rem;
+    background: var(--alpha);
+    box-shadow: 0 0 0 3px var(--cloud), var(--inset);
+    cursor: pointer;
+}
+
+.play {
+     width: 2.528em;
+    height: 2.528em;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: var(--pos);
+    left: 4%;
+    border-radius: var(--pos);
+    background: var(--cloud);
+    transform: translateY(-93%);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.play  span {
+    color: var(--red);
+}
+
+.play::before,
+.play::after {
+    content: '';
+    width: 2em;
+    height: 2em;
+    border-radius: var(--pos);
+    position: absolute;
+    top: var(--pos);
+    left: var(--pos);
+    transform: translate(-50%, -50%);
+}
+
+.play::before {
+    width: 2.528em;
+    height: 2.528em;
+    box-shadow: var(--outset)
+}
+
+.play::after {
+    box-shadow: var(--inset);
+}
