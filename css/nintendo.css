@@ -1,0 +1,418 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+}
+
+:root {
+    --pos: 50%;
+    --size: 100%;
+    --height: 100vh;
+
+    --font-stack: 'Abel', sans-serif;
+
+    /* COLORS */
+    --gray: #1E2D2F;
+    --black: #000;
+    --white: #fff;
+    --light-blue: #00C0E3;
+    --light-red: #FE5A4B;
+    --light-gray: #4E5D61;
+    --dark-gray: #273D39;
+    --dark-cloud: #5F6D72;
+    --cloud: #9aa3a5;
+    --screen: #1C1D21;
+    /* shadow */
+    --left-shadow: #0896B7;
+    --light-blue-shadow: #02DCF1;
+    --right-shadow: #FA261C;
+    --light-red-shadow: #FE8877;
+}
+
+/* ============================== General Content ============================== */
+.container {
+    width: var(--size);
+    height: var(--hegiht);
+}
+
+.container,
+.header,
+.switch--container,
+.joy--con,
+.left--lever,
+.right--lever,
+.button,
+.capture--button,
+.action--buttons,
+.home--button,
+.display--box {
+    position: relative;
+}
+
+.minus--button,
+.plus--button,
+.left--lever,
+.right--lever,
+.button,
+.capture--button,
+.home--button {
+    cursor: pointer;
+}
+
+.header {
+    padding: 1em 0;
+    margin: 0;
+    display: block;
+}
+
+.header .heading {
+    font-family: var(--font-stack);
+    font-size: 3.84rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.switch--container {
+    height: var(--height);
+    display: grid;
+    place-items: center;
+}
+
+.switch {
+    width: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ============================== Buttons ============================== */
+.joy--con {
+    width: 100px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left--joycon {
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: var(--light-blue);
+    box-shadow: 3px -4px 6px var(--left-shadow) inset,
+                              3px 4px 6px var(--light-blue-shadow) inset;
+    left: 168px
+}
+
+.right--joycon {
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: var(--light-red);
+    box-shadow: -3px -4px 6px var(--right-shadow) inset,
+                              -3px 4px 6px var(--light-red-shadow) inset;
+    right: 168px
+}
+
+.left--joycon::before,
+.left--joycon::after,
+.right--joycon::before,
+.right--joycon::after {
+    content: '';
+    width: 60px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 10px solid var(--dark-gray);
+    z-index: -1
+}
+
+.left--joycon::before {
+    border-top-left-radius: 60px;
+    transform: translate(-1px, -3px) rotate(0) skewX(-2deg);
+}
+
+.right--joycon::before {
+    border-top-right-radius: 60px;
+    transform: translate(21px, -3px) rotate(0) skewX(2deg);
+}
+
+.left--joycon::after {
+    width: 10px;
+    height: 250px;
+    background: var(--gray);
+    top: var(--pos);
+    left: var(--pos);
+    transform: translate(85%, -50%);
+    z-index: -1;
+}
+
+.right--joycon::after {
+    width: 10px;
+    height: 250px;
+    background: var(--gray);
+    top: var(--pos);
+    right: var(--pos);
+    transform: translate(-15%, -50%);
+    z-index: -1;
+}
+
+.minus--button,
+.plus--button {
+    position: absolute;
+    top: 15px;
+    font-size: 1.45rem;
+}
+
+.minus--button {
+    right: 5px
+}
+
+.plus--button {
+    left: 5px;
+}
+
+.left--lever,
+.right--lever {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--pos);
+    background: var(--dark-gray);
+}
+
+.left--lever {
+    top: -2em;
+    left: .5em;
+}
+
+.left--lever::before,
+.left--lever::after,
+.right--lever::before,
+.right--lever::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--pos);
+}
+
+.left--lever::before,
+.right--lever::before {
+    width: 53px;
+    height: 53px;
+    border-radius: var(--pos);
+    top: -4%;
+    left: -4%;
+    background: var(--gray);
+    box-shadow: 0 2px 3px rgba(0,0,0,.4), 
+                             2px -2px 4px var(--dark-gray) inset,
+                             1.5px 2px 1px var(--dark-cloud) inset;
+}
+
+.left--lever::after,
+.right--lever::after {
+    width: 43px;
+    height: 43px;
+    border: 1px solid var(--dark-gray);
+    top: 5%;
+    left: 5%;
+    box-shadow: 0 2px 3px rgba(0,0,0,.7), 
+                             2px 2px 4px var(--dark-gray) inset,
+                             -1px -1px 1px 0 var(--dark-cloud) inset;
+}
+
+.directional--buttons,
+.action--buttons {
+    width: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.action--buttons {
+    top: -2rem;
+    left: -.5em;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--pos);
+    background: var(--dark-gray);
+    box-shadow: 0 -1.5px 0 rgba(0,0,0,.5) inset, 
+                             -2px -2px 5px var(--light-gray) inset,
+                             2px -2px 4px var(--dark-gray) inset;
+}
+
+.top,
+.X--button {
+    grid-column: 2;
+}
+
+.left,
+.Y--button {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.left .lf {
+    margin-right: 2.5px;
+}
+
+.right,
+.A--button {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.right .rt {
+    margin-left: 2.5px
+}
+
+.bottom,
+.B--button {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.X--button ,
+.Y--button, 
+.B--button,
+.A--button  {
+    color: var(--white);
+    font-size: .75rem;
+    text-align: center;
+    font-family: var(--font-stack);
+}
+
+.capture--button,
+.home--button {
+    width: 25px;
+    height: 25px;
+    bottom: -15px;
+}
+
+.capture--button {
+    right: -25px;
+    border-radius: 2px;
+    background: var(--gray);
+    box-shadow: 0 2px 2px rgba(0,0,0,.4), 
+                             -1px -1.2px 1px var(--dark-gray) inset,
+                             1px -2px 2px var(--dark-cloud) inset;
+}
+
+.capture--button::after {
+    width: 18px;
+    height: 18px;
+    content: '';
+    top: 12%;
+    left: 12.5%;
+    position: absolute;
+    border-radius: var(--pos);
+    background: var(--dark-gray);
+    box-shadow: 2px 2px 3px rgba(0,0,0,.1) inset,
+                              -2px -2px 3px rgba(255,255,255,.1) inset;
+}
+
+.home--button {
+    display: grid;
+    place-items: center;
+    left: -25px;
+    border: 3px solid var(--cloud);
+    border-radius: var(--pos);
+    background: var(--dark-gray)
+}
+
+.home--button .home {
+    font-size: 1rem
+}
+
+/* ============================== Screen ============================== */
+.display--box {
+    width: calc(var(--pos) - 35px);
+    height: 292px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 3px;
+    background: linear-gradient(
+        45deg,
+        var(--gray) 3%,
+        var(--light-gray) 89%
+    );
+    border-top-left-radius: 15px;
+    border-top-right-radius:  15px;
+    box-shadow: 2px 2px 6px 0 rgba(0,0,0,.4) inset,
+                             -2px -2px 6px 0 rgba(255,255,255,.4) inset;
+}
+
+.display--box::before,
+.display--box::after {
+    content: '';
+    width: calc(var(--size) + 3px);
+    height: 278px;
+    position: absolute;
+    transform: translate(0, 0);
+    z-index: -1;
+    padding: 0 1.5px;
+}
+
+.display--box::after {
+    width: calc(var(--size) - 20px);
+    height: 15px;
+    background: var(--dark-cloud);
+    top: -10px;
+    left: 8px;
+    border-top-left-radius: 2px;
+    border-top-right-radius:  2px;
+    background: linear-gradient(
+        25deg,
+        var(--gray) 23%,
+        var(--light-gray) 89%
+    );
+    box-shadow: 0 0 3px rgba(0,0,0,.5) inset,
+                              3px -4px 6px var(--light-gray) inset,
+                              3px 4px 6px var(--dark-gray) inset;
+    z-index: 2
+}
+
+.display {
+    width: calc(var(--size) - 50px);
+    height: 270px;
+    background: var(--black);
+    margin: auto;
+    border-radius: 15px;
+}
+
+.screen {
+    width: calc(var(--size) - 50px);
+    height: 220px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px auto;
+    background: var(--screen);
+    border-radius: 5px
+}
+
+.screen .nintendo {
+    text-transform: capitalize;
+    font-family: var(--font-stack);
+    color: var(--white)
+}
