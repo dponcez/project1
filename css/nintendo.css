@@ -92,7 +92,7 @@ body {
     justify-content: space-around;
 }
 
-/* ============================== Buttons ============================== */
+/* ============================== Controls ============================== */
 .joy--con {
     width: 100px;
     height: 300px;
@@ -168,6 +168,7 @@ body {
     z-index: -1;
 }
 
+/* ============================== Buttons ============================== */
 .minus--button,
 .plus--button {
     position: absolute;
