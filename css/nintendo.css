@@ -86,6 +86,7 @@ body {
 
 .switch {
     width: var(--size);
+    max-width: 710px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -109,7 +110,7 @@ body {
     background: var(--light-blue);
     box-shadow: 3px -4px 6px var(--left-shadow) inset,
                               3px 4px 6px var(--light-blue-shadow) inset;
-    left: 168px
+    left: 0
 }
 
 .right--joycon {
@@ -120,7 +121,7 @@ body {
     background: var(--light-red);
     box-shadow: -3px -4px 6px var(--right-shadow) inset,
                               -3px 4px 6px var(--light-red-shadow) inset;
-    right: 168px
+    right: 0
 }
 
 .left--joycon::before,
@@ -344,7 +345,7 @@ body {
 
 /* ============================== Screen ============================== */
 .display--box {
-    width: calc(var(--pos) - 35px);
+    width: 500px;
     height: 292px;
     display: flex;
     align-items: center;
