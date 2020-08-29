@@ -412,7 +412,19 @@ body {
 }
 
 .screen .nintendo {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: var(--font-stack);
-    color: var(--white)
+    color: var(--white);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 30px;
+}
+
+.nintendo span {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 2.25rem;
+    font-weight: 600;
 }
