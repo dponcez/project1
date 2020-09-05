@@ -10,49 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="heading">nintendo switch</h1>
+    <div class="container" data-state="container">
+        <header class="header" role="heading">
+            <h1 class="heading" role="text">nintendo switch</h1>
         </header>
-        <div class="switch--container">
-            <section class="switch">
+        <div class="switch--container" data-state="switch container">
+            <section class="switch" role="main">
                 <!-- Left Joy-Con -->
-                <div class="left--joycon joy--con">
-                    <button class="minus--button"></button>
-                    <button class="left--stick stick"></button>
-                    <div class="directional--buttons">
-                        <button class="top button"></button>
-                        <button class="down button"></button>
-                        <button class="left button"></button>
-                        <button class="right button"></button>
+                <div class="left--joycon joy--con" data-state="control">
+                    <button class="minus--button" role="button"></button>
+                    <button class="left--stick stick" role="button"></button>
+                    <div class="directional--buttons" data-state="direction's button">
+                        <button class="top button" role="button"></button>
+                        <button class="down button" role="button"></button>
+                        <button class="left button" role="button"></button>
+                        <button class="right button" role="button"></button>
                     </div>
-                    <button class="capture--button"></button>
+                    <button class="capture--button" role="button"></button>
+                    <button class="shoulder __left" role="button"></button>
                 </div>
                 <!-- End Left Joy-Con -->
                 <!-- Screen -->
-                <div class="display--box">
-                    <div class="display">
-                        <div class="screen">
-                            <div class="logo--container">
-                                <div class="left--logo"></div>
-                                <div class="right--logo"></div>
+                <div class="display--box" data-state="display container">
+                    <div class="display" data-state="display" role="banner">
+                        <div class="screen" data-state="screen">
+                            <div class="logo--container" data-state="logo container" role="textbox">
+                                <div class="left--logo" role="text"></div>
+                                <div class="right--logo" role="text"></div>
                             </div>
-                            <h2 class="nintendo">nintendo <span>switch</span><small>tm</small></h2>
+                            <h2 class="nintendo" role="doc-subtitle">nintendo <span>switch</span><small>tm</small></h2>
                         </div>
                     </div>
                 </div>
                 <!-- End Screen -->
                 <!-- Right Joy-Con -->
-                <div class="right--joycon joy--con">
-                    <button class="plus--button"></button>
-                    <div class="action--buttons">
-                        <button class="X--button button" data-letter="X"></button>
-                        <button class="B--button button" data-letter="B"></button>
-                        <button class="Y--button button" data-letter="Y"></button>
-                        <button class="A--button button" data-letter="A"></button>
+                <div class="right--joycon joy--con" data-state="control">
+                    <button class="plus--button" role="button"></button>
+                    <div class="action--buttons" data-state="action buttons">
+                        <button class="X--button button" role="button" data-letter="X"></button>
+                        <button class="B--button button" role="button" data-letter="B"></button>
+                        <button class="Y--button button" role="button" data-letter="Y"></button>
+                        <button class="A--button button" role="button" data-letter="A"></button>
                     </div>
-                    <button class="right--stick stick"></button>
-                    <button class="home--button"></button>
+                    <button class="right--stick stick" role="button"></button>
+                    <button class="home--button" role="button"></button>
+                    <button class="shoulder __right" role="button"></button>
                 </div>
                 <!-- End Right Joy-Con -->
             </section>
