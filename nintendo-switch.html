@@ -1,78 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" type="image/png" href="images/logo1.png"> -->
     <title>Nintendo Switch Clone</title>
-    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
     <link rel="stylesheet" href="css/nintendo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="heading">nintendo switch</h1>
+    <div class="container" data-state="container">
+        <header class="header" role="heading">
+            <h1 class="heading" role="text">nintendo switch</h1>
         </header>
-        <div class="switch--container">
-            <div class="switch">
-                <!-- left joy-con -->
-                <div class="left--joycon joy--con">
-                    <div class="minus--button">
-                        <i class="fas fa-minus"></i>
+        <div class="switch--container" data-state="switch container">
+            <section class="switch" role="main">
+                <!-- Left Joy-Con -->
+                <div class="left--joycon joy--con" data-state="control">
+                    <button class="minus--button" role="button"></button>
+                    <button class="left--stick stick" role="button"></button>
+                    <div class="directional--buttons" data-state="direction's button">
+                        <button class="top button arrow" role="button"></button>
+                        <button class="down button arrow" role="button"></button>
+                        <button class="left button arrow" role="button"></button>
+                        <button class="right button arrow" role="button"></button>
                     </div>
-                    <div class="left--lever"></div>
-                    <div class="directional--buttons">
-                        <div class="top button">
-                            <i class="fas fa-caret-up up"></i>
-                        </div>
-                        <div class="bottom button">
-                            <i class="fas fa-caret-down down"></i>
-                        </div>
-                        <div class="left button">
-                            <i class="fas fa-caret-left lf"></i>
-                        </div>
-                        <div class="right button">
-                            <i class="fas fa-caret-right rt"></i>
-                        </div>
-                    </div>
-                    <div class="capture--button"></div>
+                    <button class="capture--button" role="button"></button>
+                    <button class="shoulder __left" role="button"></button>
                 </div>
-                <!-- end left joy-con -->
-
-                <!-- display box-->
-                <div class="display--box">
-                    <div class="display">
-                        <div class="screen">
-                            <div class="logo--container">
-                                <div class="left--logo"></div>
-                                <div class="right--logo"></div>
+                <!-- End Left Joy-Con -->
+                <!-- Screen -->
+                <div class="display--box" data-state="display container">
+                    <div class="switch--buttons"></div>
+                    <div class="display" data-state="display" role="banner">
+                        <div class="screen" data-state="screen">
+                            <div class="logo--container" data-state="logo container" role="textbox">
+                                <div class="left--logo" role="text"></div>
+                                <div class="right--logo" role="text"></div>
                             </div>
-                            <h2 class="nintendo">nintendo <span>switch</span><small>tm</small></h2>
+                            <h2 class="nintendo" role="doc-subtitle">nintendo <span>switch</span><small>tm</small></h2>
                         </div>
                     </div>
                 </div>
-                <!-- end display box -->
-
-                <!-- right joy-con -->
-                <div class="right--joycon joy--con">
-                    <div class="plus--button">
-                        <i class="fas fa-plus"></i>
+                <!-- End Screen -->
+                <!-- Right Joy-Con -->
+                <div class="right--joycon joy--con" data-state="control">
+                    <button class="plus--button" role="button"></button>
+                    <div class="action--buttons" data-state="action buttons">
+                        <button class="X--button button" role="button" data-letter="X"></button>
+                        <button class="B--button button" role="button" data-letter="B"></button>
+                        <button class="Y--button button" role="button" data-letter="Y"></button>
+                        <button class="A--button button" role="button" data-letter="A"></button>
                     </div>
-                    <div class="action--buttons">
-                        <div class="X--button button">X</div>
-                        <div class="B--button button">B</div>
-                        <div class="Y--button button">Y</div>
-                        <div class="A--button button">A</div>
-                    </div>
-                    <div class="right--lever"></div>
-                    <div class="home--button">
-                        <i class="fas fa-home home"></i>
-                    </div>
+                    <button class="right--stick stick" role="button"></button>
+                    <button class="home--button" role="button"></button>
+                    <button class="shoulder __right" role="button"></button>
                 </div>
-                <!-- end right joy-con -->
-            </div>
+                <!-- End Right Joy-Con -->
+            </section>
         </div>
     </div>
 </body>
+
 </html>
