@@ -803,7 +803,7 @@ button:focus {
     letter-spacing: 0.0625em;
 }
 
-.switch:hover .display--box {
+/* .switch:hover .display--box {
     top: -12em;
     transition: top 1.5s ease
-}
+} */
