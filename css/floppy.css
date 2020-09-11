@@ -6,6 +6,7 @@
     --dark--grey: #333;
     --light--grey: #666;
     --white: #fff;
+    --black: #000;
 }
 
 body {
@@ -59,6 +60,8 @@ body {
     border-radius: .5765em 0 .5765em .5765em;
 }
 
+.eyelash::before,
+.eyelash::after,
 .floppy::before,
 .floppy::after {
     content: '';
@@ -66,13 +69,80 @@ body {
     position: absolute;
 }
 
+.floppy::before {
+    width: 22em;
+    height: 12.07598em;
+    box-shadow: 
+        0.125em 0.125em 0.125em 0 rgba(0,0,0,.5) inset, -0.0925em -0.125em 0.01258em 0 rgba(1,1,1,.2) inset,
+        0.0125em -0.0625em 0 0.25em rgba(0, 0, 0, 0.234) inset,
+		0 -0.0625em 0.125em rgba(255, 255, 255, 0.75) inset;
+    border-radius: 0 0 .45em .45em;
+    margin: auto;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
 .floppy::after {
     width: 0;
     height: 0;
     top: 0;
     left: var(--size);
-    transform: translate(-90%,-10%);
     border-right: 2em solid var(--white);
     border-left: 1.61875em solid transparent;
     border-bottom: 2.0175em solid transparent;
+    transform: translate(-3.0024em, -0.08746em) rotate(0) skewX(2.5deg);
 }
+
+.eyelash {
+    width: 1.35em;
+    height: 1.35em;
+    display: block;
+    position: relative;
+    top: -15.45879em;
+    right: -13.9985em;
+    background-size: var(--size);
+    background: var(--dark--grey);
+    background-position: 0.625em var(--size), 0.625em var(--size), var(--size);
+    background-image: linear-gradient(
+        to bottom,
+        var(--grey),
+        var(--dark--grey)
+    ),
+    linear-gradient(
+        to top,
+        var(--dark-grey) 10%,
+        var(--light--grey) 95%
+    ),
+    linear-gradient(
+        to bottom,
+        var(--black),
+        var(--dark--grey)
+    );
+}
+
+.eyelash::after {
+    width: 0;
+    height: 0;
+    right: 0;
+    border-right: 0.8em solid var(--white);
+    border-left: 0.61875em solid transparent;
+    border-bottom: 1.0175em solid transparent;
+    transform: translate(0.8976em, -0.04746em) rotate(0) skewX(46.5deg);
+}
+
+/* .eyelash::before,
+.eyelash::after {
+    content: '';
+    position: absolute;
+    top: var(--pos);
+    left: var(--pos);
+    transform: translate(-50%, -50%);
+    background: var(--dark--grey);
+}
+
+.eyelash::after {
+    border-right: 2em solid var(--white);
+    border-left: 1.61875em solid transparent;
+    border-bottom: 2.0175em solid transparent;
+} */
+
