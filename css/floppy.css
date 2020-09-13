@@ -299,7 +299,6 @@ body {
     left: 0.4em;
     background: var(--white);
     border-radius: .45em;
-    opacity: 0.95;
 }
 
 .sticker::after {
@@ -308,4 +307,98 @@ body {
     top: 1.75em;
     right: .95em;
     box-shadow: 0 0.1em, 0 1.5em, 0 3em, 0 4.5em, 0 6em, 0 7.5em, 0 9em, 0 10.5em, 0 12em, 0 13.5em;
+}
+
+.ellipse {
+    width: 9.25em;
+    height: 9.25em;
+    position: absolute;
+    top: calc(var(--pos) - 2.04em);
+    left: calc(var(--pos) * 0.23);
+    background: var(--white);
+    border-radius: 0.45em 0 0 0;
+    opacity: 1
+}
+
+.ellipse::before,
+.ellipse::after {
+    content: '';
+    position: absolute;
+    top: var(--pos);
+    left: var(--pos);
+}
+
+.ellipse::before {
+    width: 8.75em;
+    height: 8.75em;
+    border-radius: 2.084272em 8.084272em 2.0074em 8.084272em;
+    transform: translate(-4.4024em, -4.08746em) rotate(-15deg) skew(-14.5deg, 3deg);
+    background: #3598be;
+}
+
+.ellipse::after {
+    border-top: 8.35em solid transparent;
+    border-right: 9.00175em solid var(--white);
+    border-radius: 2.084272em 8.084272em 2.0074em 8.084272em;
+    transform: translate(-4.7124em, -3.9746em) rotate(-15deg) skew(-17.5deg, 8deg);
+}
+
+.button {
+    position: relative;
+    background: transparent;
+    border: none
+}
+
+.button.arrow::before,
+.button.arrow::after {
+    content: '';
+    position: absolute;
+    top: var(--pos);
+    left: var(--pos);
+    transform: translate(-50%, -50%);
+}
+
+.button.arrow::before {
+    width: 1em;
+    height: 2em;
+    top: 4.8em;
+    left: 1.95em;
+    background: var(--black);
+    border: none;
+    border-radius: 0 0 .15em .15em;
+}
+
+.button.arrow::after {
+    border-left: 1.125em solid transparent;
+    border-right: 1.125em solid transparent;
+    border-bottom: 2.834em solid var(--black);
+    margin-top: 3.044em;
+    margin-left: 1.5em
+}
+
+.locker {
+    position: absolute;
+    right: 2.45em;
+    bottom: 4.5em;
+}
+
+.locker::before,
+.locker::after {
+    content: '';
+    position: absolute;
+}
+
+.locker::before {
+    width: 1.25em;
+    height: 1.25em;
+    background: var(--white);
+    box-shadow: -0.175em -0.0025em 0.114em 0 rgb(0, 0, 0) inset;
+}
+
+.locker::after {
+    width: 1.35em;
+    height: 1.25em;
+    top: 0.75em;
+    right: 32.95em;
+    background: var(--black);
 }
