@@ -25,3 +25,4 @@ Here goes all projects.
 |----|--------------------|
 | 1. |  [Expanding Cards](https://github.com/dponcez/project1/tree/master/day1-ExpandingCards)     |
 | 2. | [Progress Steps](https://github.com/dponcez/project1/tree/master/day2-ProgressSteps)         |
+| 3. | [Rotating Navigation](https://github.com/dponcez/project1/tree/master/day3-RotatingNavigation)       |
