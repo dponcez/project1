@@ -24,3 +24,4 @@ Here goes all projects.
 |  #  |    Projects     |
 |----|--------------------|
 | 1. |  [Expanding Cards](https://github.com/dponcez/project1/tree/master/day1-ExpandingCards)     |
+| 2. | [Progress Steps](https://github.com/dponcez/project1/tree/master/day2-ProgressSteps)         |
