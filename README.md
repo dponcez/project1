@@ -1,5 +1,5 @@
 # Personal Project Using Vanilla JavaScript.
-The examples below are my personal projects using HTML5, CSS3 and JS. I saw some projects of Tranversy Media on twitter and I decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
+The examples below are my personal projects using HTML5, CSS3 and JS. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
 
 |  # |    Personal Projects     |
 |----|-----------------|
