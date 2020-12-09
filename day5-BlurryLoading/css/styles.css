@@ -1,0 +1,35 @@
+:root {
+    --size: 100vw;
+    --height: 100vh;
+    --font-stack: 'Abel', sans-serif;
+}
+
+body {
+    width: var(--size);
+    height: var(--height);
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-family: var(--font-stack);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    width: calc(var(--size) * 1.022);
+    height: calc(var(--height) * 1.045);
+    background: url('../image/header.jpg') no-repeat center center / cover;
+    top: -1.875rem;
+    left: -1.875rem;
+    z-index: -1;
+    display: grid;
+    place-items: center
+}
+
+.loading--text {
+    font-size: 4rem;
+    color: #ecf0f1;
+}
