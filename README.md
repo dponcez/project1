@@ -17,7 +17,7 @@ The examples below are my personal projects using HTML5, CSS3 and JS. I also loo
 
 *The purpose of the music, which is in the audio folder, is only for the creation of the AUDIO PLAYER and the rights are reserved to each artist and / or label.*
 
-# Inspired by 50Projects50Days by Traversy Media
+# Inspired by 50Projects50Days from Traversy Media
 
 Here goes all projects.
 
