@@ -27,3 +27,5 @@ Here goes all projects.
 | 2. | [Progress Steps](https://github.com/dponcez/project1/tree/master/day2-ProgressSteps)         |
 | 3. | [Rotating Navigation](https://github.com/dponcez/project1/tree/master/day3-RotatingNavigation)       |
 | 4. | [Hidden Search](https://github.com/dponcez/project1/tree/master/day4-HiddenSearchWidget)    |
+| 5. | [Blurry Loading](https://github.com/dponcez/project1/tree/master/day5-BlurryLoading)    |
+| 6. | [Scroll Animation](https://github.com/dponcez/project1/tree/master/day6-ScrollAnimation)    |
