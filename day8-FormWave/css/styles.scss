@@ -1,0 +1,138 @@
+$bg: #3498db;
+$text-color: #ecf0f1;
+$sky-blue: rgb(30, 141, 213);
+$btn-color: rgb(53, 193, 241);
+$dark-blue: rgb(24, 79, 133);
+$alpha: rgba(0,0,0,.3);
+$font-stack: 'Abel', sans-serif;
+$size: 100vw;
+$height: 100vh;
+$pos: 50%;
+
+body {
+    width: $size;
+    height: $height;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: $bg;
+    color: $text-color;
+    font-family: $font-stack;
+}
+
+.container {
+    padding: 1.5rem 2.5rem;
+    background: linear-gradient(-190deg, $bg 50%, $btn-color 98%);
+    border-radius: .5rem;
+    box-shadow: 0.125vmin 0.1875vmin 0.675rem 0 rgba(0,0,0,.3);
+
+    .login {
+        font-size: 2.5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .text {
+        font-size: 1.15rem;
+        letter-spacing: .1rem;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $dark-blue;
+            text-transform: capitalize;
+
+            &::before {
+                content: '';
+                width: $pos * 2;
+                position: absolute;
+                bottom: 7.5rem;
+            }
+            
+            &::before {
+                width: 0;
+            }
+
+            &:hover::before {
+                width: 4.5rem;
+                border-bottom: .1rem solid $text-color;
+                transition: width .3s ease-in, border .3s ease-in;
+                z-index: 1
+            }
+        }
+    }
+
+    .login--btn {
+        width: $pos * 2;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        background: $sky-blue;
+        color: $text-color;
+        border: 0;
+        border-radius: .3rem;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    .form__container {
+        display: block;
+        margin-top: 0;
+
+        .form--control {
+            padding: 1.5rem 0 2.5rem;
+            width: 18.75rem;
+            position: relative;
+
+            & input {
+                display: block;
+                width: 100%;
+                background: transparent;
+                padding: 0.9375rem 0;
+                border: 0;
+                border-bottom: .15rem solid $text-color;
+                border-radius: .3rem;
+                color: $text-color;
+                font-size: 1.125rem;
+
+                &:focus,
+                &:active {
+                    outline: none;
+                    border-bottom: .15rem solid $dark-blue;
+
+                    & + label span {
+                        color: $sky-blue;
+                        transform: translateY(-1.875rem);
+                    }
+                }
+            }
+
+            & label {
+                position: absolute;
+                top: 1.5rem;
+                left: 0;
+                font-size: 1.125rem;
+
+                & span {
+                    display: inline-block;
+                    font-size: inherit;
+                    transition: .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    max-width: 5rem;
+                }
+            }
+        }
+    }
+}
