@@ -30,3 +30,4 @@ Here goes all projects.
 | 5. | [Blurry Loading](https://github.com/dponcez/project1/tree/master/day5-BlurryLoading)    |
 | 6. | [Scroll Animation](https://github.com/dponcez/project1/tree/master/day6-ScrollAnimation)    |
 | 7. | [Split Landing Page](https://github.com/dponcez/project1/tree/master/day7-SplitLandingPage)    |
+| 8. | [Form Wave](https://github.com/dponcez/project1/tree/master/day8-FormWave)    |
