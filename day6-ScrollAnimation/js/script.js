@@ -1,9 +1,9 @@
 const init = () => {
+    'use strict';
+
     const boxes = document.querySelectorAll('.box');
 
     window.addEventListener('scroll', checkScrollBoxes);
-
-    checkScrollBoxes();
 
     function checkScrollBoxes() {
         const posHeight = window.innerHeight / 5 * 4;
