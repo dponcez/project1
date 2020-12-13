@@ -32,3 +32,4 @@ Here goes all projects.
 | 7. | [Split Landing Page](https://github.com/dponcez/project1/tree/master/day7-SplitLandingPage)    |
 | 8. | [Form Wave](https://github.com/dponcez/project1/tree/master/day8-FormWave)    |
 | 9. | [Sound Board](https://github.com/dponcez/project1/tree/master/day9-SoundBoard)    |
+| 10. | [Dad Jokes](https://github.com/dponcez/project1/tree/master/day10-DadJokes)    |
