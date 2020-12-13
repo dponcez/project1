@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(-45deg, #006CBF 25%, #259CDC 78%);
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.container .heading {
+  position: absolute;
+  top: 10%;
+  color: #ecf0f1;
+  font-size: 3.5rem;
+  font-weight: lighter;
+}
+
+.container .heading::first-letter {
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.container .heading span {
+  display: inline-block;
+}
+
+.container .heading span::first-letter {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.container .sound--container {
+  display: block;
+}
+
+.container .sound--buttons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2.5rem 0;
+  position: absolute;
+  top: 50%;
+}
+
+.container .sound--buttons__container .sound--btn {
+  display: block;
+  width: 12rem;
+  padding: 1.5rem 0;
+  margin: .25rem;
+  border: 0;
+  border-radius: .5rem;
+  background: #259CDC;
+  color: #ecf0f1;
+  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.3rem 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0.125vmin 0.1875vmin 0.3rem 0 rgba(0, 0, 0, 0.4);
+  font-size: 1.35rem;
+  text-align: center;
+  letter-spacing: .1rem;
+  cursor: pointer;
+}
+
+.container .sound--buttons__container .sound--btn:focus, .container .sound--buttons__container .sound--btn:active {
+  outline: 0;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  border-style: none;
+}
+/*# sourceMappingURL=styles.css.map */
