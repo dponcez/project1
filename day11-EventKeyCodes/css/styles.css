@@ -1,0 +1,52 @@
+:root {
+    --size: 100vw;
+    --height: 100vh;
+    --bg-color: #3498db;
+    --bg-color-box: #184F85;
+    --text-color: #ecf0f1;
+    --font-stack: 'Abel', sans-serif;
+    --font-weight-size: .89;
+}
+
+body {
+    width: var(--size);
+    height: var(--height);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    font-family: var(--font-stack);
+    overflow: hidden;
+}
+
+.key {
+    position: relative;
+    padding: 1.25rem;
+    background: var(--bg-color-box);
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: .625rem;
+    min-width: 9.375rem;
+    border: 0.1rem solid #eee;
+    box-shadow: 0.125vmin 0.1875vmin 0.275rem rgba(0,0,0,.4), 0.125vmin 0.2875vmin 0.375rem rgba(1,2,1,.2), 0.275vmin 1.1875vmin 0.675rem rgba(0,0,0,.6);
+    font-size: 1.25rem;
+    font-weight: calc(500 * var(--font-weight-size, 1));
+    color: var(--text-color);
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    border-radius: .25rem;
+}
+
+.key small {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 0.875rem;
+}
