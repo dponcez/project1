@@ -34,3 +34,4 @@ Here goes all projects.
 | 9. | [Sound Board](https://github.com/dponcez/project1/tree/master/day9-SoundBoard)    |
 | 10. | [Dad Jokes](https://github.com/dponcez/project1/tree/master/day10-DadJokes)    |
 | 11. | [Event KeyCodes](https://github.com/dponcez/project1/tree/master/day11-EventKeyCodes)    |
+| 12. | [FAQ](https://github.com/dponcez/project1/tree/master/day12-FAQ)    |
