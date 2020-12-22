@@ -1,0 +1,124 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --font-weight: .85;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #77BA99;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body .heading {
+  padding: 1rem 0;
+  font-size: clamp(4.5vw, 4rem, 4vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: calc( 600 * var(--font-weight, 1));
+  color: #EFF0D1;
+  text-transform: capitalize;
+  letter-spacing: .1rem;
+  border-bottom: 0.1rem solid #EFF0D1;
+}
+
+.faq--container {
+  position: relative;
+  padding: 0 4rem;
+  margin: 0;
+}
+
+.faq--container .faq {
+  width: 70vw;
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin: .5rem;
+  background: #EFF0D1;
+  color: #5e6472;
+  border-radius: .5rem .5rem .8rem .8rem;
+  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.675rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.125vmin 0.1875vmin 0.675rem rgba(0, 0, 0, 0.4);
+}
+
+.faq--container .faq.active .faq--text {
+  display: block;
+}
+
+.faq--container .faq .faq--title {
+  font-size: 2.35rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: calc( 800 * var(--font-weight, 1));
+}
+
+.faq--container .faq .faq--title::first-letter {
+  text-transform: capitalize;
+}
+
+.faq--container .faq .faq--text {
+  height: 4rem;
+  line-height: 4rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-family: "Abel", sans-serif;
+  background: #5e6472;
+  color: #EFF0D1;
+  display: none;
+}
+
+.faq--container .faq .faq--text::first-letter {
+  text-transform: capitalize;
+}
+
+.faq--container .faq.active .faq--toggle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.faq--container .faq .faq--toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: .5rem 1rem;
+  border: 0;
+  border-radius: .5rem;
+  background: transparent;
+  opacity: .75;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  cursor: pointer;
+}
+
+.faq--container .faq .faq--toggle:hover {
+  opacity: 1;
+}
+
+.faq--container .faq .faq--toggle:focus {
+  outline: 0;
+}
+
+.faq--container .faq .faq--toggle .down {
+  font-size: 1.9rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=styles.css.map */
