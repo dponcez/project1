@@ -35,3 +35,4 @@ Here goes all projects.
 | 10. | [Dad Jokes](https://github.com/dponcez/project1/tree/master/day10-DadJokes)    |
 | 11. | [Event KeyCodes](https://github.com/dponcez/project1/tree/master/day11-EventKeyCodes)    |
 | 12. | [FAQ](https://github.com/dponcez/project1/tree/master/day12-FAQ)    |
+| 13. | [Random Choice Picker](https://github.com/dponcez/project1/tree/master/day13-RandomChoicePicker)    |
