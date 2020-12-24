@@ -94,6 +94,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 52rem;
   padding: .75rem;
 }
@@ -107,5 +109,10 @@ body {
   font-weight: calc( 800 * var(--font-weight, 1));
   color: #2c3e50;
   border-radius: .8rem;
+}
+
+.container .input--container .tags .tag.highlight {
+  background: #2c3e50;
+  color: #ecf0f1;
 }
 /*# sourceMappingURL=styles.css.map */

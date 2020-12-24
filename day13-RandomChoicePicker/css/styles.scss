@@ -73,6 +73,7 @@ body {
             width: 100%;
             display: flex;
             align-items: flex-start;
+            flex-wrap: wrap;
             max-width: 52rem;
             padding: .75rem;
 
@@ -85,6 +86,11 @@ body {
                 font-weight: calc( 800 * var(--font-weight, 1) );
                 color: $dark-color;
                 border-radius: .8rem;
+
+                &.highlight {
+                    background: $dark-color;
+                    color: $text-color;
+                }
             }
         }
 
