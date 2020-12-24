@@ -14,7 +14,6 @@ const init = () => {
             }, 10);
 
             randomSelect()
-            // pickRandomTags()
         }
     });
 
@@ -60,10 +59,6 @@ const init = () => {
 
     const pickRandomTags = (  ) => {
         const tags = document.querySelectorAll('.tag');
-
-        // tags.forEach( tag => {
-        //     return tag[ Math.floor( Math.random() * tag.length) ];
-        // })
         return tags[Math.floor(Math.random() * tags.length)];
     }
 
