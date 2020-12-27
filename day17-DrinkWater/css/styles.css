@@ -63,10 +63,15 @@ body {
 }
 
 .container > .cup .percentage {
+  width: 100%;
   height: 0;
   font-size: 3rem;
-  background: #3498db;
+  -webkit-backdrop-filter: blur(0.75rem);
+          backdrop-filter: blur(0.75rem);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5.123%, #3498db), color-stop(37.233%, #1B9DE2), to(#35C1F1));
+  background: linear-gradient(0deg, #3498db 5.123%, #1B9DE2 37.233%, #35C1F1 100%);
   font-weight: calc( 800 * var(--font-weight, 2));
+  text-align: center;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -154,6 +159,12 @@ body {
   display: flex;
   border-radius: 0 0 1.75rem 1.75rem;
   cursor: pointer;
+}
+
+.container .cups--container .cup.small--cup.full {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5.123%, #3498db), color-stop(37.233%, #1B9DE2), to(#35C1F1));
+  background: linear-gradient(0deg, #3498db 5.123%, #1B9DE2 37.233%, #35C1F1 100%);
+  color: #eef7fe;
 }
 
 .container .cups--container .cup.small--cup .ml {

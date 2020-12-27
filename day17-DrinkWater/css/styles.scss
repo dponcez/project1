@@ -1,4 +1,6 @@
 $fill--color: #3498db;
+$light-blue: #35C1F1;
+$sky-blue: #1B9DE2;
 $border-color: #144fc6;
 $font-stack: 'Abel', sans-serif;
 $bg-color: #eef7fe;
@@ -56,10 +58,13 @@ body {
         height: 33rem;
         margin: 3rem 0;
         .percentage {
+            width: 100%;
             height: 0;
             font-size: 3rem;
-            background: $fill--color;
+            backdrop-filter: blur(.75rem);
+            background: linear-gradient(0deg, $fill--color 5.123%, $sky-blue 37.233%, $light-blue 100%);
             font-weight: calc( 800 * var(--font-weight, 2) );
+            text-align: center;
             transition: .5s ease;
         }
         .remained {
@@ -110,6 +115,10 @@ body {
             display: flex;
             border-radius: 0 0 1.75rem 1.75rem;
             cursor: pointer;
+            &.full {
+                background: linear-gradient(0deg, $fill--color 5.123%, $sky-blue 37.233%, $light-blue 100%);
+                color: $bg-color;
+            }
             .ml {
                 font-size: 1.5rem;
             }
