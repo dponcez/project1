@@ -1,6 +1,7 @@
 :root {
   --size: 100vw;
   --height: 100vh;
+  --pos: 50%;
   --percent: 100%;
   --text-color: #ecf0f1;
 }
@@ -102,6 +103,7 @@ body::before {
   opacity: 0;
   width: var(--size);
   height: var(--height);
+  background-image: url("../images/header.jpg");
   background-position: center center;
   background-size: cover;
   position: absolute;
