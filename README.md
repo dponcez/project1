@@ -38,3 +38,5 @@ Here goes all projects.
 | 13. | [Random Choice Picker](https://github.com/dponcez/project1/tree/master/day13-RandomChoicePicker)    |
 | 14. | [Animated Navigation](https://github.com/dponcez/project1/tree/master/day14-AnimatedNavigation)    |
 | 15. | [Increment Counter](https://github.com/dponcez/project1/tree/master/day15-IncrementCounter)    |
+| 16. | [Background Slider](https://github.com/dponcez/project1/tree/master/day16-BackgroundSlider)    |
+| 17. | [Drink Water](https://github.com/dponcez/project1/tree/master/day17-DrinkWater)    |
