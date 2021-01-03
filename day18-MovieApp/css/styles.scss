@@ -32,6 +32,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding: 1rem;
+    margin-right: 1rem;
     
     .search--container {
         width: 18.75rem;
@@ -54,12 +55,12 @@ body {
         }
 
         .search {
-            width: 0;
+            width: 18.5rem;
             max-height: $size;
             background: $bg-color-3;
             border-radius: .2rem 0 0 .2rem;
             padding: 0;
-            padding-left : 0;
+            padding-left : 1rem;
             font-size: 1.12rem;
             transition: width .2s ease;
         }
