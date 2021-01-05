@@ -10,6 +10,7 @@ The examples below are my personal projects using HTML5, CSS3 and JS. I also loo
 | 5. | Menu            |
 | 6. | Nintendo Switch |
 | 7. | Player          |
+| 8. | Animated Navigation          |
 
 
 
