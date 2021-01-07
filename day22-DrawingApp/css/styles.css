@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.canvas {
+  border: .1rem solid #ccc;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.toolbox {
+  width: 100%;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 1rem;
+  background: #add8e6;
+  -webkit-box-shadow: 0.1875vmin 0.1875vmin 0.275em rgba(0, 0, 0, 0.2), -0.1875vmin -0.1875vmin 0.375em rgba(255, 255, 255, 0.3) inset;
+          box-shadow: 0.1875vmin 0.1875vmin 0.275em rgba(0, 0, 0, 0.2), -0.1875vmin -0.1875vmin 0.375em rgba(255, 255, 255, 0.3) inset;
+}
+
+.toolbox__button, .toolbox__size {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.toolbox__size {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #2c3e50;
+  color: #eef7ef;
+}
+
+.toolbox__button {
+  margin: 1rem;
+  border: 0;
+  color: #2c3e50;
+  background: #eef7ef;
+  font-size: 4rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.8);
+}
+
+.toolbox__button:focus {
+  outline: 0;
+}
+
+.toolbox__button:active {
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.toolbox__button:last-child {
+  position: absolute;
+  right: 1rem;
+}
+
+.toolbox__color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 12.5rem;
+  border: 0.1rem solid #2c3e50;
+  border-radius: .5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toolbox__color:focus {
+  outline: 0;
+}
+
+.alert {
+  display: block;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: #add8e6;
+  border-radius: .5rem;
+}
+
+.alert .description {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+.alert .close--alert {
+  --font-weight: .85;
+  padding: .7rem 1.8rem;
+  position: relative;
+  right: -19rem;
+  border: 0;
+  border-radius: .5rem;
+  background: #2c3e50;
+  color: #eef7ef;
+  font-size: 1.5rem;
+  font-weight: calc( 700 * var(--font-weight, 1));
+  letter-spacing: .02rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0.1875vmin 0.125vmin 0.675em rgba(255, 255, 255, 0.3);
+          box-shadow: 0.1875vmin 0.125vmin 0.675em rgba(255, 255, 255, 0.3);
+}
+
+.alert .close--alert:focus {
+  outline: 0;
+}
+
+.alert .close--alert:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=styles.css.map */
