@@ -46,3 +46,5 @@ Here goes all projects.
 | 20. | [Button Ripple Effect](https://github.com/dponcez/project1/tree/master/day20-ButtonRippleEffect)    |
 | 21. | [Drag and Drop](https://github.com/dponcez/project1/tree/master/day21-DragNDrop)    |
 | 22. | [Drawing App](https://github.com/dponcez/project1/tree/master/day22-DrawingApp)    |
+| 23. | [Kinetic Loader](https://github.com/dponcez/project1/tree/master/day23-kineticLoader)    |
+| 24. | [Content Placeholder](https://github.com/dponcez/project1/tree/master/day24-ContentPlaceholder)    |
