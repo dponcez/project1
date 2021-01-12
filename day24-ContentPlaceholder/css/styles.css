@@ -1,0 +1,129 @@
+:root {
+    --font-stack: 'Abel', sans-serif;
+    --roboto: 'Robot', sans-serif;
+    --dark-color: #000000;
+    --light-color: #eef7ef;
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack);
+    width: var(--width);
+    height: var(--height);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+img {
+    max-width: var(--size);
+}
+
+.card {
+    width: 35rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.4);
+    overflow: hidden;
+}
+
+.card-header {
+    height: 20rem
+}
+
+.card-header img {
+    object-fit: cover;
+    width: var(--size);
+    height: var(--size);
+}
+
+.card-content {
+    padding: 3rem;
+    background: var(--light-color);
+}
+
+.card-content .card-title {
+    height: 2rem;
+    font-size: 2rem;
+    font-family: var(--roboto);
+    margin: 0;
+}
+
+.card-content .card-excerpt {
+    padding: 0;
+    margin: 1rem 0 2rem;
+    font-size: 1.6rem;
+}
+
+.author {
+    display: flex;
+}
+
+.author img {
+    object-fit: cover;
+    width: 5.2rem;
+    height: 5.2rem;
+    overflow: hidden;
+    border-radius: calc( var(--size) * .5 );
+}
+
+.author-info {
+    width: 10rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+}
+
+.author-info strong {
+    font-size: large
+}
+
+.author-info small {
+    font-size: medium;
+    opacity: .75;
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    var(--light-color) 0%,
+    #edeef1 10%,
+    var(--light-color) 20%,
+    var(--light-color) 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
