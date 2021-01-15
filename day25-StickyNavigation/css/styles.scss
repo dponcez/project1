@@ -1,0 +1,87 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    width: $width;
+    height: $height;
+    background: $color-light;
+}
+
+.container {
+    height: $size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    & .header {
+        // position: absolute;
+        // top: 0;
+        background: url('https://s3-eu-west-1.amazonaws.com/fta-ez-prod/ez/images/8/1/7/5/1515718-1-eng-GB/blur-close-up-code-546819%20(2).jpg') no-repeat center / cover;
+        width: $width;
+        height: $height;
+        .navigation {
+            display: flex;
+            align-items: centre;
+            justify-content: space-between;
+            width: $size;
+            height: 10rem;
+            background: $color-dark;
+            & h2 {
+                display: flex;
+                padding-left: 2rem;
+                font-size: 3rem;
+                color: $color-light;
+                text-transform: capitalize;
+                & span {
+                    display: inline-block;
+                }
+            }
+            .menu {
+                width: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 2rem;
+                .item {
+                    list-style: none;
+                    padding: 0;
+                    .link {
+                        padding: 2rem;
+                        color: $color-light;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-size: 2.25rem;
+                    }
+                }
+            }
+        }
+        & h1, p {
+            position: absolute;
+            top: $size * .5;
+            left: $size * .5;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
