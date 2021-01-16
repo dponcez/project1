@@ -48,3 +48,4 @@ Here goes all projects.
 | 22. | [Drawing App](https://github.com/dponcez/project1/tree/master/day22-DrawingApp)    |
 | 23. | [Kinetic Loader](https://github.com/dponcez/project1/tree/master/day23-kineticLoader)    |
 | 24. | [Content Placeholder](https://github.com/dponcez/project1/tree/master/day24-ContentPlaceholder)    |
+| 25. | [Sticky Navigation](https://github.com/dponcez/project1/tree/master/day25-StickyNavigation)    |
