@@ -49,3 +49,4 @@ Here goes all projects.
 | 23. | [Kinetic Loader](https://github.com/dponcez/project1/tree/master/day23-kineticLoader)    |
 | 24. | [Content Placeholder](https://github.com/dponcez/project1/tree/master/day24-ContentPlaceholder)    |
 | 25. | [Sticky Navigation](https://github.com/dponcez/project1/tree/master/day25-StickyNavigation)    |
+| 26. | [Vertical Slider](https://github.com/dponcez/project1/tree/master/day26-VerticalSlider)    |
