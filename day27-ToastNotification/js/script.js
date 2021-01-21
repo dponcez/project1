@@ -1,6 +1,26 @@
-function init(){
+/* 
+    Debounce function allow us waiting for the last click,
+    but if we want to avoid this situation we can ignore the rest of clicking
+    if  the timer variable is not active, if so we can call the func.apply(), and also we can set the timer variable  as an undefined value on setTimeout() 
+*/
+const debounce = ( func, timeout = 300 ) => {
+    let timer;
+
+    return ( ...args ) => {
+        if( !timer ) { func.apply( this, args ) }
+
+        clearTimeout( timer );
+        timer = setTimeout(() => {
+            timer = undefined;
+        }, timeout);
+    }
+}
+
+// call the init function when the window is loaded
+const init = () => {
+    // get HTML references
     const button = document.querySelector('button');
-    const toasts = document.querySelector('#toast');
+    const toast = document.getElementById('toast');
 
     const messages = [
         'message one',
@@ -10,31 +30,32 @@ function init(){
     ];
 
     const types = [ 'info', 'success', 'error' ];
-    let timeout = 3000;
 
-    button.addEventListener('click', () => createNotification());
+    button.addEventListener( 'click', () => createNotification() )
 
-    function createNotification( message = null, type = null ){
+    // triggered the createNotification function to debounce function to prevent or mitigate the multiple clicking on button
+    const createNotification = debounce( () =>  notification() )
+
+    const notification = ( message = null, type = null ) => {
         const notif = document.createElement('div');
         notif.classList.add('toast');
         notif.classList.add( type ? type : getRandomType() );
+        notif.textContent = message ? message : getRandomMessage();
 
-        notif.innerText = message ? message : getRandomMessage();
-
-        toasts.appendChild( notif );
+        toast.appendChild( notif );
 
         setTimeout(() => {
-            notif.remove()
-        }, timeout);
+            notif.remove();
+        }, 3000);
     }
 
-    function getRandomType() {
-        return types[ Math.floor( Math.random() * types.length ) ]
+    const getRandomType = () => {
+        return  types[ Math.floor( Math.random() * types.length )]
     }
 
-    function getRandomMessage(){
-        return messages[ Math.floor( Math.random() * messages.length ) ]
+    const getRandomMessage = () => {
+        return messages[ Math.floor( Math.random() * messages.length )];
     }
 }
 
-init()
+window.onload = init

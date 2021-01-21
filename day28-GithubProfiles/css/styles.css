@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  height: 100vh;
+  background: #3498db;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user--form {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.user--form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 80%;
+  padding: 1.5rem 2rem;
+  border-radius: .5rem;
+  border: 0;
+  background: #ecf0f1;
+  font-size: 1.8rem;
+  -webkit-box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.user--form input::-webkit-input-placeholder {
+  color: #2c3e50;
+}
+
+.user--form input:-ms-input-placeholder {
+  color: #2c3e50;
+}
+
+.user--form input::-ms-input-placeholder {
+  color: #2c3e50;
+}
+
+.user--form input::placeholder {
+  color: #2c3e50;
+}
+
+.user--form input:focus {
+  outline: 0;
+}
+
+.main {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.main .card {
+  min-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 5rem;
+  margin: 0 1.5rem;
+  border-radius: .5rem;
+  background: #ecf0f1;
+  -webkit-box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.main .card .avatar--container {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3), 0 -0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3), 0 -0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.main .card .avatar--container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.27);
+}
+
+.main .card .avatar--container .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.main .card .user--info {
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.main .card .user--info h2,
+.main .card .user--info p {
+  color: #2c3e50;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.main .card .user--info h2,
+.main .card .user--info strong {
+  text-transform: capitalize;
+  font-weight: 665;
+}
+
+.main .card .user--info h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .card .user--info p {
+  font-size: 1.9rem;
+}
+
+.main .card .user--info .info {
+  max-width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.main .card .user--info .info li {
+  padding: 0;
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+
+.main .card .user--info .info li strong {
+  font-size: 1.8rem;
+  padding-left: .5rem;
+}
+
+.main .card .user--info #repos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+}
+
+.main .card .user--info #repos .repo {
+  display: block;
+  text-decoration: none;
+  color: #ecf0f1;
+  background: #3498db;
+  font-size: 1.15rem;
+  padding: 1rem .2rem;
+  margin: 1rem auto;
+  border-radius: .4rem;
+}
+
+@media (max-width: 50rem) {
+  .card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user--form {
+    max-width: 40rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
