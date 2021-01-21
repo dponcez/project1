@@ -51,3 +51,4 @@ Here goes all projects.
 | 25. | [Sticky Navigation](https://github.com/dponcez/project1/tree/master/day25-StickyNavigation)    |
 | 26. | [Vertical Slider](https://github.com/dponcez/project1/tree/master/day26-VerticalSlider)    |
 | 27. | [Toast Notification](https://github.com/dponcez/project1/tree/master/day27-ToastNotification)    |
+| 28. | [Github Profiles](https://github.com/dponcez/project1/tree/master/day28-GithunProfiles)    |
