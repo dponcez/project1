@@ -1,8 +1,8 @@
-<img src="https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="coding" width="100%" height="300px"/>
+<img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
 
 ---
 # Personal Project Using Vanilla JavaScript.
-The examples below are my personal projects using [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>], [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>] and [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>]. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 5⃣0⃣ Projects 5⃣0⃣ Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
+The examples below are my personal projects using [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>], [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>] and [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>]. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
 
 |  # |    Personal Projects   📁  |
 |----|-----------------|
@@ -21,7 +21,7 @@ The examples below are my personal projects using [<img align="center" alt="HTML
 
 *The purpose of the music, which is in the audio folder, is only for the creation of the AUDIO PLAYER [🎧] and the rights are reserved to each artist and / or label.*
 
-## Inspired by 50Projects50Days from Traversy Media
+## Inspired by [50Projects50Days](https://50projects50days.com/) from Traversy Media
 
 Here goes all projects.
 
