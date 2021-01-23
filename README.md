@@ -1,5 +1,7 @@
 <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
 
+* Image from [pexels](https://www.pexels.com/)
+
 ---
 # Personal Project Using Vanilla JavaScript.
 The examples below are my personal projects using [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>], [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>] and [<img align="center" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>]. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
