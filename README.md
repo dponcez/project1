@@ -1,4 +1,4 @@
-<img src="https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="coding" width="100%" height="200px"/>
+<img src="https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="coding" width="100%" height="300px"/>
 
 ---
 # Personal Project Using Vanilla JavaScript.
