@@ -61,3 +61,4 @@ Here goes all projects.
 | 26. | [Vertical Slider](https://github.com/dponcez/project1/tree/master/day26-VerticalSlider)    |
 | 27. | [Toast Notification](https://github.com/dponcez/project1/tree/master/day27-ToastNotification)    |
 | 28. | [Github Profiles](https://github.com/dponcez/project1/tree/master/day28-GithunProfiles)    |
+| 29. | [Double Click Heart](https://github.com/dponcez/project1/tree/master/day29-DoubleClickHeart)    |
