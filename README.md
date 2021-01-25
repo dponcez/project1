@@ -6,7 +6,23 @@
 
 ---
 ## Personal Project Using Vanilla JavaScript.
-The examples below are my personal projects using <img align="center" alt="HTML5" width="15px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>, <img align="center" alt="HTML5" width="15px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/> and <img align="center" alt="HTML5" width="15px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
+The examples below are my personal projects using <span style="font-size: 16px; display: inline-block; font-weight: bold; color: #F06427;">HTML5</span>, <span style="font-size: 16px; display: inline-block; font-weight: bold; color: #35AADC;">CSS3</span> and <span style="font-size: 16px; display: inline-block; font-weight: bold; color: #F0DB4F;">JS</span>. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
+
+### 🚀 Coding
+
+<div style="display: flex;">
+    <div style="border-radius: 50%; padding: 5px 0;  width: 35px; height: 25px; text-align: center; margin: auto 2px; display: grid; place-items: center; background: rgba(155,155,155,.1)">
+        <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>
+    </div>
+    <div style="border-radius: 50%; padding: 5px 0;  width: 35px; height: 25px; text-align: center; margin: auto 2px; display: grid; place-items: center; background: rgba(155,115,115,.1)">
+        <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
+    </div>
+    <div style="border-radius: 50%; padding: 5px 0;  width: 35px; height: 25px; text-align: center; margin: auto 2px; display: grid; place-items: center; background: rgba(155,115,115,.1)">
+        <img style="border-radius: 25%;" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
+    </div>
+</div>
+
+---
 
 Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/)
 
