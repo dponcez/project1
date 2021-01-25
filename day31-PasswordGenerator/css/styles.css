@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  background: linear-gradient(45deg, #3498db 40%, #2c3e50 80%);
+  overflow: hidden;
+}
+
+.container {
+  width: 30rem;
+  height: 40rem;
+  background: #ecf0f1;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4), 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4), 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.container button {
+  border-radius: .25rem;
+  border: 0;
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+.container button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.container button:focus {
+  outline: 0;
+}
+
+.container button:focus-visible {
+  outline: 0.1rem solid #2c3e50;
+}
+
+.container .heading {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #2c3e50;
+  text-align: center;
+  padding: 1.5rem 0;
+  letter-spacing: .1rem;
+}
+
+.container .result--container {
+  width: 100%;
+  height: 2.5rem;
+  max-width: 25rem;
+  background: #2c3e50;
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 1rem;
+  border-radius: .4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem auto;
+}
+
+.container .result--container .result {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #ecf0f1;
+  font-weight: 570;
+}
+
+.container .result--container .button {
+  font-size: 2rem;
+  padding: .75rem 1rem;
+  background: linear-gradient(45deg, #3498db 1.5%, #2c3e50 25%, #3498db 80%);
+  -webkit-box-shadow: 0 0.2rem 0.3rem rgba(255, 255, 255, 0.2) inset, 0 0.2vmin 0.5vmin rgba(0, 0, 0, 0.42);
+          box-shadow: 0 0.2rem 0.3rem rgba(255, 255, 255, 0.2) inset, 0 0.2vmin 0.5vmin rgba(0, 0, 0, 0.42);
+}
+
+.container .settings--container {
+  width: 100%;
+  height: 20rem;
+  max-width: 25rem;
+  padding: 2rem 1rem;
+  background: rgba(44, 62, 80, 0.1);
+  margin: auto;
+  border-radius: 0 0 .5rem .5rem;
+  -webkit-box-shadow: 0 0.2vmin 0.5vmin rgba(44, 62, 80, 0.4);
+          box-shadow: 0 0.2vmin 0.5vmin rgba(44, 62, 80, 0.4);
+  display: block;
+}
+
+.container .settings--container .setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.container .settings--container .setting label {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  text-transform: capitalize;
+  font-weight: 760;
+}
+
+.container .settings--container .setting [type="number"] {
+  border: 0;
+  -webkit-box-shadow: 0 0.2rem 0.2rem rgba(44, 62, 80, 0.5) inset;
+          box-shadow: 0 0.2rem 0.2rem rgba(44, 62, 80, 0.5) inset;
+}
+
+.container .password {
+  margin: auto;
+  margin-top: 1rem;
+  display: block;
+  background: #3498db;
+  padding: .75rem 1rem;
+  -webkit-box-shadow: 0 0.2vmin 0.5vmin rgba(44, 62, 80, 0.5);
+          box-shadow: 0 0.2vmin 0.5vmin rgba(44, 62, 80, 0.5);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.container .password:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=styles.css.map */
