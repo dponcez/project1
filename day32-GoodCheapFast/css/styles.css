@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container,
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  height: inherit;
+  padding: 2rem;
+}
+
+.container h2 {
+  display: block;
+  font-size: clamp(3vw, 5vw, 3rem);
+  font-weight: 665;
+  color: #2c3e50;
+}
+
+.container h2::first-letter {
+  text-transform: uppercase;
+}
+
+.container .content {
+  position: relative;
+  padding: 2rem 0;
+  width: 30rem;
+}
+
+.container .content .toggle--container {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.container .content .toggle--container input {
+  visibility: hidden;
+}
+
+.container .content .toggle--container input:checked + label {
+  background: #2c3e50 !important;
+}
+
+.container .content .toggle--container input:checked + label .ball {
+  -webkit-animation: slideOn .5s linear forwards;
+          animation: slideOn .5s linear forwards;
+}
+
+@-webkit-keyframes slideOn {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) scale(1.2);
+            transform: translateX(2rem) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateX(5.12rem) scale(1);
+            transform: translateX(5.12rem) scale(1);
+  }
+}
+
+@keyframes slideOn {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) scale(1.2);
+            transform: translateX(2rem) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateX(5.12rem) scale(1);
+            transform: translateX(5.12rem) scale(1);
+  }
+}
+
+.container .content .toggle--container span {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2c3e50;
+  text-transform: capitalize;
+  font-weight: 760;
+}
+
+.container .content .toggle--container label {
+  width: 10rem;
+  height: 5rem;
+  position: relative;
+  margin: 0 1.5rem 0;
+  display: inline-block;
+  border-radius: 5rem;
+  background: #ecf0f1;
+  cursor: pointer;
+}
+
+.container .content .toggle--container label .ball {
+  width: 4.25rem;
+  height: 4.25rem;
+  position: absolute;
+  top: .3rem;
+  left: .3rem;
+  border-radius: 50%;
+  background: white;
+  border-radius: 50%;
+  background: white;
+  -webkit-animation: slideOff .5s linear forwards;
+          animation: slideOff .5s linear forwards;
+}
+
+@-webkit-keyframes slideOff {
+  0% {
+    -webkit-transform: translateX(4rem) scale(1);
+            transform: translateX(4rem) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) scale(1.2);
+            transform: translateX(2rem) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    -webkit-transform: translateX(4rem) scale(1);
+            transform: translateX(4rem) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) scale(1.2);
+            transform: translateX(2rem) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
