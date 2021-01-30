@@ -72,3 +72,4 @@ Here goes all projects.
 | 30. | [Auto Text Effect](https://github.com/dponcez/project1/tree/master/day30-AutoTextEffect)    |
 | 31. | [Password Generator](https://github.com/dponcez/project1/tree/master/day31-PasswordGenerator)    |
 | 32. | [Good, Cheap, Fast](https://github.com/dponcez/project1/tree/master/day32-GoodCheapFast)    |
+| 33. | [Note App](https://github.com/dponcez/project1/tree/master/day33-NoteApp)    |
