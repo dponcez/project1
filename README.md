@@ -73,3 +73,4 @@ Here goes all projects.
 | 31. | [Password Generator](https://github.com/dponcez/project1/tree/master/day31-PasswordGenerator)    |
 | 32. | [Good, Cheap, Fast](https://github.com/dponcez/project1/tree/master/day32-GoodCheapFast)    |
 | 33. | [Note App](https://github.com/dponcez/project1/tree/master/day33-NoteApp)    |
+| 34. | [Animated Countdown](https://github.com/dponcez/project1/tree/master/day34-AnimatedCountdown)    |
