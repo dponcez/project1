@@ -1,0 +1,169 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+}
+
+.container {
+    height: $height;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    & h4 {
+        font-size: 3.125rem;
+        margin: 1rem;
+        text-transform: uppercase;
+    }
+
+    .counter,
+    .final {
+        position: fixed;
+        top: $size * .5;
+        left: $size * .5;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    .counter {
+        .nums {
+            width: 25rem;
+            height: 5rem;
+            position: relative;
+            font-size: 5rem;
+            color: $color-blue;
+            font-weight: 700 * $font-weight;
+            overflow: hidden;
+
+            & span {
+                position: absolute;
+                top: $size * .5;
+                left: $size * .5;
+                transform: translate(-50%,-50%) rotate(120deg);
+                transform-origin: bottom center;
+
+                &.in {
+                    transform: translate(-50%,-50%) rotate(0);
+                    animation: goIn .5s ease-in-out;
+
+                    @keyframes goIn {
+                        0% {
+                            transform: translate(-50%,-50%) rotate(120deg);
+                        }
+    
+                        30% {
+                            transform: translate(-50%, -50%) rotate(-20deg);
+                        }
+    
+                        60% {
+                            transform: translate(-50%, -50%) rotate(10);
+                        }
+    
+                        100% {
+                            transform: translate(-50%, -50%) rotate(0);
+                        }
+                    }
+                }
+
+                &.out {
+                    animation: goOut .5s ease-in-out;
+
+                    @keyframes goOut {
+                        0% {
+                            transform: translate(-50%,-50%) rotate(0);
+                        }
+
+                        60% {
+                            transform: translate(-50%, -50%) rotate(20deg);
+                        }
+
+                        100% {
+                            transform: translate(-50%, -50%) rotate(-120deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.hide {
+            transform: translate(-50%, -50%) scale(0);
+            animation: hide .3s ease-out;
+
+            @keyframes hide {
+                0% {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+
+                100% {
+                    transform: translate(-50%, -50%) scale(0);
+                }
+            }
+        }
+    }
+
+    .final {
+        .replay {
+            position: relative;
+            top: 5rem;
+            padding: 1rem 1.5rem;
+            background: $color-dark;
+            color: $color-light;
+            border: 0;
+            border-radius: .3rem;
+            cursor: pointer;
+            box-shadow: 0 .2rem .3rem .2rem rgba( $color-dark, .4);
+            font-size: 1.6rem;
+            text-transform: capitalize;
+
+            &:focus { outline: 0; }
+            &:active { 
+                transform: scale(.96); 
+                box-shadow: 0 .1rem .2rem .1rem rgba($color-dark, .2);
+            }
+        }
+        &.show {
+            transform: translate(-50%,-50%) scale(1);
+            animation: show .3s ease-out;
+
+            @keyframes show {
+                0% {
+                    transform: translate(-50%,-50%) scale(0);
+                }
+
+                30% {
+                    transform: translate(-50%, -50%) scale(1.4);
+                }
+
+                100% {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+}
