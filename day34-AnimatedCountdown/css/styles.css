@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Abel", sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -38,6 +39,7 @@ body {
   font-size: 3.125rem;
   margin: 1rem;
   text-transform: uppercase;
+  color: #2c3e50;
 }
 
 .container .counter,
@@ -179,9 +181,14 @@ body {
   }
 }
 
+.container .final {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 .container .final .replay {
   position: relative;
-  top: 5rem;
+  top: 2rem;
   padding: 1rem 1.5rem;
   background: #2c3e50;
   color: #ecf0f1;
