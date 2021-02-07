@@ -11,7 +11,7 @@ The examples below are my personal projects using HTML5, CSS3 and JS. I also loo
 ### 🚀 Coding
 <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>
 <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
-<img  alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
+<img  alt="HTML5" width="21px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
 
 ---
 
@@ -74,3 +74,4 @@ Here goes all projects.
 | 32. | [Good, Cheap, Fast](https://github.com/dponcez/project1/tree/master/day32-GoodCheapFast)    |
 | 33. | [Note App](https://github.com/dponcez/project1/tree/master/day33-NoteApp)    |
 | 34. | [Animated Countdown](https://github.com/dponcez/project1/tree/master/day34-AnimatedCountdown)    |
+| 35. | [Image Carousel](https://github.com/dponcez/project1/tree/master/day35-ImageCarousel)    |
