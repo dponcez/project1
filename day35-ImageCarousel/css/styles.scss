@@ -1,0 +1,110 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+    background: $color-light;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    height: $height * .8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .gallery--container {
+        width: 40rem;
+        height: 50rem;
+        max-width: $size;
+        box-shadow: .3rem .2rem .3rem .1rem rgba($color-dark, .5);
+        position: relative;
+
+        & img {
+            width: $size;
+            height: $size;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .buttons--container {
+        width: $size;
+        height: 3rem;
+        margin-top: .5rem;
+
+        & button {
+            width: 20rem;
+            height: $size;
+            border: 0;
+            border-radius: .5rem;
+            background: #2c3e50;
+            color: $color-light;
+            font-size: 1.65rem;
+            box-shadow: 0 .2rem .4rem .2rem rgba($color-dark, .5);
+            cursor: pointer;
+
+            &:active {
+                transform: scale(.97)
+            }
+
+            &:focus {
+                outline: 0;
+            }
+            
+            &.prev:hover .left {
+                transform: translateX(-2rem);
+                transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+
+            &.next:hover .right {
+                transform: translateX(2rem);
+                transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                text-transform: capitalize;
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: inline-flex;
+            }
+
+            &.prev:hover::before {
+                content: attr(data-prev);
+            }
+
+            &.next:hover::before {
+                content: attr(data-next);
+                transform: translateX(-2.5rem);
+            }
+        }
+    }
+}
