@@ -33,83 +33,87 @@ body {
 }
 
 .container {
-    width: 40rem;
-    height: 50rem;
+    width: auto;
+    height: $height;
     max-width: $size;
     overflow: hidden;
-    box-shadow: .3rem .2rem .3rem .1rem rgba($color-dark, .5);
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
+    
     .gallery--container {
+        width: 40rem;
+        height: 50rem;
         display: flex;
         position: relative;
         transform: translateX(0);
         transition: transform .5s ease-in-out;
+        box-shadow: .3rem .2rem .3rem .1rem rgba($color-dark, .5);
 
         & img {
-            width: 40rem;
+            width: $size;
             height: $size;
-            min-width: auto;
+            min-width: 40rem;
             max-height: 50rem;
             object-fit: cover;
         }
     }
-}
-
-.buttons--container {
-    width: $size;
-    height: 3rem;
-    position: absolute;
-    left:  0;
-    bottom: 0;
-
-    & button {
-        width: 20rem;
-        height: $size;
-        border: 0;
-        border-radius: .5rem;
-        background: #2c3e50;
-        color: $color-light;
-        font-size: 1.65rem;
-        box-shadow: 0 .2rem .4rem .2rem rgba($color-dark, .5);
-        cursor: pointer;
-
-        &:active {
-            transform: scale(.97)
-        }
-
-        &:focus {
-            outline: 0;
-        }
-        
-        &.prev:hover .left {
-            transform: translateX(-2rem);
-            transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        &.next:hover .right {
-            transform: translateX(2rem);
-            transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        &::before,
-        &::after {
-            position: absolute;
-            text-transform: capitalize;
-            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: inline-flex;
-        }
-
-        &.prev:hover::before {
-            content: attr(data-prev);
-        }
-
-        &.next:hover::before {
-            content: attr(data-next);
-            transform: translateX(-2.5rem);
+    
+    .buttons--container {
+        width: $size;
+        height: 3rem;
+        position: relative;
+        // left:  0;
+        // bottom: 0;
+        display: flex;
+    
+        & button {
+            width: 20rem;
+            height: $size;
+            margin: .5rem .1rem;
+            border: 0;
+            border-radius: .5rem;
+            background: #2c3e50;
+            color: $color-light;
+            font-size: 1.65rem;
+            box-shadow: 0 .2rem .4rem .2rem rgba($color-dark, .5);
+            cursor: pointer;
+    
+            &:active {
+                transform: scale(.97)
+            }
+    
+            &:focus {
+                outline: 0;
+            }
+            
+            &.prev:hover .left {
+                transform: translateX(-2rem);
+                transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+    
+            &.next:hover .right {
+                transform: translateX(2rem);
+                transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+    
+            &::before,
+            &::after {
+                position: absolute;
+                text-transform: capitalize;
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: inline-flex;
+            }
+    
+            &.prev:hover::before {
+                content: attr(data-prev);
+            }
+    
+            &.next:hover::before {
+                content: attr(data-next);
+                transform: translateX(-2.5rem);
+            }
         }
     }
 }

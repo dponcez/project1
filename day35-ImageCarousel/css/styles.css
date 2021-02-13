@@ -23,12 +23,10 @@ body {
 }
 
 .container {
-  width: 40rem;
-  height: 50rem;
+  width: auto;
+  height: 100vh;
   max-width: 100%;
   overflow: hidden;
-  -webkit-box-shadow: 0.3rem 0.2rem 0.3rem 0.1rem rgba(44, 62, 80, 0.5);
-          box-shadow: 0.3rem 0.2rem 0.3rem 0.1rem rgba(44, 62, 80, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +43,8 @@ body {
 }
 
 .container .gallery--container {
+  width: 40rem;
+  height: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,28 +55,32 @@ body {
   transition: -webkit-transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-box-shadow: 0.3rem 0.2rem 0.3rem 0.1rem rgba(44, 62, 80, 0.5);
+          box-shadow: 0.3rem 0.2rem 0.3rem 0.1rem rgba(44, 62, 80, 0.5);
 }
 
 .container .gallery--container img {
-  width: 40rem;
+  width: 100%;
   height: 100%;
-  min-width: auto;
+  min-width: 40rem;
   max-height: 50rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.buttons--container {
+.container .buttons--container {
   width: 100%;
   height: 3rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.buttons--container button {
+.container .buttons--container button {
   width: 20rem;
   height: 100%;
+  margin: .5rem .1rem;
   border: 0;
   border-radius: .5rem;
   background: #2c3e50;
@@ -87,16 +91,16 @@ body {
   cursor: pointer;
 }
 
-.buttons--container button:active {
+.container .buttons--container button:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
 }
 
-.buttons--container button:focus {
+.container .buttons--container button:focus {
   outline: 0;
 }
 
-.buttons--container button.prev:hover .left {
+.container .buttons--container button.prev:hover .left {
   -webkit-transform: translateX(-2rem);
           transform: translateX(-2rem);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -105,7 +109,7 @@ body {
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.buttons--container button.next:hover .right {
+.container .buttons--container button.next:hover .right {
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -114,7 +118,7 @@ body {
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.buttons--container button::before, .buttons--container button::after {
+.container .buttons--container button::before, .container .buttons--container button::after {
   position: absolute;
   text-transform: capitalize;
   -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -124,11 +128,11 @@ body {
   display: inline-flex;
 }
 
-.buttons--container button.prev:hover::before {
+.container .buttons--container button.prev:hover::before {
   content: attr(data-prev);
 }
 
-.buttons--container button.next:hover::before {
+.container .buttons--container button.next:hover::before {
   content: attr(data-next);
   -webkit-transform: translateX(-2.5rem);
           transform: translateX(-2.5rem);
