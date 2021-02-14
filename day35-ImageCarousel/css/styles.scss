@@ -38,7 +38,6 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: .3rem .2rem .3rem 0 rgba($color-dark, .5), -.3rem -.2rem .3rem 0 rgba($color-dark, .5);
-    transition: bottom .5s cubic-bezier(0, 1.266, 0, 0.352, 1);
     
     .gallery--container {
         display: flex;
@@ -53,10 +52,6 @@ body {
             object-fit: cover;
         }
     }
-
-    &:hover .button--container {
-        bottom: 0;
-    }
     
     .buttons--container {
         width: $size;
@@ -64,6 +59,7 @@ body {
         position: absolute;
         display: flex;
         margin: .2rem 0;
+        bottom: .5rem;
     
         & button {
             width: 20rem;
@@ -71,10 +67,12 @@ body {
             margin: .5rem .1rem;
             border: 0;
             border-radius: .5rem;
-            background: #2c3e50;
-            color: $color-light;
+            background: rgba($color-light, .5);
+            color: $color-dark;
             font-size: 1.65rem;
+            font-weight: 700 * $font-weight;
             box-shadow: 0 .2rem .4rem .2rem rgba($color-dark, .5);
+            backdrop-filter: blur(.25rem);
             cursor: pointer;
     
             &:active {

@@ -42,7 +42,7 @@ const init = () => {
             index = gallery.length - 1
         }
     
-        images.style.transform = `translateX( ${ -index * 500 }px)`
+        images.style.transform = `translateX( ${ -index * 417.5 }px)`
     }
 
     // resetInterval function 
