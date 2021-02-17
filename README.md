@@ -76,3 +76,4 @@ Here goes all projects.
 | 34. | [Animated Countdown](https://github.com/dponcez/project1/tree/master/day34-AnimatedCountdown)    |
 | 35. | [Image Carousel](https://github.com/dponcez/project1/tree/master/day35-ImageCarousel)    |
 | 36. | [Hover Board](https://github.com/dponcez/project1/tree/master/day36-HoverBoard)    |
+| 37. | [PokeDex](https://github.com/dponcez/project1/tree/master/day37-PokeDex)    |
