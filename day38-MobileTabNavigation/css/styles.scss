@@ -1,0 +1,97 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+}
+
+.container {
+    height: inherit;
+    display: grid;
+    place-items: center;
+
+    .mobile {
+        width: 35rem;
+        height: 60rem;
+        overflow: hidden;
+        position: relative;
+        border-radius: $radius * 2.25;
+        border: .1rem solid rgba($color-dark, .2);
+
+        & .content {
+            width: $size;
+            height: $size * .9;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        & nav {
+            width: $size;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-top: $padding * -.25;
+            & ul {
+                display: flex;
+                height: 6rem;
+                list-style: none;
+                padding: 1rem;
+                margin: 0;
+                background: $color-light;
+                & li {
+                    flex: 1;
+                    padding: $padding * .65;
+                    text-align: center;
+                    cursor: pointer;
+                    color: rgba($color-dark, .8);
+                    &:hover,
+                    &.active {
+                        color: $color-dark;
+                    }
+
+                    & i {
+                        font-size: initial
+                    }
+
+                    & p {
+                        font-size: 1.4rem;
+                        margin: .2rem 0
+                    }
+                }
+            }
+        }
+    }
+}
