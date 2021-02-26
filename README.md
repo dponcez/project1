@@ -15,7 +15,7 @@ The examples below are my personal projects using HTML5, CSS3 and JS. I also loo
 
 ---
 
-Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/)
+Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/github/)
 
 |  # |    Personal Projects   📁  |
 |----|-----------------|
@@ -78,3 +78,4 @@ Here goes all projects.
 | 36. | [Hover Board](https://github.com/dponcez/project1/tree/master/day36-HoverBoard)    |
 | 37. | [PokeDex](https://github.com/dponcez/project1/tree/master/day37-PokeDex)    |
 | 38. | [Mobile Tab Navigation](https://github.com/dponcez/project1/tree/master/day38-MobileTabNavigation)    |
+| 39. | [Password Strength Background](https://github.com/dponcez/project1/tree/master/day39-PasswordStrengthBackground)    |
