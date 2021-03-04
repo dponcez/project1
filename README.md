@@ -79,3 +79,5 @@ Here goes all projects.
 | 37. | [PokeDex](https://github.com/dponcez/project1/tree/master/day37-PokeDex)    |
 | 38. | [Mobile Tab Navigation](https://github.com/dponcez/project1/tree/master/day38-MobileTabNavigation)    |
 | 39. | [Password Strength Background](https://github.com/dponcez/project1/tree/master/day39-PasswordStrengthBackground)    |
+| 40. | [3D Boxes Background](https://github.com/dponcez/project1/tree/master/day40-3DBoxesBackground)    |
+| 41. | [Verify Account](https://github.com/dponcez/project1/tree/master/day41-VerifyAccount)    |
