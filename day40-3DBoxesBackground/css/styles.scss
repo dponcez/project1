@@ -1,0 +1,120 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-yellow: #f9ca24;
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$alpha: 0.5;
+
+$radius: .5rem;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .magic--btn {
+        position: fixed;
+        top: 1.5rem;
+        padding: 1.35rem 2.5rem;
+        background: $color-yellow;
+        border: 0;
+        border-radius: $radius;
+        font-size: 1.7rem;
+        font-family: $font-stack-2;
+        font-weight: 700 * $font-weight;
+        color: $color-light;
+        letter-spacing: .1rem;
+        text-transform: capitalize;
+        box-shadow: 0 .2vmin .4vmin .2vmin rgba($color-dark, $alpha);
+        cursor: pointer;
+        z-index: 10;
+        & .fas {
+            color: $color-dark;
+            padding-left: $radius;
+        }
+        &:active {
+            transform: scale(0.98) translateY(.2rem);
+        }
+        &:focus {
+            outline: none
+        }
+    }
+
+    .boxes {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        transition: .5s ease-in;
+        &.big {
+            width: 600px;
+            height: 600px;
+        }
+        &.big .box {
+            transform:  rotateZ(360deg);
+        }
+
+        .box {
+            width: 125px;
+            height: 125px;
+            background: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif') no-repeat;
+            background-size: 500px 500px;
+            position: relative;
+            transition: .5s ease-in;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+            }
+            &::before {
+                width: $size;
+                height: 15px;
+                left: 8px;
+                bottom: -15px;
+                background: $color-yellow;
+                transform: skewX(45deg);
+            }
+            &::after {
+                width: 15px;
+                height: $size;
+                top: 8px;
+                right: -15px;
+                background: #f6e58d;
+                transform: skewY(45deg);
+            }
+        }
+    }
+}
