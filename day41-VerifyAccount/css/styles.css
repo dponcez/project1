@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:300,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2c3e50;
+}
+
+.container {
+  width: 100%;
+  max-width: 70rem;
+  padding: 3rem;
+  border: 0.2rem solid #2c3e50;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-transition: max-width .5s ease;
+  transition: max-width .5s ease;
+}
+
+.container h2 {
+  padding: 1.29833rem;
+  margin: 0;
+  font-size: 3.475rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 665;
+  letter-spacing: .1rem;
+  text-transform: capitalize;
+  border-bottom: 0.1rem solid rgba(44, 62, 80, 0.1);
+}
+
+.container p {
+  font-size: 1.725rem;
+  padding: 2.34rem;
+  margin: 0;
+}
+
+.container small {
+  display: inline-block;
+  max-width: 40rem;
+  font-size: 1.375rem;
+  padding: 1.2rem 2.14rem;
+  margin-top: 1.14rem;
+  background: rgba(44, 62, 80, 0.2);
+  border-radius: 0.5rem;
+}
+
+.container .code--container {
+  position: relative;
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .code--container .code {
+  width: 10rem;
+  height: 12rem;
+  margin: 1%;
+  border: 0.1rem solid rgba(44, 62, 80, 0.3);
+  border-radius: 0.5rem;
+  font-size: 8rem;
+  font-family: "Muli", sans-serif;
+  font-weight: 380;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.container .code--container .code::-webkit-outer-spin-button, .container .code--container .code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container .code--container .code:valid {
+  border: .1rem solid #3498db;
+  -webkit-box-shadow: 0 0.1rem 0.1rem -0.5rem rgba(44, 62, 80, 0.25);
+          box-shadow: 0 0.1rem 0.1rem -0.5rem rgba(44, 62, 80, 0.25);
+}
+
+@media (max-width: 50rem) {
+  .container {
+    max-width: 50rem;
+    -webkit-transition: max-width .5s ease;
+    transition: max-width .5s ease;
+  }
+  .container .code--container {
+    max-width: 100%;
+  }
+  .container .code--container .code {
+    width: 7rem;
+    height: 8rem;
+    font-size: 6rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
