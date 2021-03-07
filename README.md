@@ -81,3 +81,4 @@ Here goes all projects.
 | 39. | [Password Strength Background](https://github.com/dponcez/project1/tree/master/day39-PasswordStrengthBackground)    |
 | 40. | [3D Boxes Background](https://github.com/dponcez/project1/tree/master/day40-3DBoxesBackground)    |
 | 41. | [Verify Account](https://github.com/dponcez/project1/tree/master/day41-VerifyAccount)    |
+| 42. | [Live User Filter](https://github.com/dponcez/project1/tree/master/day42-LiveUserFilter)    |
