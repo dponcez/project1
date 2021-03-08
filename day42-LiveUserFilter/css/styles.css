@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: 45rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.3vmin 0.3vmin 0.1vmin rgba(44, 62, 80, 0.2);
+          box-shadow: 0.3vmin 0.3vmin 0.1vmin rgba(44, 62, 80, 0.2);
+  overflow: hidden;
+}
+
+.container .header {
+  padding: 3rem 2.01rem;
+  background: #3498db;
+  color: #ecf0f1;
+}
+
+.container .header .title {
+  margin: 0;
+  font-size: 2.88rem;
+  font-weight: 475;
+  text-transform: capitalize;
+}
+
+.container .header .info {
+  display: inline-block;
+  margin: 0.5rem 0 2.01rem;
+  font-size: medium;
+  opacity: 0.8;
+}
+
+.container .header .info::first-letter {
+  text-transform: uppercase;
+}
+
+.container .header .search {
+  width: 100%;
+  padding: 1.26316rem 1.6rem;
+  border: 0;
+  border-radius: 2.5rem;
+  font-size: 1.44rem;
+  background: rgba(44, 62, 80, 0.2);
+  color: #ecf0f1;
+}
+
+.container .header .search:focus {
+  outline: 0;
+}
+
+.container .header .search::-webkit-input-placeholder {
+  color: #ecf0f1;
+  opacity: 0.95;
+}
+
+.container .header .search:-ms-input-placeholder {
+  color: #ecf0f1;
+  opacity: 0.95;
+}
+
+.container .header .search::-ms-input-placeholder {
+  color: #ecf0f1;
+  opacity: 0.95;
+}
+
+.container .header .search::placeholder {
+  color: #ecf0f1;
+  opacity: 0.95;
+}
+
+.container .user--list {
+  margin: 0;
+  padding: 0;
+  max-height: 40rem;
+  overflow-y: auto;
+  background: #ecf0f1;
+  list-style: none;
+}
+
+.container .user--list h3 {
+  font-size: 2rem;
+  font-weight: 380;
+  color: #2c3e50;
+}
+
+.container .user--list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.01rem;
+}
+
+.container .user--list li img {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.container .user--list li .user--info {
+  margin-left: 2rem;
+}
+
+.container .user--list li .user--info h4 {
+  margin: 0 0  1rem;
+  padding: 0;
+  font-size: 1.75rem;
+}
+
+.container .user--list li .user--info p {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=styles.css.map */

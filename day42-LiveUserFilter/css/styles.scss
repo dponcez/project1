@@ -1,0 +1,118 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$radius: .5rem;
+$padding: 1.2rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 45rem;
+    border-radius: $radius;
+    box-shadow: .3vmin .3vmin .1vmin rgba($color-dark, .2);
+    overflow: hidden;
+
+    .header {
+        padding: $padding * 2.5 $padding * 1.675;
+        background: #3498db;
+        color: $color-light;
+
+        .title {
+            margin: 0;
+            font-size: $padding * 2.4;
+            font-weight: 500 * $font-weight;
+            text-transform: capitalize;
+        }
+
+        .info {
+            display: inline-block;
+            margin: $radius 0 $padding * 1.675;
+            font-size: medium;
+            opacity: 0.8;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+
+        .search {
+            width: $size;
+            padding: $padding / $font-weight $radius * 3.2;
+            border: 0;
+            border-radius: $radius * 5;
+            font-size: $padding * 1.2;
+            background: rgba($color-dark, .2);
+            color: $color-light;
+            &:focus {
+                outline: 0;
+            }
+            &::placeholder {
+                color: $color-light;
+                opacity: $font-weight;
+            }
+        }
+    }
+
+    .user--list {
+        margin: 0;
+        padding: 0;
+        max-height: 40rem;
+        overflow-y: auto;
+        background: $color-light;
+        list-style: none;
+        & h3 {
+            font-size: 2rem;
+            font-weight: 400 * $font-weight;
+            color: $color-dark
+        }
+        & li {
+            display: flex;
+            padding: $padding * 1.675;
+
+            & img {
+                width: 5rem;
+                height: 5rem;
+                object-fit: cover;
+                border-radius: $size * .5;
+            }
+            & .user--info {
+                margin-left: 2rem;
+                & h4 {
+                    margin: 0 0  1rem;
+                    padding: 0;
+                    font-size: 1.75rem;
+                }
+                & p {
+                    margin: $radius 0;
+                    font-size: $padding * 1.25;
+                }
+            }
+        }
+    }
+}
