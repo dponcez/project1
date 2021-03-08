@@ -1,6 +1,6 @@
 function init() {
     const result = document.getElementById('result');
-    const filter = document.querySelector('input[type=text]');
+    const filter = document.getElementById('filter');
     const userList = [];
 
     getData();
@@ -33,11 +33,7 @@ function init() {
 
     function filterData( searchTerms ) {
         userList.forEach( item => {
-            if( item.innerText.toLowerCase().includes( searchTerms.toLowerCase()) ) {
-                item.classList.remove('hide');
-            }else {
-                item.classList.add('hide');
-            }
+            const isIncluded = item.innerHTML.toLowerCase().includes( searchTerms.toLowerCase()) ? item.classList.remove('hide') : item.classList.add('hide');
         })
     }
 }
