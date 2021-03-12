@@ -94,6 +94,9 @@ body {
         & li {
             display: flex;
             padding: $padding * 1.675;
+            &.hide {
+                display: none
+            }
 
             & img {
                 width: 5rem;

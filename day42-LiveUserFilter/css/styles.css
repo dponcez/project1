@@ -114,6 +114,10 @@ body {
   padding: 2.01rem;
 }
 
+.container .user--list li.hide {
+  display: none;
+}
+
 .container .user--list li img {
   width: 5rem;
   height: 5rem;
