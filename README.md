@@ -84,3 +84,5 @@ Here goes all projects.
 | 42. | [Live User Filter](https://github.com/dponcez/project1/tree/master/day42-LiveUserFilter)    |
 
 Note: In Live User Filter project, there's a bug or something goes wrong, when you want to filter by user name or their location this no have effect, there's no changes. 
+
+Live User Filter project was updated! Added 'hide' class on styles.css 
