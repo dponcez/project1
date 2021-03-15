@@ -82,6 +82,7 @@ Here goes all projects.
 | 40. | [3D Boxes Background](https://github.com/dponcez/project1/tree/master/day40-3DBoxesBackground)    |
 | 41. | [Verify Account](https://github.com/dponcez/project1/tree/master/day41-VerifyAccount)    |
 | 42. | [Live User Filter](https://github.com/dponcez/project1/tree/master/day42-LiveUserFilter)    |
+| 43. | [CustomRangeSlider](https://github.com/dponcez/project1/tree/master/day43-CustomRangeSlider)    |
 
 Note: In Live User Filter project, there's a bug or something goes wrong, when you want to filter by user name or their location this no have effect, there's no changes. 
 

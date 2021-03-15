@@ -1,0 +1,140 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.2rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    display: grid;
+    place-items: center;
+    color: $color-dark;
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & .heading {
+        font-size: 3rem;
+        font-weight: 600 * $font-weight;
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize
+    }
+
+    & .input--range__container {
+        width: 50rem;
+        height: auto;
+        position: relative;
+        padding: $padding * $font-weight + 2.5 $radius * $font-weight  + 2;
+        background: $color-light;
+        border-radius: $radius;
+        box-shadow: 0 .3vmin .5vmin .2vmin rgba($color-dark, .3);
+        & .slider {
+            width: $size;
+            height: 2rem * $font-weight / 1.7;
+            appearance: none;
+            border-radius: $radius;
+            background: $color-dark;
+            & + label {
+                position: absolute;
+                top: -2.15rem;
+                left: 224.985px;
+                // transform: translateX(-50%);
+                width: 7rem;
+                padding: $padding * $font-weight / 1.75 0;
+                background: $color-light;
+                border-radius: $radius;
+                box-shadow: 0 .3vmin .4vmin .3vmin rgba($color-dark, .25);
+                font-weight: 700 * $font-weight;
+                font-size: 1.75rem;
+                text-align: center;
+            }
+            &:focus {
+                outline: none;
+            }
+            // Chrome and Safari
+            &::-webkit-slider-thumb {
+                appearance: none;
+                width: $padding * $font-weight + 1.2;
+                height: $padding * $font-weight + 1.2;
+                margin-top: -.7rem;
+                border-radius: $size * .5;
+                background: $color-light;
+                box-shadow: 0 0 0 .3vmin rgba($color-dark, .5),
+                                          0 0 0 .6vmin rgba($color-dark, .5);
+                cursor: pointer
+            }
+            &::-webkit-slider-runnable-track {
+                width: $size;
+                height: 1rem;
+                background: $color-dark;
+                border-radius: $radius;
+                cursor: pointer;
+            }
+            // Firefox
+            &::-moz-range-track {
+                width: $size;
+                height: $padding;
+                background: $color-dark;
+                border-radius: $radius;
+                cursor: pointer;
+            }
+            &::-moz-range-thumb {
+                appearance: none;
+                width: $padding * $font-weight+1.2;
+                height: $padding * $font-weight+1.2;
+                margin-top: -.7rem;
+                border-radius: $size * .5;
+                background: $color-light;
+                box-shadow: 0 0 0 .3vmin rgba($color-dark, .5);
+                cursor: pointer
+            }
+            // IE
+            &::-ms-thumb {
+                appearance: none;
+                width: $padding * $font-weight + 1.2;
+                height: $padding * $font-weight + 1.2;
+                margin-top: -.7rem;
+                border-radius: $size * .5;
+                background: $color-blue;
+                box-shadow: 0 0 0 .5vmin rgba($color-dark, .6);
+                cursor: pointer;
+            }
+            &::-ms-track {
+                width: $size;
+                height: $padding;
+                border-radius: $radius;
+                background: $color-blue;
+                cursor: pointer;
+            }
+        }
+    }
+}
