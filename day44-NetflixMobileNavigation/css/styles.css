@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container :is(.nav--btn) {
+  border: 0;
+  background: transparent;
+  font-size: 2.275rem;
+  cursor: pointer;
+}
+
+.container .logo {
+  width: 100%;
+  max-width: 14.25rem;
+}
+
+.container .description {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.container .open--btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.container .nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.container .nav.visible {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.container .nav--black {
+  width: 60%;
+  max-width: 48rem;
+  min-width: 32rem;
+  background: #221f1f;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.container .nav--black.visible {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.container .nav--red {
+  width: 95%;
+  background: #f0001d;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.container .nav--red.visble {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.container .nav--white {
+  width: 95%;
+  padding: 4rem;
+  position: relative;
+  background: #fff;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.container .nav--white.visible {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.container .nav .close--btn {
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  opacity: .3;
+}
+
+.container .nav .list {
+  list-style: none;
+  padding: 0;
+}
+
+.container .nav .list li {
+  margin: 2rem 0;
+}
+
+.container .nav .list li a {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #221f1f;
+}
+
+.container .nav .list ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */
