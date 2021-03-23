@@ -84,6 +84,8 @@ Here goes all projects.
 | 42. | [Live User Filter](https://github.com/dponcez/project1/tree/master/day42-LiveUserFilter)    |
 | 43. | [CustomRangeSlider](https://github.com/dponcez/project1/tree/master/day43-CustomRangeSlider)    |
 | 44. | [Netflix Mobile Navigation](https://github.com/dponcez/project1/tree/master/day44-NetflixMobileNavigation)    |
+| 45. | [Quiz App](https://github.com/dponcez/project1/tree/master/day45-QuizApp)    |
+| 46. | [Testimonial Box](https://github.com/dponcez/project1/tree/master/day46-TestimonialBox)    |
 
 Note: In Live User Filter project, there's a bug or something goes wrong, when you want to filter by user name or their location this no have effect, there's no changes. 
 
