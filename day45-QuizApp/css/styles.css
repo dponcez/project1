@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  color: #2c3e50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: block;
+}
+
+.container .quiz--container {
+  width: 100%;
+  min-width: 60rem;
+  padding: 1.14rem 1.26316rem;
+  border-radius: 0.475rem;
+  -webkit-box-shadow: 0 0.2vmin 0.3vmin 0.2vmin rgba(44, 62, 80, 0.3);
+          box-shadow: 0 0.2vmin 0.3vmin 0.2vmin rgba(44, 62, 80, 0.3);
+}
+
+.container .quiz--container h2 {
+  padding: 1.2rem;
+  margin: 0;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 665;
+}
+
+.container .quiz--container h2::first-letter {
+  text-transform: uppercase;
+}
+
+.container .quiz--container .quiz--header {
+  padding: 4.14rem;
+}
+
+.container .quiz--container .quiz--header ul {
+  padding: 0;
+  list-style: none;
+}
+
+.container .quiz--container .quiz--header ul li {
+  margin: 1.2rem 0;
+  font-size: 2.215rem;
+}
+
+.container .quiz--container .quiz--header ul li label {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.container .quiz--container button {
+  width: 100%;
+  padding: 1.2rem;
+  background: #2c3e50;
+  color: #ecf0f1;
+  border: 0;
+  font-size: 2.2rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.1vmin rgba(44, 62, 80, 0.2);
+          box-shadow: 0 0.1vmin 0.2vmin 0.1vmin rgba(44, 62, 80, 0.2);
+  cursor: pointer;
+}
+
+.container .quiz--container button:focus {
+  outline: none;
+}
+
+.container .quiz--container button:hover {
+  background: rgba(44, 62, 80, 0.85);
+}
+
+.container .quiz--container button:active {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+/*# sourceMappingURL=styles.css.map */
