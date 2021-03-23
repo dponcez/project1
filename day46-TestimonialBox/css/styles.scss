@@ -1,0 +1,127 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$radius: .5rem;
+$padding: 1.2rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+}
+
+.container {
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial--container {
+    width: $size;
+    max-width: clamp(6.8rem, 90vw, 74.8rem);
+    position: relative;
+    padding: $padding * 4.12 $padding * 6.5;
+    border-radius: $radius * $font-weight + 1.5;
+    background: rgba($color-blue * $font-weight, $alpha: 1);
+    color: rgba($color-light * 2, $alpha: 1);
+    box-shadow: 0 .2vmin .1vmin .2vmin rgba($color-dark * 2, $alpha: .5);
+    .progress--bar {
+        width: $size;
+        height: .5rem;
+        background: rgba($color-light * 2, $alpha: 1);
+        animation: range 10s linear infinite;
+        transform-origin: left;
+        @keyframes range {
+            0% {
+                transform: scaleX(0);
+            }
+        }
+    }
+    .fa-quote {
+        font-size: 3rem;
+        position: absolute;
+        top: 7rem;
+        color: rgba($color-light * 2, $alpha: 1);
+        opacity: .7;
+        &-right {
+            right: 4rem;
+        }
+        &-left {
+            left: 4rem
+        }
+    }
+    .testimonial {
+        font-size: 1.7rem;
+        text-align: justify;
+        line-height: 2.8rem;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--image {
+            width: 7.5rem;
+            height: 7.5rem;
+            object-fit: cover;
+            border-radius: $size * .5;
+        }
+        &--details {
+            margin-left: 1rem;
+            .username,
+            .role { 
+                font-size: 1.75rem;
+                letter-spacing: .1rem;
+                text-transform: capitalize;
+            }
+            
+            .username {
+                margin: 0;
+            }
+            .role {
+                margin: 1rem 0;
+                font-weight: 500 * $font-weight
+            }
+        }
+    }
+
+    @media ( max-width: 781px ) {
+        & {
+            padding: $padding * 2.12 $padding * 4.5;
+    
+            & .fa-quote {
+                top: 5rem;
+                font-size: 2rem;
+                &-right {
+                    right: 2rem;
+                }
+                &-left {
+                    left: 2rem;
+                }
+            }
+        }
+    }
+}
