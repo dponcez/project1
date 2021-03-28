@@ -32,16 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             todoItem.innerText = todoText
 
+            if( todoItem.innerText === todoText ){
+                todoList.style.height = '40vh'
+            }
+
             if( todo && todo.completed ) {
                 todoItem.classList.add('completed')
             }
 
             listItem.addEventListener('click', ( ) => {
                 todoItem.classList.toggle('completed')
-                // listItem.remove()
             })
 
-            trash.addEventListener('click', updated)
+            trash.addEventListener('click', removeTodoItems)
 
             listItem.appendChild( todoItem );
             listItem.appendChild( trash );
@@ -52,24 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updated( e ) {
-        listItems = document.querySelectorAll('.list--item');
-        listItems.forEach( element => {
-            element.remove();
-        })
-        // const listItems = document.querySelectorAll('.list--item');
-        // let todos = [];
+    function removeTodoItems( e ) {
+      
+        const element = {
+            parentNode: e.target.parentElement
+        }
 
-        // listItems.forEach( todoElement => {
-        //     todos.push({
-        //         text: todoElement.innerText,
-        //         completed: todoElement.classList.contains('completed')
-        //     })
-        //     let taskItem = e.target.parentElement;
+        const { parentNode } = element;
 
-        //     todoList.remove(  todoElement )
-        // })
-
-        // localStorage.setItem('todos', JSON.stringify( todos ));
+        if( parentNode.classList.contains('list--item') ) {
+            const parent = parentNode;
+           
+            todoList.style.height = 'auto';
+            todoList.removeChild( parent)
+            localStorage.setItem('todos', JSON.stringify(todos))
+        }
+        
     }
 })

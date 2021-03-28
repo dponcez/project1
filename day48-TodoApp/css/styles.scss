@@ -95,7 +95,7 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     padding: $padding $padding + 1;
-                    border-top: .1rem solid rgba($color-dark, .3);
+                    border-bottom: .1rem solid rgba($color-dark, .3);
                     cursor: pointer;
                     scroll-snap-align: start;
                     & li {

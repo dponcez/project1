@@ -128,7 +128,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.2rem 2.2rem;
-  border-top: 0.1rem solid rgba(44, 62, 80, 0.3);
+  border-bottom: 0.1rem solid rgba(44, 62, 80, 0.3);
   cursor: pointer;
   scroll-snap-align: start;
 }
