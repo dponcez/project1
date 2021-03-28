@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.container .heading {
+  display: block;
+  margin: 1rem 0;
+  padding: 1.2rem 2.4rem;
+  position: absolute;
+  top: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12.9rem;
+  font-weight: 680;
+  color: rgba(44, 62, 80, 0.5);
+  text-shadow: 0.3vmin 0.4vmin 0.5vmin rgba(44, 62, 80, 0.4);
+}
+
+.container .heading::first-letter {
+  font-size: 20.1rem;
+}
+
+.container .todo--container {
+  position: relative;
+  display: block;
+  top: 27rem;
+  height: 100%;
+}
+
+.container .todo--container form {
+  max-width: 100%;
+  width: 50rem;
+  -webkit-box-shadow: 0 0.3vmin 0.5vmin rgba(44, 62, 80, 0.5);
+          box-shadow: 0 0.3vmin 0.5vmin rgba(44, 62, 80, 0.5);
+  border-radius: 0.5rem;
+}
+
+.container .todo--container form .input {
+  width: 100%;
+  display: block;
+  padding: 1.2rem 2.2rem;
+  font-size: 2rem;
+  border: 0;
+  border-bottom: 0.1rem solid rgba(44, 62, 80, 0.2);
+  -webkit-box-shadow: 0.1vmin 0.2vmin 0.4vmin rgba(44, 62, 80, 0.2) inset;
+          box-shadow: 0.1vmin 0.2vmin 0.4vmin rgba(44, 62, 80, 0.2) inset;
+}
+
+.container .todo--container form .input:focus {
+  outline-color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .input::-webkit-input-placeholder {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 680;
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .input:-ms-input-placeholder {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 680;
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .input::-ms-input-placeholder {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 680;
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .input::placeholder {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 680;
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .todo--list {
+  height: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: auto;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  background: #ecf0f1;
+}
+
+.container .todo--container form .todo--list .list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem 2.2rem;
+  border-top: 0.1rem solid rgba(44, 62, 80, 0.3);
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.container .todo--container form .todo--list .list--item li {
+  font-size: 2rem;
+}
+
+.container .todo--container form .todo--list .list--item li.completed {
+  text-decoration: line-through;
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.container .todo--container form .todo--list .list--item i {
+  font-size: 2rem;
+  color: rgba(44, 62, 80, 0.5);
+}
+
+.container .todo--container form .todo--list .list--item:hover {
+  background: rgba(44, 62, 80, 0.5);
+}
+
+.container .todo--container form .todo--list .list--item:hover li,
+.container .todo--container form .todo--list .list--item:hover i {
+  color: #ecf0f1;
+}
+
+.container .todo--container form .todo--list .list--item:hover li {
+  font-weight: 595;
+}
+/*# sourceMappingURL=styles.css.map */
