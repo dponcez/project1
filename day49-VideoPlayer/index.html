@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset='UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <title>Video Player</title>
+    <!-- Mobile Specific Metas -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@200;300&display=swap'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <h1 class="heading">video player</h1>
+        <div class="video--container">
+            <video src="">
+                <p>Your browser does not support the video element</p>
+            </video>
+            <div class="controls--container">
+                <div class="progress--bar">
+                    <div class="progress"></div>
+                    <input type="range" name="progress" class="progress__slider" id="range">
+                </div>
+                <div class="controllers">
+                    <button class="play" id="btn">
+                        <!-- <i class="fas fa-play"></i> -->
+                        <span class="player"></span>
+                    </button>
+                    <div class="volume--container">
+                        <input type="range" name="slider" class="slider" id="slide">
+                        <div class="mute--btn"></div>
+                    </div>
+                    <div class="timer--container">
+                        <span class="timer">00:00</span>
+                    </div>
+                    <div class="preview--controllers">
+                        <button class="prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>
