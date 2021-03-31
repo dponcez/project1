@@ -18,16 +18,16 @@
     <div class='container'>
         <h1 class="heading">video player</h1>
         <div class="video--container">
-            <video src="">
+            <video src="video/Another-You.mp4">
                 <p>Your browser does not support the video element</p>
             </video>
-            <div class="controls--container">
-                <div class="progress--bar">
-                    <div class="progress"></div>
-                    <input type="range" name="progress" class="progress__slider" id="range">
+            <div class="panel--container">
+                <div class="progress">
+                    <div class="progress--bar"></div>
+                    <input type="range" name="progress" class="progress__slider" id="range" value="5">
                 </div>
                 <div class="controllers">
-                    <button class="play" id="btn">
+                    <button class="play btn" id="btn">
                         <!-- <i class="fas fa-play"></i> -->
                         <span class="player"></span>
                     </button>
@@ -39,17 +39,19 @@
                         <span class="timer">00:00</span>
                     </div>
                     <div class="preview--controllers">
-                        <button class="prev">
-                            <i class="fas fa-chevron-left"></i>
+                        <button class="prev btn">
+                            <!-- <i class="fas fa-chevron-left"></i> -->
+                            <span class="chevron--left"></span>
                         </button>
-                        <button class="next">
-                            <i class="fas fa-chevron-right"></i>
+                        <button class="next btn">
+                            <!-- <i class="fas fa-chevron-right"></i> -->
+                            <span class="chevron--right"></span>
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div><!-- Controlls -->
+            </div><!-- Panel Container -->
+        </div><!-- Video Container -->
+    </div><!-- Container -->
     <script src='js/script.js'></script>
 </body>
 </html>

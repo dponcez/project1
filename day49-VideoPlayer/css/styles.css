@@ -1,0 +1,323 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .heading {
+  width: 100%;
+  max-width: 50vw;
+  font-size: 3rem;
+  color: #2c3e50;
+  text-transform: capitalize;
+  display: block;
+  position: relative;
+  border-bottom: 0.1vmin solid rgba(44, 62, 80, 0.2);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.video--container {
+  width: 100%;
+  max-width: 60vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.video--container video {
+  width: 100%;
+}
+
+.video--container:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.video--container:hover .panel--container {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.video--container .panel--container {
+  width: 100%;
+  height: 3.6rem;
+  padding: 3.6rem 6rem;
+  background: rgba(44, 62, 80, 0.5);
+  position: relative;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video--container .panel--container .progress {
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(44, 62, 80, 0.35);
+}
+
+.video--container .panel--container .progress--bar {
+  width: 10%;
+  height: inherit;
+  background: #2c3e50;
+  border-radius: 0.5rem;
+}
+
+.video--container .panel--container .progress__slider {
+  width: 100%;
+  height: inherit;
+  background: #65b6d6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  top: 0;
+  left: -0.2%;
+  margin-top: 0;
+}
+
+.video--container .panel--container .progress__slider:focus {
+  outline: none;
+}
+
+.video--container .panel--container .progress__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video--container .panel--container .progress__slider:hover::-webkit-slider-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #65b6d6;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+.video--container .panel--container .progress__slider::-webkit-slider-runnable-track {
+  background: red;
+  width: 10%;
+  height: inherit;
+}
+
+.video--container .panel--container .controllers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1rem;
+}
+
+.video--container .panel--container .controllers .volume--container {
+  margin-top: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video--container .panel--container .controllers .volume--container .mute--btn {
+  width: 0;
+  height: 0;
+  position: relative;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: transparent #ecf0f1 transparent transparent;
+  border-width: 1rem 1.79167rem 1rem 1rem;
+  cursor: pointer;
+}
+
+.video--container .panel--container .controllers .volume--container .mute--btn:hover {
+  border-color: transparent rgba(236, 240, 241, 0.95) transparent transparent;
+}
+
+.video--container .panel--container .controllers .volume--container .mute--btn::before, .video--container .panel--container .controllers .volume--container .mute--btn::after {
+  content: '';
+  position: absolute;
+  right: -3.5rem;
+  background: #ecf0f1;
+  margin-top: -.25rem;
+}
+
+.video--container .panel--container .controllers .volume--container .mute--btn::before {
+  width: 1.2rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.video--container .panel--container .controllers .volume--container .mute--btn::after {
+  width: 1.2rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.video--container .panel--container .controllers .volume--container .slider {
+  width: 100%;
+  height: 0.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.video--container .panel--container .controllers .volume--container .slider:focus {
+  outline: 0;
+}
+
+.video--container .panel--container .controllers .volume--container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: #ecf0f1;
+  border: 0.1vh solid rgba(44, 62, 80, 0.15);
+}
+
+.video--container .panel--container .controllers .volume--container .slider:hover::-webkit-slider-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25), 0 0 0 0.3rem rgba(44, 62, 80, 0.15);
+          box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25), 0 0 0 0.3rem rgba(44, 62, 80, 0.15);
+}
+
+.video--container .panel--container .controllers .timer--container {
+  margin-top: -1rem;
+}
+
+.video--container .panel--container .controllers .timer--container .timer {
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #ecf0f1;
+}
+
+.video--container .panel--container .controllers .preview--controllers {
+  margin-top: -1.5rem;
+}
+
+.video--container .panel--container .controllers .btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--container .panel--container .controllers .btn span {
+  display: inline-block;
+}
+
+.video--container .panel--container .controllers .btn span::before, .video--container .panel--container .controllers .btn span::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+}
+
+.video--container .panel--container .controllers .btn span.chevron--left::before, .video--container .panel--container .controllers .btn span.chevron--left::after, .video--container .panel--container .controllers .btn span.chevron--right::before, .video--container .panel--container .controllers .btn span.chevron--right::after {
+  width: 1.7rem;
+  height: 0.5rem;
+  background: #ecf0f1;
+}
+
+.video--container .panel--container .controllers .btn span.player::before {
+  border-color: transparent transparent transparent #ecf0f1;
+  border-width: 1.56rem 1.2rem 1.56rem 2.34rem;
+  margin-top: -2rem;
+}
+
+.video--container .panel--container .controllers .btn span.player:hover::before {
+  border-color: transparent transparent transparent rgba(236, 240, 241, 0.95);
+}
+
+.video--container .panel--container .controllers .btn span.chevron--left::before {
+  -webkit-transform: rotate(-40deg) translate(0.3rem, -0.3rem);
+          transform: rotate(-40deg) translate(0.3rem, -0.3rem);
+  border-radius: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.video--container .panel--container .controllers .btn span.chevron--left::after {
+  -webkit-transform: rotate(40deg) translate(0.3rem, 0.3rem);
+          transform: rotate(40deg) translate(0.3rem, 0.3rem);
+  border-radius: 0 0.5rem 0.5rem 0.25rem;
+}
+
+.video--container .panel--container .controllers .btn span.chevron--right::before {
+  -webkit-transform: rotate(-40deg) translate(0.3rem, 0.85rem);
+          transform: rotate(-40deg) translate(0.3rem, 0.85rem);
+  border-radius: 0.5rem 0.25rem 0 0.5rem;
+}
+
+.video--container .panel--container .controllers .btn span.chevron--right::after {
+  -webkit-transform: rotate(40deg) translate(0.3rem, -0.85rem);
+          transform: rotate(40deg) translate(0.3rem, -0.85rem);
+  border-radius: 0.5rem 0 0.25rem 0.5rem;
+}
+
+.video--container .panel--container .controllers .btn span.chevron--left::before, .video--container .panel--container .controllers .btn span.chevron--left::after, .video--container .panel--container .controllers .btn span.chevron--right::before, .video--container .panel--container .controllers .btn span.chevron--right::after {
+  background: rgba(236, 240, 241, 0.95);
+}
+
+.video--container .panel--container .controllers .btn:focus {
+  outline: none;
+}
+/*# sourceMappingURL=styles.css.map */
