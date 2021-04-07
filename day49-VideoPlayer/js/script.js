@@ -22,13 +22,31 @@ function init( ) {
     const progressBar = document.querySelector('.progress--bar');
     const progressSlider = document.querySelector('.progress__slider');
 
-    const playBtn = document.getElementById('btn');
+    const playBtn = document.querySelector('#btn .player');
     const volumeSlider = document.getElementById('slider');
     const muteBtn = document.querySelector('.mute--btn');
     const counter = document.querySelector('.timer');
 
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
+
+    let isPlay = false;
+
+    function getPlayVideo() {
+        const isPlayer = video.paused ? video.play() : video.pause()
+
+        if( !isPlay ) {
+            playBtn.classList.add('active')
+            isPlay = true
+        }else {
+            playBtn.classList.remove('active')
+            isPlay = false;
+        }
+    }
+
+    playBtn.addEventListener('click', debounce(() => {
+        getPlayVideo()
+    }, 300 ))
 }
 
 document.addEventListener('DOMContentLoaded', init )

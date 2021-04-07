@@ -48,7 +48,7 @@ body {
         text-transform: capitalize;
         display: block;
         position: relative;
-        border-bottom: .1vmin solid rgba($color-dark, .2);
+        border-bottom: .1vmin solid rgba($color-dark, $alpha: .2);
         border-radius: $radius;
         text-align: center;
     }
@@ -72,7 +72,7 @@ body {
         width: $size;
         height: $padding * 3;
         padding: $padding * 3 $padding * 5;
-        background: rgba($color-dark, .65);
+        background: rgba($color-dark, $alpha: .65);
         position: absolute;
         bottom: 2%;
         transform: translateY(100%);
@@ -84,7 +84,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            background: rgba($color-dark, .7);
+            background: rgba($color-dark, $alpha: .7);
             &--bar {
                 width: 10%;
                 height: inherit;
@@ -95,7 +95,7 @@ body {
             &__slider {
                 width: $size * .3;
                 height: inherit;
-                background: rgba($color-light, 1);
+                background: rgba($color-light, $alpha: 1);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -128,7 +128,7 @@ body {
                     border-width:($padding - $font-weight + 0.75) ($padding + $font-weight) / 1.2 ($padding - $font-weight + 0.75) ($padding - $font-weight + 0.75);
                     cursor: pointer;
                     &:hover {
-                        border-color: transparent rgba($color-light, .95) transparent transparent;
+                        border-color: transparent rgba($color-light, $alpha: .95) transparent transparent;
                     }
                     &::before,
                     &::after {
@@ -166,14 +166,14 @@ body {
                         height: 1.7rem;
                         border-radius: $size * .5;
                         background: $color-light;
-                        border: .1vh solid rgba($color-dark, .15)
+                        border: .1vh solid rgba($color-dark, $alpha: .15)
                     }
                     &:hover::-webkit-slider-thumb {
                         width: 1.5rem;
                         height: 1.5rem;
                         border-radius: $size * .5;
-                        box-shadow: 0 0 0 .2rem rgba($color-dark, .25),
-                                                  0 0 0 .3rem rgba($color-dark, .15);
+                        box-shadow: 0 0 0 .2rem rgba($color-dark, $alpha: .25),
+                                                  0 0 0 .3rem rgba($color-dark, $alpha: .15);
                     }
                 }
             }
@@ -224,8 +224,26 @@ body {
                         margin-top: -2rem;
                         margin-left: -3rem;
                     }
+                    &.player.active::before,
+                    &.player.active::after {
+                        width: 0;
+                        height: 0;
+                        // border: 0 solid transparent;
+                        border-color: rgba($color-light, $alpha: 1);
+                        border-width: $padding * 1.3 $padding * .5 $padding * 1.3 $padding * .5;
+                        margin-top: -2rem
+                    }
+                    &.player.active::after {
+                        left: $radius
+                    }
+                    &.player.active:hover::before,
+                    &.player.active:hover::after { 
+                        border-color: rgba($color-light, $alpha: .95);
+                        border-width: $padding * 1.3 $padding * .5 $padding * 1.3 $padding * .5
+
+                    }
                     &.player:hover::before {
-                        border-color: transparent transparent transparent rgba($color-light, .95);
+                        border-color: transparent transparent transparent rgba($color-light, $alpha: .95);
                     }
                     &.chevron--left::before {
                         transform: rotate(-40deg) translate(.3rem, -.3rem);
@@ -247,7 +265,7 @@ body {
                     &.chevron--left::before,
                     &.chevron--left::after,
                     &.chevron--right::before,
-                    &.chevron--right::after { background: rgba($color-light, .95); }
+                    &.chevron--right::after { background: rgba($color-light, $alpha: .95); }
                 }
 
                 &:focus {

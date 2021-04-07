@@ -262,6 +262,23 @@ body {
   margin-left: -3rem;
 }
 
+.video--container .panel--container .controllers .btn span.player.active::before, .video--container .panel--container .controllers .btn span.player.active::after {
+  width: 0;
+  height: 0;
+  border-color: #ecf0f1;
+  border-width: 1.56rem 0.6rem 1.56rem 0.6rem;
+  margin-top: -2rem;
+}
+
+.video--container .panel--container .controllers .btn span.player.active::after {
+  left: 0.5rem;
+}
+
+.video--container .panel--container .controllers .btn span.player.active:hover::before, .video--container .panel--container .controllers .btn span.player.active:hover::after {
+  border-color: rgba(236, 240, 241, 0.95);
+  border-width: 1.56rem 0.6rem 1.56rem 0.6rem;
+}
+
 .video--container .panel--container .controllers .btn span.player:hover::before {
   border-color: transparent transparent transparent rgba(236, 240, 241, 0.95);
 }
