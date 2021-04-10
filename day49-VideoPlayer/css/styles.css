@@ -94,8 +94,12 @@ body {
   background: rgba(44, 62, 80, 0.7);
 }
 
+.video--container .panel--container .progress:hover {
+  cursor: e-resize;
+}
+
 .video--container .panel--container .progress--bar {
-  width: 10%;
+  width: 0;
   height: inherit;
   position: relative;
   background: #65b6d6;
@@ -157,24 +161,24 @@ body {
 
 .video--container .panel--container .controllers .volume--container .mute--btn::before, .video--container .panel--container .controllers .volume--container .mute--btn::after {
   content: '';
+  width: 1.2rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
   position: absolute;
   right: -3.5rem;
   background: #ecf0f1;
   margin-top: -.25rem;
+  display: none;
 }
 
-.video--container .panel--container .controllers .volume--container .mute--btn::before {
-  width: 1.2rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
+.video--container .panel--container .controllers .volume--container .mute--btn.muted::before {
+  display: block;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.video--container .panel--container .controllers .volume--container .mute--btn::after {
-  width: 1.2rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
+.video--container .panel--container .controllers .volume--container .mute--btn.muted::after {
+  display: block;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }

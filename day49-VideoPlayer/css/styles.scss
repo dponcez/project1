@@ -85,8 +85,11 @@ body {
             top: 0;
             left: 0;
             background: rgba($color-dark, $alpha: .7);
+            &:hover {
+                cursor: e-resize;
+            }
             &--bar {
-                width: 10%;
+                width: 0;
                 height: inherit;
                 position: relative;
                 background: $color-light-blue;
@@ -133,21 +136,21 @@ body {
                     &::before,
                     &::after {
                         content: '';
+                        width: $padding;
+                        height: $radius;
+                        border-radius: $radius;
                         position: absolute;
                         right: -3.5rem;
                         background: rgba($color-light, $alpha: 1);
                         margin-top: -.25rem;
+                        display: none;
                     }
-                    &::before {
-                        width: $padding;
-                        height: $radius;
-                        border-radius: $radius;
+                    &.muted::before {
+                        display: block;
                         transform: rotate(45deg);
                     }
-                    &::after {
-                        width: $padding;
-                        height: $radius;
-                        border-radius: $radius;
+                    &.muted::after {
+                        display: block;
                         transform: rotate(-45deg);
                     }
                 }
