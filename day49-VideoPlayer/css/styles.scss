@@ -56,7 +56,7 @@ body {
 
 .video--container {
     width: $size;
-    max-width: $width * .6;
+    max-width: $width * .75;
     position: absolute;
     overflow: hidden;
     & video {

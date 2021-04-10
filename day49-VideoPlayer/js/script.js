@@ -30,9 +30,14 @@ function init( ) {
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
 
-    let isPlay = false;
+    let isPlay = false,
+        mousedown = false;
+        
+    playBtn.addEventListener('click', debounce(() => {
+        getPlayVideo()
+    }, 300 ) )
 
-    function getPlayVideo() {
+    const getPlayVideo = () => {
         const isPlayer = video.paused ? video.play() : video.pause()
 
         if( !isPlay ) {
@@ -44,9 +49,15 @@ function init( ) {
         }
     }
 
-    playBtn.addEventListener('click', debounce(() => {
-        getPlayVideo()
-    }, 300 ))
+    const scrub = ( e ) => {
+        const slideScrub = ( e.pageX / window.clientWIdth ) * video.duration;
+        progressBar.style.width = slideScrub + '%';
+    }
+
+    progress.addEventListener('click', scrub);
+    progress.addEventListener('mousedown', ( e ) => mousedown && scrub( e ) );
+    progress.addEventListener('mouseup', () => mousedown = false);
+    progress.addEventListener('mousedown', () => mousedown = true)
 }
 
 document.addEventListener('DOMContentLoaded', init )
