@@ -17,10 +17,12 @@ function debounce( fnc, wait, immediate ) {
 
 function init( ) {
     // Get HTML references
-    const video = document.querySelector('video');
+    // const video = document.querySelector('video');
     const progress = document.querySelector('.progress')
     const progressBar = document.querySelector('.progress--bar');
     const progressSlider = document.querySelector('.progress__slider');
+
+    const videoContainer = document.querySelector('.video--container');
 
     const playBtn = document.querySelector('#btn .player');
     const volumeSlider = document.getElementById('slide');
@@ -30,14 +32,46 @@ function init( ) {
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
 
-    let isPlay = false,
-        isMute = false,
-        mousedown = false,
-        durmins = null,
-        dursecs = null,
-        curmins = null,
-        cursecs = null,
-        index = 0;
+    const status = document.querySelector('.status');
+
+    // Create a new element
+    const video = document.createElement('video');
+    const para = document.createElement('p');
+
+    let isPlay = false;
+    let isMute = false;
+    let mousedown = false;
+    let durmins = null;
+    let dursecs = null;
+    let curmins = null;
+    let cursecs = null;
+    let index = 0;
+
+    let dir = 'video/';
+    let playlist = [
+        'Another-You',
+        '21-Questions',
+        'Soldier',
+        'Treading-Water'
+    ];
+    let ext = '.mp4';
+    let userAgents = navigator.userAgent.toLowerCase();
+
+    if( userAgents.indexOf('firefox') !== -1 || userAgents.indexOf('opera') !== -1 ) {
+        ext = '.ogg'
+    }else if( userAgents.indexOf('chrome') !== -1 && userAgents.indexOf('edge') !== -1 ) {
+        ext = '.webm';
+    }
+
+    para.innerHTML = 'Your browser does not support video element'
+
+    video.loop = false;
+    video.src = `${ dir }${ playlist[ index ] }${ ext }`;
+    status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }${ ext }`
+
+    // Append elements
+    video.appendChild( para );
+    videoContainer.appendChild( video )
         
     playBtn.addEventListener('click', debounce(() => {
         getPlayVideo()
@@ -45,6 +79,14 @@ function init( ) {
 
     muteBtn.addEventListener('click', debounce(() => {
         getMutedVideo()
+    }, 300 ) )
+
+    prevBtn.addEventListener('clcik', debounce(() => {
+        getPreviousVideo()
+    }, 300 ) )
+
+    nextBtn.addEventListener('click', debounce(() => {
+        getNextVideo();
     }, 300 ) )
 
     const getPlayVideo = () => {
@@ -70,7 +112,6 @@ function init( ) {
             isMute = false
         }
     }
-
     
     const getVideoEnded = () => {
         if( video.ended ) {
@@ -78,8 +119,32 @@ function init( ) {
             playBtn.classList.remove('active');
         }
     }
-    
-    // getVideoEnded();
+
+    const getPreviousVideo = () => {
+        if( index < 0 || index === 0 ){
+            index = playlist.length - 1
+        }else {
+            index--
+        }
+        switchTrack()
+    }
+
+    const getNextVideo = () => {
+        if ( index === playlist.length - 1 || ( !index  > playlist.length - 1 ) ) {
+          index = 0
+        } else {
+            index++
+        }
+        switchTrack()
+    }
+
+    const switchTrack = () => {
+        video.loop = false;
+        video.src = `${ dir }${ playlist[ index ] }${ ext }`;
+        status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }${ ext }`;
+        video.play();
+        playBtn.classList.add('active');
+    }
 
     const seekTimeUpdate = () => {
         const pCounter = video.currentTime / video.duration * 100;
