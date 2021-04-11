@@ -40,12 +40,12 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    color: $color-dark;
 
     .heading {
         width: $size;
         max-width: $width * .5;
         font-size: 3rem;
-        color: $color-dark;
         text-transform: capitalize;
         display: block;
         position: absolute;
@@ -56,16 +56,18 @@ body {
     }
 
     .status {
+        width: $size;
         position: absolute;
-        bottom:$size * .1;
-        left: 9rem;
+        bottom: $size * .05;
+        left: $size * .175;
         font-size: 2rem;
+        font-weight: 700 * $font-weight;
     }
 }
 
 .video--container {
     width: $size;
-    max-width: $width * .75;
+    max-width: $width * .65;
     position: absolute;
     overflow: hidden;
     & video {
@@ -90,7 +92,7 @@ body {
 
         .progress {
             width: $size;
-            height: 1rem;
+            height: .8rem;
             position: absolute;
             top: 0;
             left: 0;
@@ -103,10 +105,11 @@ body {
                 height: inherit;
                 position: relative;
                 background: $color-light-blue;
-                border-radius: 0 $radius $radius 0
+                border-radius: 0 $radius $radius 0;
+                transition: width 650ms linear
             }
             &__slider {
-                width: $size * .3;
+                width: 0;
                 height: inherit;
                 background: rgba($color-light, $alpha: 1);
                 position: absolute;
@@ -115,6 +118,7 @@ body {
                 margin-top: 0;
                 border-radius: 0 $radius $radius 0;
                 z-index: -1;
+                transition: width 850ms cubic-bezier(0.29, 0.88, 0.99, 0.71)
             }
         }
 
@@ -124,7 +128,7 @@ body {
             justify-content: space-around;
             
             gap: 1rem;
-
+            
             .volume--container {
                 margin-top: -1rem;
                 margin-left: -2rem;
@@ -201,13 +205,17 @@ body {
             }
 
             .preview--controllers {
+                width: $size * .1;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
                 margin-top: -1.5rem;
             }
 
             .btn {
-                width: 2.5rem;
-                height: 2.5rem;
-                padding: $padding;
+                // width: 2.5rem;
+                // height: 2.5rem;
+                // padding: $padding;
                 display: inline-flex;
                 position: relative;
                 background: none;
@@ -247,7 +255,7 @@ body {
                         margin-top: -2rem
                     }
                     &.player.active::after {
-                        left: $radius
+                        left: -$radius
                     }
                     &.player.active:hover::before,
                     &.player.active:hover::after { 

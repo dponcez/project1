@@ -67,7 +67,7 @@ function init( ) {
 
     video.loop = false;
     video.src = `${ dir }${ playlist[ index ] }${ ext }`;
-    status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }${ ext }`
+    status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }`
 
     // Append elements
     video.appendChild( para );
@@ -112,13 +112,10 @@ function init( ) {
             isMute = false
         }
     }
-    
-    const getVideoEnded = () => {
-        if( video.ended ) {
-            video.currentTime = 0;
-            playBtn.classList.remove('active');
-        }
-    }
+
+    const rangeSlider = () => {
+      video.volume = volumeSlider.value / 100;
+    };
 
     const getPreviousVideo = () => {
         if( index < 0 || index === 0 ){
@@ -141,14 +138,21 @@ function init( ) {
     const switchTrack = () => {
         video.loop = false;
         video.src = `${ dir }${ playlist[ index ] }${ ext }`;
-        status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }${ ext }`;
+        status.innerHTML = `Track ${ ( index + 1 ) } - ${ playlist[ index ] }`;
         video.play();
         playBtn.classList.add('active');
     }
 
     const seekTimeUpdate = () => {
         const pCounter = video.currentTime / video.duration * 100;
-        progressBar.style.width = pCounter + '%';
+        progressBar.style.width = `${ pCounter }%`;
+
+        if( progressSlider.style.width === pCounter  >= 100 ) {
+            progressSlider.style.width = `${ pCounter }%`
+        }else {
+            progressSlider.style.width = `${ ( pCounter * 1.125 ) }%`
+        }
+        // index++;
 
         durmins = Math.floor( video.duration / 60 );
         dursecs = Math.floor( video.duration - durmins * 60 );
@@ -170,8 +174,11 @@ function init( ) {
         video.currentTime = slideScrub;
     }
 
-    const rangeSlider = () => {
-        video.volume = volumeSlider.value / 100;
+     const getVideoEnded = () => {
+        if( video.ended ) {
+            video.currentTime = 0;
+            playBtn.classList.remove('active');
+        }
     }
 
     // Handler Events Section
