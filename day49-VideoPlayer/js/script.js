@@ -17,7 +17,7 @@ function debounce( fnc, wait, immediate ) {
 
 function init( ) {
     // Get HTML references
-    // const video = document.querySelector('video');
+    
     const progress = document.querySelector('.progress')
     const progressBar = document.querySelector('.progress--bar');
     const progressSlider = document.querySelector('.progress__slider');
@@ -59,7 +59,7 @@ function init( ) {
 
     if( userAgents.indexOf('firefox') !== -1 || userAgents.indexOf('opera') !== -1 ) {
         ext = '.ogg'
-    }else if( userAgents.indexOf('chrome') !== -1 && userAgents.indexOf('edge') !== -1 ) {
+    }else if( userAgents.indexOf('chrome') !== -1 || userAgents.indexOf('edge') !== -1 ) {
         ext = '.webm';
     }
 
