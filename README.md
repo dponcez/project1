@@ -30,9 +30,9 @@ Note: The logos used above are from [raw.githubusercontent.com](https://raw.gith
 
 
 
-* El proposito de la música, que se encuentra la carpeta audio, es para uso de la creación del AUDIO PLAYER 🎧 y los derechos están reservados a cada artista y/o disquera.
+* El proposito de los elementos de audio y vídeo, que se encuentran en las carpeta de  audio y video respectivamente, son para uso de la creación del AUDIO PLAYER 🎧 y VIDEO PLAYER y los derechos están reservados a cada artista y/o disquera.
 
-*The purpose of the music, which is in the audio folder, is only for the creation of the AUDIO PLAYER 🎧 and the rights are reserved to each artist and / or label.*
+*The purpose of the audio and video elements, which are in the audio and video folder, are only for the creation of the AUDIO PLAYER 🎧 and VIDEO PLAYER and the rights are reserved to each artist and / or label.*
 
 ## Inspired by [50Projects50Days](https://50projects50days.com/) from Traversy Media
 
