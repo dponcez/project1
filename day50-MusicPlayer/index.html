@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset='UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <title>Document</title>
+    <!-- Mobile Specific Metas -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@200;300&display=swap'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <header class="header">
+            <h1 class="heading">music player</h1>
+        </header>
+        <div class="music--player">
+            <div class="progress--bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="music--container" id="music">
+                <div class="image--container">
+                    <img src="" alt="cover" class="avatar" id="cover">
+                </div>
+                <div class="controls--container">
+                    <button class="backward btn" id="prev"></button>
+                    <button class="player btn" id="player"></button>
+                    <button class="forward btn" id="next"></button>
+                </div>
+                <div class="volume--container">
+                    <input type="range" name="slider" class="slider" id="slider" min="0" max="100" step="1" value="3">
+                </div>
+
+                <div class="info">
+                    <p><span>author</span> 50 cent</p>
+                    <p><span>title</span> 21 questions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>
