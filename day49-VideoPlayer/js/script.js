@@ -118,20 +118,20 @@ function init( ) {
     };
 
     const getPreviousVideo = () => {
-        if( index < 0 || index === 0 ){
+        index--
+        if( index < 0 ){
             index = playlist.length - 1
-        }else {
-            index--
         }
+
         switchTrack()
     }
 
     const getNextVideo = () => {
-        if ( index === playlist.length - 1 || ( !index  > playlist.length - 1 ) ) {
+        index++
+        if ( index  > playlist.length - 1 )  {
           index = 0
-        } else {
-            index++
-        }
+        } 
+
         switchTrack()
     }
 
