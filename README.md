@@ -89,6 +89,7 @@ Here goes all projects.
 | 47. | [Random Images](https://github.com/dponcez/project1/tree/master/day47-RandomImages)    |
 | 48. | [Todo App](https://github.com/dponcez/project1/tree/master/day48-TodoApp)    |
 | 49. | [Video Player](https://github.com/dponcez/project1/tree/master/day49-VideoPlayer)    |
+| 50. | [Music Player](https://github.com/dponcez/project1/tree/master/day50-MusicPlayer)    |
 
 Note: In Live User Filter project, there's a bug or something goes wrong, when you want to filter by user name or their location this no have effect, there's no changes. 
 
