@@ -11,9 +11,234 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   margin: 0;
   padding: 0;
+  background: linear-gradient(-5deg, #ffb6c1 25%, #ffc0cb 78%);
+  color: #2c3e50;
+  overflow: hidden;
+}
+
+.container {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .header {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4.8rem;
+}
+
+.container .header .heading {
+  font-size: 3rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 475;
+}
+
+.container .header .heading::first-letter {
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+.music--player {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.music--player .progress--box {
+  width: 100%;
+  max-width: 30rem;
+  height: 4rem;
+  position: relative;
+  left: 5rem;
+  bottom: 0;
+  background: #bdd5ea;
+  border-radius: 0 0.5rem 0 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
+  transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  z-index: 1;
+}
+
+.music--player .progress--box .progress {
+  width: 65%;
+  height: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 9.35rem;
+  border-radius: 0.5rem;
+  background: rgba(44, 62, 80, 0.5);
+  -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+          box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+}
+
+.music--player .progress--box .progress--bar {
+  width: 10%;
+  height: inherit;
+  background: #ffb6c1;
+  -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+          box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+  cursor: pointer;
+}
+
+.music--player .music--container {
+  width: 100%;
+  min-width: 35rem;
+  height: 10rem;
+  position: relative;
+  background: #fffafa;
+  border-radius: 1.2rem 0 1.2rem 1.2rem;
+  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+  z-index: 1;
+}
+
+.music--player .music--container .image--container {
+  position: absolute;
+  width: 14.4rem;
+  height: 14.4rem;
+  border-radius: 50%;
+  left: 1rem;
+  bottom: 2rem;
+  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+}
+
+.music--player .music--container .image--container::after {
+  content: '';
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fffafa;
+  -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+          box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+}
+
+.music--player .music--container .image--container .avatar {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.music--player .music--container .controls--container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%);
+}
+
+.music--player .music--container .controls--container .btn {
+  position: relative;
+  display: block;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.music--player .music--container .controls--container .btn:focus {
+  outline: 0;
+}
+
+.music--player .music--container .controls--container .btn::before, .music--player .music--container .controls--container .btn::after {
+  content: '';
+  position: absolute;
+  border: 0 solid transparent;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.music--player .music--container .controls--container .btn.player::before {
+  border-left-color: #bdd5ea;
+  border-width: 2.45rem 1.2rem 2.45rem 3.3rem;
+}
+
+.music--player .music--container .controls--container .btn.player.active::before, .music--player .music--container .controls--container .btn.player.active::after {
+  border-width: 2.45rem 1.2rem 2.45rem 0.9rem;
+  border-color: #bdd5ea;
+  border-radius: .35rem;
+}
+
+.music--player .music--container .controls--container .btn.player.active::before {
+  left: -1.25rem;
+}
+
+.music--player .music--container .controls--container .btn.player.active::after {
+  left: 1.5rem;
+}
+
+.music--player .info {
+  width: 25rem;
+  height: 7rem;
+  padding: 1.2rem 1.56rem;
+  position: absolute;
+  bottom: -5.75rem;
+  background: #bdd5ea;
+  border-radius: 0 0 0.5rem 0.5rem;
+  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+  -webkit-transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
+  transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
+  z-index: -1;
+}
+
+.music--player .info p {
+  display: block;
+  font-size: 1.44rem;
   font-family: "Abel", sans-serif;
+  padding: 0;
+  margin: 0.6rem;
+  text-transform: capitalize;
+  letter-spacing: 0.16667rem;
+}
+
+.music--player .info p span {
+  display: inline-block;
+  font-weight: 855;
 }
 /*# sourceMappingURL=styles.css.map */
