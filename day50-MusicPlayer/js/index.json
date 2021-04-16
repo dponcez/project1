@@ -1,0 +1,20 @@
+[
+    {
+        "song": "audio/id1.mp3",
+        "cover": "images/image1.jpg",
+        "author": "50 cent",
+        "title" : "21 questions"
+    },
+    {
+        "song": "audio/id2.mp3",
+        "cover": "images/image2.jpg",
+        "author": "2Pac",
+        "title" : "all eyez on me"
+    },
+    {
+        "song": "audio/id3.mp3",
+        "cover": "images/image3.jpg",
+        "author": "sza ft. kendrick lamar",
+        "title" : "all starts"
+    }
+]

@@ -74,7 +74,7 @@ body {
   height: 4rem;
   position: relative;
   left: 5rem;
-  bottom: 0;
+  bottom: -4rem;
   background: #bdd5ea;
   border-radius: 0 0.5rem 0 0;
   -webkit-transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
@@ -82,6 +82,12 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 1;
+}
+
+.music--player .progress--box.active {
+  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+  bottom: 0;
 }
 
 .music--player .progress--box .progress {
@@ -117,6 +123,11 @@ body {
   z-index: 1;
 }
 
+.music--player .music--container.play .image--container .avatar {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
 .music--player .music--container .image--container {
   position: absolute;
   width: 14.4rem;
@@ -150,6 +161,32 @@ body {
      object-fit: cover;
   border-radius: 50%;
   margin: 0;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .music--player .music--container .controls--container {
@@ -173,6 +210,7 @@ body {
   position: relative;
   display: block;
   padding: 0;
+  border: 0;
   background: none;
   cursor: pointer;
 }
@@ -212,19 +250,45 @@ body {
   left: 1.5rem;
 }
 
+.music--player .music--container .controls--container .btn.backward::before {
+  border-right-color: #bdd5ea;
+  border-width: 1.08rem;
+}
+
+.music--player .music--container .controls--container .btn.backward::after {
+  border-color: #bdd5ea;
+  border-width: 1.008rem 0.225rem 1.008rem 0.225rem;
+}
+
+.music--player .music--container .controls--container .btn.forward::before {
+  border-left-color: #bdd5ea;
+  border-width: 1.08rem;
+}
+
+.music--player .music--container .controls--container .btn.forward::after {
+  border-color: #bdd5ea;
+  border-width: 1.008rem 0.225rem 1.008rem 0.225rem;
+}
+
 .music--player .info {
   width: 25rem;
   height: 7rem;
   padding: 1.2rem 1.56rem;
   position: absolute;
-  bottom: -5.75rem;
+  bottom: 0;
   background: #bdd5ea;
   border-radius: 0 0 0.5rem 0.5rem;
-  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
-          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
   transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);
   z-index: -1;
+}
+
+.music--player .info.active {
+  -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+  bottom: -5.75rem;
 }
 
 .music--player .info p {
