@@ -226,6 +226,42 @@ body {
                 }
             }
         }
+
+        .volume--container {
+            width: $size * .5;
+            max-width: 7rem;
+            position: absolute;
+            bottom: $radius;
+            right: 0;
+            .slider {
+                width: $size;
+                max-width: 6rem;
+                height: $radius;
+                appearance: none;
+                border: 0;
+                box-shadow: $shadow3;
+                border-radius: $radius;
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    width: $padding;
+                    height: $padding;
+                    border-radius: $size * .5;
+                    background: $color-light-blue;
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    margin-top: 0
+                }
+                &:hover::-webkit-slider-thumb {
+                    width: $padding * $font-weight;
+                    height: $padding * $font-weight;
+                    box-shadow: 0 0 0 .1rem rgba($color-dark, .5),
+                                              0 0 0 .3rem $color-light-blue
+                }
+                &:focus {
+                    outline: 0
+                }
+            }
+        }
     }
 
     .info {

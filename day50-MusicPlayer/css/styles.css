@@ -270,6 +270,51 @@ body {
   border-width: 1.008rem 0.225rem 1.008rem 0.225rem;
 }
 
+.music--player .music--container .volume--container {
+  width: 50%;
+  max-width: 7rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+}
+
+.music--player .music--container .volume--container .slider {
+  width: 100%;
+  max-width: 6rem;
+  height: 0.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+          box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
+  border-radius: 0.5rem;
+}
+
+.music--player .music--container .volume--container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #bdd5ea;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-top: 0;
+}
+
+.music--player .music--container .volume--container .slider:hover::-webkit-slider-thumb {
+  width: 1.14rem;
+  height: 1.14rem;
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(44, 62, 80, 0.5), 0 0 0 0.3rem #bdd5ea;
+          box-shadow: 0 0 0 0.1rem rgba(44, 62, 80, 0.5), 0 0 0 0.3rem #bdd5ea;
+}
+
+.music--player .music--container .volume--container .slider:focus {
+  outline: 0;
+}
+
 .music--player .info {
   width: 25rem;
   height: 7rem;
