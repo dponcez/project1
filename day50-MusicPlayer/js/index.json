@@ -14,8 +14,8 @@
     {
         "song": "audio/id3",
         "cover": "images/image3",
-        "artist": "sza ft. kendrick lamar",
-        "title" : "all starts"
+        "artist": "SZA ft. kendrick lamar",
+        "title" : "all the stars"
     },
     {
         "song": "audio/id4",
@@ -32,7 +32,7 @@
     {
         "song": "audio/id6",
         "cover": "images/image6",
-        "artist": "dmx",
+        "artist": "DMX",
         "title": "slipping"
     },
     {
@@ -56,7 +56,7 @@
     {
         "song": "audio/id10",
         "cover": "images/image10",
-        "artist": "jhené aiko ft. h.e.r",
+        "artist": "jhené aiko ft. H.E.R",
         "title": "b.s"
     },
     {
@@ -87,13 +87,13 @@
         "song": "audio/id15",
         "cover": "images/image15",
         "artist": "zedd ft. kehlani" ,   
-        "title": "good things"
+        "title": "good thing"
     },
     {
         "song": "audio/id16",
         "cover": "images/image16",
-        "artist": "obie trice",
-        "title": "rap name"
+        "artist": "khalid",
+        "title": "young dumb & broke"
     },
     {
         "song": "audio/id17",

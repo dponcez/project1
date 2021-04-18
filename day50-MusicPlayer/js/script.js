@@ -135,9 +135,10 @@ function init() {
       }, 300)
     );
 
-    prevBtn.addEventListener("click", prevSong);
-    nextBtn.addEventListener("click", nextSong);
+    prevBtn.addEventListener("click", debounce(() => prevSong ) );
+    nextBtn.addEventListener("click", debounce(() => nextSong ) );
     volumeSlider.addEventListener("change", rangeVolumeSlider);
+    volumeSlider.addEventListener('mousemove', rangeVolumeSlider);
     progress.addEventListener("click", getUpdateProgressBar);
     audio.addEventListener("timeupdate", updateProgressBar);
     audio.addEventListener("ended", nextSong);
