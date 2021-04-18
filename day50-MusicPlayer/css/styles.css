@@ -17,7 +17,7 @@ body {
   place-items: center;
   margin: 0;
   padding: 0;
-  background: linear-gradient(-5deg, #ffb6c1 25%, #ffc0cb 78%);
+  background: linear-gradient(-5deg, #f8a488 25%, #ff8882 78%);
   color: #2c3e50;
   overflow: hidden;
 }
@@ -103,9 +103,9 @@ body {
 }
 
 .music--player .progress--box .progress--bar {
-  width: 10%;
+  width: 0;
   height: inherit;
-  background: #ffb6c1;
+  background: #f8a488;
   -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
           box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
   cursor: pointer;
@@ -116,7 +116,7 @@ body {
   min-width: 35rem;
   height: 10rem;
   position: relative;
-  background: #fffafa;
+  background: #ffffff;
   border-radius: 1.2rem 0 1.2rem 1.2rem;
   -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
           box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
@@ -149,7 +149,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #fffafa;
+  background: #ffffff;
   -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
           box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
 }
@@ -316,13 +316,13 @@ body {
 }
 
 .music--player .info {
-  width: 25rem;
+  width: 35rem;
   height: 7rem;
   padding: 1.2rem 1.56rem;
   position: absolute;
   bottom: 0;
   background: #bdd5ea;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 1.2rem 1.2rem;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: all 0.5s cubic-bezier(0.89, 0.162, 0.76, -0.672);

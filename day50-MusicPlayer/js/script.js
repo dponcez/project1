@@ -29,64 +29,120 @@ function init() {
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
     const playBtn = document.getElementById('player');
+    const volumeSlider = document.getElementById('slider');
 
     let index = 0;
+    let isPlaying = false;
+    let playlist;
 
-    const http = new XMLHttpRequest();
-    const URL = './js/index.json';
-    http.open( 'get', URL );
-    http.onload = function()  {
+    const request = new XMLHttpRequest();
+    const requestURL = './js/index.json';
+    request.open( 'get', requestURL );
+    request.onload = function()  {
 
         if( this.readyState === 4 && this.status === 200 ){
-            const options = http.responseText;
-            const playlist = JSON.stringify( options )
-            playSong( playlist[index] );
+            const options = request.responseText;
+            playlist = JSON.parse( options )
+            playSong( playlist[ index ] );
         }
         
     }
 
 
-    function playSong(songs) {
+    function playSong( songs ) {
         try {
-            audio.src = songs.song;
-            cover.src = songs.cover;
-      
+            audio.src = `${ songs.song }.mp3`;
+            cover.src = `${ songs.cover }.jpg`;
+        
             info.innerHTML = `
-                          <p><span>author:</span> ${songs.artist}</p>
-                          <p><span>title:</span> ${songs.title}</p>
-                      `;
-                      function addClassElement() {
-                        musicContainer.classList.add("play");
-                        playBtn.classList.add("active");
-                        progressBox.classList.add("active");
-                        info.classList.add("active");
-                      }
-                  
-                      function removeClassElement() {
-                        musicContainer.classList.remove("play");
-                        playBtn.classList.remove("active");
-                        progressBox.classList.remove("active");
-                        info.classList.remove("active");
-                      }
-                  
-                      playBtn.addEventListener("click", () => {
-                        const isPlaying = musicContainer.classList.contains("play");
-                  
-                        if (isPlaying) {
-                          addClassElement();
-                          playSong(playlist[index]);
-                          audio.play();
-                        } else {
-                          removeClassElement();
-                          audio.pause();
-                        }
-                      });
+                <p><span>artist:</span> ${ songs.artist }</p>
+                <p><span>title:</span> ${ songs.title }</p>
+            `;
         } catch( error ) {
-            console.log('Something error went occur')
+            console.log(`Something error occured while we trying to get response: ${ error }`)
         }
     }
 
-    http.send()
+    function addClassElement() {
+      musicContainer.classList.add("play");
+      playBtn.classList.add("active");
+      progressBox.classList.add("active");
+      info.classList.add("active");
+    }
+
+    function removeClassElement() {
+      musicContainer.classList.remove("play");
+      playBtn.classList.remove("active");
+      progressBox.classList.remove("active");
+      info.classList.remove("active");
+    }
+
+    function prevSong() {
+      index--;
+      if (index < 0) {
+        index = playlist.length - 1;
+      }
+      playSong(playlist[index]);
+      audio.play();
+    }
+
+    function nextSong() {
+      index++;
+      if (index > playlist.length - 1) {
+        index = 0;
+      }
+      playSong(playlist[index]);
+      audio.play()
+      // removeClassElement();
+    }
+
+    function updateProgressBar() {
+      const currentTime = audio.currentTime;
+      const duration = audio.duration;
+      const pCounter = (currentTime / duration) * 100;
+
+      progress.style.width = `${pCounter}%`;
+    }
+
+    function getUpdateProgressBar(e) {
+      const width = this.offsetWidth;
+      const offsetX = e.offsetX;
+      const duration = audio.duration;
+
+      audio.currentTime = (offsetX / width) * duration;
+    }
+
+    function rangeVolumeSlider() {
+      audio.volume = volumeSlider.value / 100;
+    }
+
+    playBtn.addEventListener(
+      "click",
+      debounce(() => {
+        if (!isPlaying) {
+          isPlaying = true;
+
+          addClassElement();
+          playSong(playlist[index]);
+          audio.play();
+        } else {
+          isPlaying = false;
+
+          removeClassElement();
+          // playSong(songs);
+          audio.pause();
+        }
+      }, 300)
+    );
+
+    prevBtn.addEventListener("click", prevSong);
+    nextBtn.addEventListener("click", nextSong);
+    volumeSlider.addEventListener("change", rangeVolumeSlider);
+    progress.addEventListener("click", getUpdateProgressBar);
+    audio.addEventListener("timeupdate", updateProgressBar);
+    audio.addEventListener("ended", nextSong);
+
+    request.send()
 }
 
 document.addEventListener('DOMContentLoaded', init)
