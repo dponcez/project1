@@ -129,15 +129,26 @@ body {
             left: $radius * 2;
             bottom: 2rem;
             box-shadow: 0 .1vmin .2vmin .25vmin rgba($color-dark, .35) inset, $shadow1;
+            &::before,
             &::after {
                 content: '';
                 position: absolute;
-                width: $padding;
-                height: $padding;
+                width: $padding * $font-weight + 1;
+                height: $padding * $font-weight + 1;
                 top: $size * .5;
                 left: $size * .5;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 border-radius: $size * .5;
+                z-index: 1
+            }
+            &::before {
+                width: $padding * $font-weight + 5;
+                height: $padding * $font-weight + 5;
+                box-shadow: 0 0 0 .2vmin rgba($color-dark, .5);
+                background: rgba($color-dark, .25);
+                backdrop-filter: blur(.014vmin)
+            }
+            &::after {
                 background: $color-light;
                 box-shadow: $shadow3;
             }
@@ -225,6 +236,30 @@ body {
                     border-color: $color-light-blue;
                     border-width: $padding * .84 $radius * .45 $padding * .84 $radius * .45;
                 }
+                // hovered
+                &.player:hover::before {
+                    border-color: transparent transparent transparent rgba($color-light-blue, .8);
+                    border-width: $padding+1.25 $padding $padding+1.25 $padding * 2.75;
+                }
+                &.player.active:hover::before,
+                &.player.active:hover::after {
+                    border-color: rgba($color-light-blue, .8);
+                    border-width: $padding+1.25 $padding $padding+1.25 $padding * .75;
+                }
+                &.backward:hover::before {
+                    border-right-color: rgba($color-light-blue, .8);
+                    border-width: $padding * .9
+                }
+                &.backward:hover::after {
+                    border-color: rgba($color-light-blue, .8)
+                }
+                &.forward:hover::before {
+                    border-left-color: rgba($color-light-blue, .8);
+                    border-width: $padding * .9
+                }
+                &.forward:hover::after {
+                    border-color: rgba($color-light-blue, .8)
+                }
             }
         }
 
@@ -232,6 +267,7 @@ body {
             width: $size * .5;
             max-width: 7rem;
             position: absolute;
+            padding: 0 $radius 0 0; 
             bottom: $radius;
             right: 0;
             .slider {

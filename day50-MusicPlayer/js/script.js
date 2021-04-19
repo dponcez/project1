@@ -1,3 +1,5 @@
+// Returns a function that as long as continues it's execution to be invoked, // this not will triggered immediately if user fire a handling event.
+// The function will be called after being stops it's execution for 'n' milliseconds
 function debounce( func, wait, immediate ) {
     let timer = null;
     
@@ -59,7 +61,7 @@ function init() {
                 <p><span>title:</span> ${ songs.title }</p>
             `;
         } catch( error ) {
-            console.log(`Something error occured while we trying to get response: ${ error }`)
+            console.log(`An error occured while we trying to get response: ${ error }`)
         }
     }
 
@@ -93,7 +95,6 @@ function init() {
       }
       playSong(playlist[index]);
       audio.play()
-      // removeClassElement();
     }
 
     function updateProgressBar() {
@@ -116,6 +117,7 @@ function init() {
       audio.volume = volumeSlider.value / 100;
     }
 
+    // Event handlers
     playBtn.addEventListener(
       "click",
       debounce(() => {
@@ -129,19 +131,18 @@ function init() {
           isPlaying = false;
 
           removeClassElement();
-          // playSong(songs);
           audio.pause();
         }
       }, 300)
     );
 
-    prevBtn.addEventListener("click", debounce(() => prevSong ) );
-    nextBtn.addEventListener("click", debounce(() => nextSong ) );
-    volumeSlider.addEventListener("change", rangeVolumeSlider);
-    volumeSlider.addEventListener('mousemove', rangeVolumeSlider);
+    prevBtn.addEventListener("click", debounce(() => prevSong() ) );
+    nextBtn.addEventListener("click", debounce(() => nextSong() ) );
+    volumeSlider.addEventListener("change", debounce(() => rangeVolumeSlider() ) );
+    volumeSlider.addEventListener('mousemove', debounce(() => rangeVolumeSlider() ) );
     progress.addEventListener("click", getUpdateProgressBar);
     audio.addEventListener("timeupdate", updateProgressBar);
-    audio.addEventListener("ended", nextSong);
+    audio.addEventListener("ended", debounce(() => nextSong() ) );
 
     request.send()
 }

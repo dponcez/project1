@@ -140,16 +140,30 @@ body {
           box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset, 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
 }
 
-.music--player .music--container .image--container::after {
+.music--player .music--container .image--container::before, .music--player .music--container .image--container::after {
   content: '';
   position: absolute;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 2.14rem;
+  height: 2.14rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 50%;
+  z-index: 1;
+}
+
+.music--player .music--container .image--container::before {
+  width: 6.14rem;
+  height: 6.14rem;
+  -webkit-box-shadow: 0 0 0 0.2vmin rgba(44, 62, 80, 0.5);
+          box-shadow: 0 0 0 0.2vmin rgba(44, 62, 80, 0.5);
+  background: rgba(44, 62, 80, 0.25);
+  -webkit-backdrop-filter: blur(0.014vmin);
+          backdrop-filter: blur(0.014vmin);
+}
+
+.music--player .music--container .image--container::after {
   background: #ffffff;
   -webkit-box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
           box-shadow: 0 0.1vmin 0.2vmin 0.25vmin rgba(44, 62, 80, 0.35) inset;
@@ -271,10 +285,39 @@ body {
   border-width: 1.008rem 0.225rem 1.008rem 0.225rem;
 }
 
+.music--player .music--container .controls--container .btn.player:hover::before {
+  border-color: transparent transparent transparent rgba(189, 213, 234, 0.8);
+  border-width: 2.45rem 1.2rem 2.45rem 3.3rem;
+}
+
+.music--player .music--container .controls--container .btn.player.active:hover::before, .music--player .music--container .controls--container .btn.player.active:hover::after {
+  border-color: rgba(189, 213, 234, 0.8);
+  border-width: 2.45rem 1.2rem 2.45rem 0.9rem;
+}
+
+.music--player .music--container .controls--container .btn.backward:hover::before {
+  border-right-color: rgba(189, 213, 234, 0.8);
+  border-width: 1.08rem;
+}
+
+.music--player .music--container .controls--container .btn.backward:hover::after {
+  border-color: rgba(189, 213, 234, 0.8);
+}
+
+.music--player .music--container .controls--container .btn.forward:hover::before {
+  border-left-color: rgba(189, 213, 234, 0.8);
+  border-width: 1.08rem;
+}
+
+.music--player .music--container .controls--container .btn.forward:hover::after {
+  border-color: rgba(189, 213, 234, 0.8);
+}
+
 .music--player .music--container .volume--container {
   width: 50%;
   max-width: 7rem;
   position: absolute;
+  padding: 0 0.5rem 0 0;
   bottom: 0.5rem;
   right: 0;
 }
