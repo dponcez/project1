@@ -7,9 +7,9 @@
 ---
 ## About Me!
 
-My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be help to translate an Open Source Project, but when I could do it, I'll do it well.
+My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be help to translate an Open Source Project, but when I can do it, I'll do it well.
 
-Also, I am a dogs walker, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens next, just follow my way and my dreams.
+Also, I am a dogs walker and dogs trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens next, just follow my way and my dreams.
 
 All my personal projects helps me so much to grow me up to get knowledge about Web Techs and so I could have my own personal Web Page.
 
@@ -21,9 +21,9 @@ All my personal projects helps me so much to grow me up to get knowledge about W
 <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
 <img  alt="HTML5" width="21px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
 
----
-
 Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/github/)
+
+---
 
 # Personal Project Using HTML5, CSS3 and Vanilla JavaScript.
 
