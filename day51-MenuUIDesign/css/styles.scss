@@ -166,35 +166,44 @@ a {
                         &:last-child {
                             height: $px-height;
                             border-radius: 0 0 $padding 0;
-                            left: -15%;
+                            left: -10%;
+
+                            &.active {
+                                left: 0
+                            }
                         }
 
                         &:first-child {
-                            width: $width * .54;
+                            width: $px-width;
+                            left: -23.89%;
                             background: $color-green1;
                             transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
 
                         &:nth-child(2) {
                             width: $px-width - 40px;
+                            left: -20.9%;
                             background: $color-green2;
                             transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
 
                         &:nth-child(3) {
                             width: $px-width * .975 - $px-height;
+                            left: -18.25%;
                             background: $color-green3;
                             transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
 
                         &:nth-child(4) {
                             width: $px-width * .875 - $px-height;
+                            left: -15.54%;
                             background: $color-green4;
                             transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
 
                         &:nth-child(5) {
                             width: $px-width * .775 - $px-height;
+                            left: -12.8%;
                             background: $color-green5;
                             transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
@@ -206,13 +215,19 @@ a {
                         }
                     }
 
-                    & a {
+                    & .link {
                         width: $size;
                         display: inline-flex;
                         justify-content: space-between;
                         padding: $padding * 1.75;
                         font-size: $padding * 2;
                         text-transform: capitalize;
+                        & span {
+                            opacity: 1;
+                            &.remove {
+                                opacity: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -220,9 +235,9 @@ a {
             .heading {
                 display: block;
                 position: absolute;
-                top: $size * .5;
-                left: $size * .25;
-                transform: translate(-25%, -50%);
+                top: $size * .45;
+                left: $size * .10;
+                transform: translate(-15%, -50%);
                 font-size: 4rem;
                 color: $color-green1;
                 text-transform: uppercase;
@@ -244,27 +259,99 @@ a {
             // Toggler
             .toggle--container {
                 position: absolute;
-                left: $size * .47;
-                bottom: 10rem;
-                width: $padding * 6.75;
-                height: $padding * 6.75;
+                left: $size * .18;
+                bottom: 15%;
+                width: $padding * 4.75;
+                height: $padding * 4.75;
                 border-radius: $size * .5;
                 background: linear-gradient( $gradient );
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
-                justify-content: space-around;
-                padding-left: .4rem;
-                box-shadow: 0 .2vmin .1vmin .3vmin rgba($color-light, .2), -.2vmin .2vmin .1vmin .3vmin rgba($color-light, .3) inset;
+                display: grid;
+                place-items: center;
+                // box-shadow: 0 .2vmin .1vmin .3vmin rgba($color-light, .2);
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: $size * .5;
+                }
 
-                .title {
-                    font-size: $padding * 1.25;
-                    text-transform: uppercase;
-                    color: $dark;
-                    font-weight: 600;
-                    margin: 0 0 $padding * -.45 $padding * .45
+                &::before {
+                    transition: background-color 100ms linear;
+                    z-index: -1;
+                }
+
+                &::after {
+                    background: $color-green2;
+                    animation: pulse 1350ms infinite;
+                    z-index: 1;
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(.95);
+                            opacity: .85;
+                        }
+                        100% {
+                            transform: scale(1.32);
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &:hover::before {
+                    background: $color-green4;
+                }
+
+                .toggle {
+                    width: 2.975rem;
+                    height: 1.75rem;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    transition: transform 350ms cubic-bezier(.75,.35,.35,.75);
+                    z-index: 10;
+                    cursor: pointer;
+
+                    .bar {
+                        width: $size;
+                        height: .375rem;
+                        background: $dark;
+                        border-radius: $padding;
+                        &.half {
+                            width: $size * .5;
+                        }
+
+                        &.start {
+                            align-self: flex-start;
+                            transform-origin: left;
+                            transition: transform 350ms cubic-bezier(.65,.96,.96,.65);
+                        }
+                        &.end {
+                            align-self: flex-end;
+                            transform-origin: right;
+                            transition: transform 350ms cubic-bezier(.65, .96, .96, .65);
+                        }
+                    }
+
+                    
+                    &.open {
+                        transform: rotate(405deg)
+                    }
                 }
             }
         }
     }
+}
+
+// Animate toggle button
+.open .bar.start {
+    transform: translate(1.5rem, .7rem) rotate(270deg);
+}
+.open .bar.end {
+    transform: translate(-1.495rem, -.65rem) rotate(270deg);
 }
