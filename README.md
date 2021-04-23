@@ -7,7 +7,7 @@
 ---
 ## About Me!
 
-My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be help to translate in some Open Source Project, but when I can do it, I'll do it well.
+My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be, help to translate some Open Source Project, but when I can do it, I'll do it well.
 
 Also, I am a dogs walker and dogs trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens in the future, but the moment I just follow my way and my dreams.
 
