@@ -1,4 +1,4 @@
-# Learning to code 📚 </>
+# Learning to < code /> 📚
 
 <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
 
@@ -7,11 +7,11 @@
 ---
 ## About Me!
 
-My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be help to translate an Open Source Project, but when I can do it, I'll do it well.
+My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be help to translate in some Open Source Project, but when I can do it, I'll do it well.
 
-Also, I am a dogs walker and dogs trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens next, just follow my way and my dreams.
+Also, I am a dogs walker and dogs trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens in the future, but the moment I just follow my way and my dreams.
 
-All my personal projects helps me so much to grow me up to get knowledge about Web Techs and so I could have my own personal Web Page.
+All my personal projects help me so much to grow me up to get knowledge about Web Techs and so I could have my own personal Web Page.
 
 ---
 
@@ -25,7 +25,7 @@ Note: The logos used above are from [raw.githubusercontent.com](https://raw.gith
 
 ---
 
-# Personal Project Using HTML5, CSS3 and Vanilla JavaScript.
+## Personal Project Using HTML5, CSS3 and Vanilla JavaScript.
 
 The examples below are my personal projects using HTML5, CSS3 and JS. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
 
@@ -45,7 +45,7 @@ The examples below are my personal projects using HTML5, CSS3 and JS. I also loo
 
 *The purpose of the audio and video elements, which are in the audio and video folder, are only for the creation of the AUDIO PLAYER 🎧 and VIDEO PLAYER and the rights are reserved to each artist and / or label.*
 
-# Inspired by [50Projects50Days](https://50projects50days.com/) from Traversy Media
+## Inspired by [50Projects50Days](https://50projects50days.com/) from Traversy Media
 
 Here goes all projects.
 
