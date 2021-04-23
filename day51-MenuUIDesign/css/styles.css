@@ -109,7 +109,7 @@ a {
   display: inline-block;
   font-size: 1.5rem;
   text-transform: capitalize;
-  color: #2c3e50;
+  color: #ecf0f1;
 }
 
 .container .mobile .app--header .logo span::first-letter {
@@ -173,7 +173,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:first-child {
   width: 375px;
-  left: -23.89%;
+  left: -17.89%;
   background: #1ec89d;
   -webkit-transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -181,7 +181,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:nth-child(2) {
   width: 335px;
-  left: -20.9%;
+  left: -15.9%;
   background: #22b999;
   -webkit-transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -189,7 +189,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:nth-child(3) {
   width: 298.625px;
-  left: -18.25%;
+  left: -14.25%;
   background: #23a98e;
   -webkit-transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -197,7 +197,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:nth-child(4) {
   width: 261.125px;
-  left: -15.54%;
+  left: -12.54%;
   background: #269784;
   -webkit-transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -205,7 +205,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:nth-child(5) {
   width: 223.625px;
-  left: -12.8%;
+  left: -10.8%;
   background: #25887d;
   -webkit-transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -213,6 +213,7 @@ a {
 
 .container .mobile .app--header .nav--header .nav--menu .item:last-child {
   width: 186.125px;
+  left: -9%;
   background: #257470;
   -webkit-transition: left 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -232,7 +233,10 @@ a {
 }
 
 .container .mobile .app--header .nav--header .nav--menu .link span {
+  display: inline-block;
   opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.84, 0.16, 0.32, 0.9);
+  transition: opacity 250ms cubic-bezier(0.84, 0.16, 0.32, 0.9);
 }
 
 .container .mobile .app--header .nav--header .nav--menu .link span.remove {

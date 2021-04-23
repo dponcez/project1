@@ -30,13 +30,12 @@ function init() {
             toggler.classList.toggle('open')
 
             if( toggler && menuItems ) {
-                menuItems.forEach(( items, index  ) => {
+                menuItems.forEach( items => {
                     if( items.classList.contains('active') ) {
                         items.classList.remove('active')
-                        index++
+                        
                     }else {
                         items.classList.add('active')
-                        index--
                     }
                 })
 
