@@ -5,6 +5,8 @@ $font-weight: .95;
 // ========== VIEWPORT
 $width: 100vw;
 $height: 100vh;
+$max-width: 80rem;
+$max-height: 60rem;
 $size: 100%;
 $radius: .5em;
 $padding: 1.5em;
@@ -59,8 +61,8 @@ body {
             &.open--image {
                 width: $size;
             	height: $size;
-            	max-width: $size;
-            	max-height: 60rem;
+            	max-width: $max-width;
+            	max-height: $max-height;
                 animation: scale 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
                 @keyframes scale {
@@ -144,9 +146,80 @@ body {
         background: $color-grey;
         box-shadow: $shadow;
         z-index : 10;
-        
+
         &.hide {
         	display: none
+        }
+    }
+
+    .banner--container {
+        position: absolute;
+        width: $size;
+        height: $size;
+        max-width: $max-width;
+        max-height: $max-height;
+        background: rgba($color-light, .5);
+        z-index: 20;
+        backdrop-filter: blur(.1rem);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .heading {
+            width: $size;
+            margin: 0;
+            // padding: $radius $padding;
+            font-size: $padding * 5;
+            text-align: center;
+            display: blocK;
+            text-transform: capitalize;
+            color: $color-dark;
+            font-family: $font-stack-2;
+        }
+
+        .content {
+            padding: $padding * 2;
+            margin: $padding;
+            display: block;
+
+            .description {
+                padding: $padding;
+                color: #000000;
+                font-family: $font-stack-1;
+                text-align: center;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+
+                &:first-child {
+                    font-size: $padding * 1.2;
+                    padding: $padding * 1.5;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    font-size: $padding * 1.5
+                }
+            }
+        }
+
+        .close {
+            width: max-content;
+            padding: $radius $padding * $font-weight;
+            border: 0;
+            border-radius: $radius;
+            background: $color-red;
+            color: $color-light;
+            font-size: $padding * 1.2;
+            font-weight: 900;
+            box-shadow: $shadow;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(.98);
+            }
         }
     }
 }
