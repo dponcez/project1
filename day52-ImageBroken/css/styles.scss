@@ -6,9 +6,14 @@ $font-weight: .95;
 $width: 100vw;
 $height: 100vh;
 $size: 100%;
+$radius: .5em;
+$padding: 1.5em;
 // ========== COLORS
 $color-dark: #2c3e50;
 $color-light: #ecf0f1;
+$color-red: #f00;
+$color-grey: #ccc;
+$shadow: 0 .2vmin .3vmin .1vmin rgba($color-dark, .5);
 
 *,
 *::before,
@@ -26,4 +31,109 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-stack-1;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image--container {
+        display: block;
+
+        .image {
+            width: $size;
+            height: $padding * 3.5;
+            // max-width: 10rem;
+            min-width: 15rem;
+            position: relative;
+            background: transparent;
+            padding: $padding;
+            border-radius: $radius;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // &.open {
+            // 	width: 100%;
+            // 	height: 100%;
+            // 	max-width: 30rem;
+            // 	max-height: 50rem;
+            // }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: $size * .5;
+                left: $size * .5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translate(-50%,-50%);
+            }
+
+            &::before {
+                content: '\2639';
+                width: $size;
+                height: $size;
+                justify-content: flex-start;
+                padding-left: $padding / 2.5 * $font-weight;
+                font-size: $padding * 2;
+                font-weight: 800 * $font-weight;
+                color: $color-red;
+                background: $color-grey;
+                border-radius: $radius / 2;
+                box-shadow: $shadow;
+            }
+            &::after {
+                content: attr(data-text);
+                width: $size;
+                height: $size;
+                margin-left: $padding * 3;
+                color: $color-light;
+                background: $color-red;
+                border-radius: $radius;
+                font-family: $font-stack-1;
+                font-size: $padding * 1.25;
+                text-transform: capitalize;
+                top: $size * .6;
+                left: 5%;
+                transform: translateY(50%) rotate(25deg);
+                transition: transform 2s ease;
+                animation: fall 1800ms cubic-bezier(0.75, 1.75, 0.187, 0.67);
+                box-shadow: $shadow;
+                z-index: 10;
+                @keyframes fall {
+                    0% {
+                        transform: translateY(-50%);
+                    }
+                    25% {
+                        transform: translateY(25%);
+                    }
+                    100% {
+                        transform: translateY(50%) rotate(25deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .point {
+        width: $padding * 2.275;
+        height: $padding + 1;
+        display: block;
+        position: absolute;
+        top: $size * .5;
+        transform: translate(50%, 50%);
+        border-radius: $radius / 1.2;
+        background: $color-grey;
+        box-shadow: $shadow;
+        z-index : 10;
+        // &.active {
+        // 	display: none
+        // }
+    }
 }
