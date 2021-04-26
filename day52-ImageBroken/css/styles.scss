@@ -158,49 +158,34 @@ body {
         height: $size;
         max-width: $max-width;
         max-height: $max-height;
-        background: rgba($color-light, .5);
+        background: $color-light;
         z-index: 20;
-        backdrop-filter: blur(.1rem);
+        // backdrop-filter: blur(.1rem);
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
 
-        .heading {
-            width: $size;
-            margin: 0;
-            // padding: $radius $padding;
-            font-size: $padding * 5;
-            text-align: center;
-            display: blocK;
-            text-transform: capitalize;
-            color: $color-dark;
-            font-family: $font-stack-2;
+        &.disabled {
+            display: none;
         }
-
+       
         .content {
             padding: $padding * 2;
             margin: $padding;
             display: block;
-
+            
             .description {
-                padding: $padding;
-                color: #000000;
-                font-family: $font-stack-1;
+                width: $size;
+                margin: 0;
+                font-size: $padding * 3;
                 text-align: center;
-
+                display: blocK;
+                color: $color-dark;
+                font-family: $font-stack-2;
+                
                 &::first-letter {
-                    text-transform: uppercase;
-                }
-
-                &:first-child {
-                    font-size: $padding * 1.2;
-                    padding: $padding * 1.5;
-                    margin: 0;
-                }
-
-                &:last-child {
-                    font-size: $padding * 1.5
+                    text-transform: capitalize;
                 }
             }
         }
