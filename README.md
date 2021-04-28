@@ -113,3 +113,4 @@ Live User Filter project was updated! Added 'hide' class on styles.css
 
 | 51. | [Menu UI Design](https://github.com/dponcez/project1/tree/master/day51-MenuUIDesign)    |
 | 52. | [Image Broken](https://github.com/dponcez/project1/tree/master/day52-ImageBroken)    |
+| 53. | [Calculator](https://github.com/dponcez/project1/tree/master/day53-Calculator)    |
