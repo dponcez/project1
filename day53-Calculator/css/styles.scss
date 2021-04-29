@@ -102,6 +102,86 @@ body {
                 background: transparent;
                 outline-offset: .4rem;
                 transition: filter 250ms;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(.95);
+                    transition: transform 250ms;
+                }
+
+                &:nth-child(11) {
+                    grid-column: 4;
+                    grid-row: 4;
+                }
+
+                &:nth-child(12) {
+                    grid-column: 4;
+                    grid-row: 3;
+                }
+
+                &:nth-child(13) {
+                    grid-column: 4;
+                    grid-row: 1;
+                }
+
+                &:nth-child(14) {
+                    grid-column: 4;
+                    grid-row: 2;
+                }
+
+                &:nth-child(15) {
+                    grid-column: span 3;
+                    grid-row: 5;
+                    background : rgba($color-dark, .3);
+                    color: $color-dark;
+                }
+
+                &:nth-child(16) {
+                    grid-column: 1;
+                    grid-row: 5;
+                }
+
+                &:nth-child(17) {
+                    grid-column: 2 / span 2;
+                    grid-row: 4;
+                    text-transform: uppercase;
+                }
+
+                &:nth-child(16),
+                &:nth-child(17) {
+                    font-size: 2rem;
+                    font-weight: 700 * $font-weight;
+                }
+
+                &:hover {
+                    filter: brightness(110%);
+
+                    & .front {
+                        transform: translateY(-.6rem);
+                        transition: transform 250ms cubic-bezier(.3, .4, .7, 1.5);
+                    }
+
+                    & .shadow {
+                        transform: translateY(.4rem);
+                        transition: transform 250ms cubic-bezier(.3, .4, .7, 1.5);
+                    }
+                }
+
+                &:active {
+                    & .front {
+                        transform: translateY(-.2rem);
+                        transition: transform 34ms;
+                    }
+
+                    & .shadow {
+                        transform: translateY(-.1rem);
+                        transition: transform 34ms;
+                    }
+                }
+
+                &:focus:not(:focus-visible) {
+                    outline: none;
+                }
 
                 .shadow,
                 .edge {
@@ -133,7 +213,7 @@ body {
                 .front {
                     display: block;
                     position: relative;
-                    padding: $padding $padding * 2;
+                    padding: $padding * 2 $padding * 2;
                     border-radius: $padding / 2;
                     font-size: $padding;
                     color: $color-light;
