@@ -40,12 +40,26 @@ const init = () => {
     const clean = document.getElementById("clean");
 
     function calculate( e ) {
-        const display = document.getElementById('display');
-        display.value;
-        const value = eval( display );
-
-        document.getElementById('display').value = value;
+        try {
+            const display = document.getElementById('display').value;
+            const value = eval( display );
+    
+            document.getElementById('display').value = value;
+        }catch( error ) {
+            console.log(`There is an input error, we cannot display your result: ${error}`);
+        }
     }
+
+    function clickableButton( val ) {
+        display.value += val;
+    }
+
+    function clearInputText() {
+        display.value = ''
+    }
+
+    const getCalculus = debounce(() => clickableButton( ) );
+    const clearDisplay = debounce(() => clearInputText() )
 
     // Event handler
     n_7.addEventListener('click', () => clickableButton( 7 ) );
@@ -63,9 +77,10 @@ const init = () => {
     division.addEventListener('click', () => clickableButton('/') );
     plus.addEventListener('click', () => clickableButton('+') );
     minus.addEventListener('click', () => clickableButton('-') );
-    equal.addEventListener('click', () => clickableButton('=') );
     point.addEventListener('click', () => clickableButton('.') );
-    clean.addEventListener('click', () => clearInputText('c') )
+    clean.addEventListener('click', () => clearInputText('c') );
+
+    equal.addEventListener('click', calculate );
 }
 
 document.addEventListener('DOMContentLoaded', init )

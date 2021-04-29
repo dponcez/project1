@@ -1,0 +1,148 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: hsla(210, 29%, 24%, .95);
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: $size * .8;
+    height: $size * .9;
+    max-width: 40rem;
+    background: $color-light;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,.2) 2%,
+        rgba(100,100,100,.1) 90%
+    );
+    box-shadow: 0.1vmin 0.125vmin 0.675vmin rgba($color-dark, .4),
+                              -0.25vmin 0.275vmin 1.875vmin 0 rgba($color-dark, .2), 0 0 0 .1675vmin rgba($color-dark, .75);
+    padding: $padding;
+    border-radius: $padding  * $font-weight / 1.2;
+
+    .calculator {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .display--container {
+            width: $size * .8;
+            height: $padding * 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: $padding 2rem;
+            margin-top: $padding * 1.15;
+            box-shadow: .125vmin .1875vmin .675vmin rgba(0, 0, 0, .2) inset, -.125vmin -.1875vmin .675vmin rgba(255, 255, 255, .2) inset, .1875vmin .125vmin .125vmin rgba($color-dark, .3) inset;
+            border-radius: $radius;
+
+            .display {
+                appearance: none;
+                width: $size;
+                max-width: $padding * 25;
+                height: $padding;
+                padding: $padding $radius;
+                display: block;
+                font-family: $font-stack-1;
+                border: .1vmin solid $color-dark;
+                background: $color-dark;
+                color: $color-light;
+                font-size: $padding * $font-weight / .75;
+                border-radius: $radius;
+
+                &::placeholder {
+                    color: $color-light;
+                    opacity: .95;
+                }
+            }
+        }
+
+        .buttons--container {
+            margin-top: $padding * 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 1rem;
+
+            .btn {
+                // padding: $padding * 1.7 $padding * 1.7;
+                padding: 0;
+                border-radius: $radius;
+                position: relative;
+                border: none;
+                background: transparent;
+                outline-offset: .4rem;
+                transition: filter 250ms;
+
+                .shadow,
+                .edge {
+                    width: $size;
+                    height: $size;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: $padding / 2;
+                }
+
+                .shadow {
+                    background: hsla(0deg, 0%, 0%,  0.25);
+                    will-change: transform;
+                    transform: translateY(.2rem);
+                    transition: transform 600ms cubic-bezier(.3, .4, .7, 1)
+                }
+
+                .edge {
+                    background: linear-gradient(
+                        to left,
+                        hsl(340deg, 100%, 16%) 0%,
+                        hsl(340deg, 100%, 32%) 8%,
+                        hsl(340deg, 100%, 32%) 92%,
+                        hsl(340deg, 100%, 32%) 100%,
+                    );
+                }
+
+                .front {
+                    display: block;
+                    position: relative;
+                    padding: $padding $padding * 2;
+                    border-radius: $padding / 2;
+                    font-size: $padding;
+                    color: $color-light;
+                    background: hsl(345deg, 100%, 47%);
+                    will-change: transform;
+                    transform: translateY(-.4rem);
+                    transition: transform 600ms cubic-bezier(.3, .4, .7, 1);
+                }
+            }
+        }
+    }
+}

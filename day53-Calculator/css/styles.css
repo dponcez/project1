@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  max-width: 40rem;
+  background: #ecf0f1;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 2%, rgba(100, 100, 100, 0.1) 90%);
+  -webkit-box-shadow: 0.1vmin 0.125vmin 0.675vmin rgba(43, 61, 79, 0.4), -0.25vmin 0.275vmin 1.875vmin 0 rgba(43, 61, 79, 0.2), 0 0 0 0.1675vmin rgba(43, 61, 79, 0.75);
+          box-shadow: 0.1vmin 0.125vmin 0.675vmin rgba(43, 61, 79, 0.4), -0.25vmin 0.275vmin 1.875vmin 0 rgba(43, 61, 79, 0.2), 0 0 0 0.1675vmin rgba(43, 61, 79, 0.75);
+  padding: 1.5rem;
+  border-radius: 1.1875rem;
+}
+
+.container .calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .calculator .display--container {
+  width: 80%;
+  height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin-top: 1.725rem;
+  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(0, 0, 0, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(255, 255, 255, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
+          box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(0, 0, 0, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(255, 255, 255, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
+  border-radius: 0.5rem;
+}
+
+.container .calculator .display--container .display {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  max-width: 37.5rem;
+  height: 1.5rem;
+  padding: 1.5rem 0.5rem;
+  display: block;
+  font-family: "Abel", sans-serif;
+  border: 0.1vmin solid rgba(43, 61, 79, 0.95);
+  background: rgba(43, 61, 79, 0.95);
+  color: #ecf0f1;
+  font-size: 1.9rem;
+  border-radius: 0.5rem;
+}
+
+.container .calculator .display--container .display::-webkit-input-placeholder {
+  color: #ecf0f1;
+  opacity: .95;
+}
+
+.container .calculator .display--container .display:-ms-input-placeholder {
+  color: #ecf0f1;
+  opacity: .95;
+}
+
+.container .calculator .display--container .display::-ms-input-placeholder {
+  color: #ecf0f1;
+  opacity: .95;
+}
+
+.container .calculator .display--container .display::placeholder {
+  color: #ecf0f1;
+  opacity: .95;
+}
+
+.container .calculator .buttons--container {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.container .calculator .buttons--container .btn {
+  padding: 0;
+  border-radius: 0.5rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  outline-offset: .4rem;
+  -webkit-transition: -webkit-filter 250ms;
+  transition: -webkit-filter 250ms;
+  transition: filter 250ms;
+  transition: filter 250ms, -webkit-filter 250ms;
+}
+
+.container .calculator .buttons--container .btn .shadow,
+.container .calculator .buttons--container .btn .edge {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.75rem;
+}
+
+.container .calculator .buttons--container .btn .shadow {
+  background: rgba(0, 0, 0, 0.25);
+  will-change: transform;
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1), -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+}
+
+.container .calculator .buttons--container .btn .edge {
+  background: -webkit-gradient(linear, right top, left top, from(#52001b), color-stop(8%, #a30036), color-stop(92%, #a30036), to(#a30036));
+  background: linear-gradient(to left, #52001b 0%, #a30036 8%, #a30036 92%, #a30036 100%);
+}
+
+.container .calculator .buttons--container .btn .front {
+  display: block;
+  position: relative;
+  padding: 1.5rem 3rem;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  background: #f0003c;
+  will-change: transform;
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+  transition: transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1), -webkit-transform 600ms cubic-bezier(0.3, 0.4, 0.7, 1);
+}
+/*# sourceMappingURL=styles.css.map */
