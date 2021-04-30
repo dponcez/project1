@@ -46,39 +46,90 @@ const init = () => {
     
             document.getElementById('display').value = value;
         }catch( error ) {
-            console.log(`There is an input error, we cannot display your result: ${error}`);
+            console.log(`There is an output error, we cannot display your result: ${error}`);
         }
     }
 
-    function clickableButton( val ) {
-        display.value += val;
-    }
+    // function clickableButton( val ) {
+    //     try {
+    //         const json = JSON.stringify( val );
+    //         display.value += json;
+            
+    //         console.log( json )
+    //     }catch( error ) {
+    //         console.log( error.message )
+    //     }
+         
+    // }
 
     function clearInputText() {
         display.value = ''
     }
 
-    const getCalculus = debounce(() => clickableButton( ) );
-    const clearDisplay = debounce(() => clearInputText() )
+    // const getCalculus = debounce(() => clickableButton( e ) );
+    const clearDisplay = debounce(() => clearInputText() );
+
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach( ( button, index )  => {
+        // const options = [
+        //     { seven: 7 },
+        //     { eight: 8 },
+        //     { nine: 9 },
+        //     { four: 4 },
+        //     { five: 5 },
+        //     { six: 6 },
+        //     { one: 1},
+        //     { two: 2 },
+        //     { three: 3 },
+        //     { zero: 0 },
+        //     { multiply: "*" },
+        //     { division: "/" },
+        //     { add: "+" },
+        //     { minus: "-" },
+        //     { point: "." }
+        // ]
+        const options = [7,8,9,4,5,6,1,2,3,0,'*','/','+','-','.']
+       
+        button.addEventListener('click', ( e ) => {
+             try {
+                const json = JSON.stringify( e.target.dataset.number[ index ] );
+                display.value += json;
+                
+                console.log( json )
+            }catch( error ) {
+                console.log( error.message )
+            }
+        } )
+        // button.addEventListener('click', () => clickableButton( eight ) )
+        // button.addEventListener('click', () => clickableButton( nine ) )
+        // button.addEventListener('click', () => clickableButton( four ) )
+        // button.addEventListener('click', () => clickableButton( five ) )
+        // button.addEventListener('click', () => clickableButton( six ) )
+        // button.addEventListener("click", () => clickableButton( one));
+        // button.addEventListener('click', () => clickableButton( two ) )
+        // button.addEventListener("click", () => clickableButton( three ));
+        // button.addEventListener("click", () => clickableButton( zero ));
+    })
 
     // Event handler
-    n_7.addEventListener('click', () => clickableButton( 7 ) );
-    n_8.addEventListener('click', () => clickableButton( 8 ) );
-    n_9.addEventListener('click', () => clickableButton( 9 ) );
-    n_4.addEventListener('click', () => clickableButton( 4 ) );
-    n_5.addEventListener("click", () => clickableButton( 5 ));
-    n_6.addEventListener('click', () => clickableButton( 6 ) );
-    n_1.addEventListener('click', () => clickableButton( 1 ) );
-    n_2.addEventListener("click", () => clickableButton( 2 ) );
-    n_3.addEventListener("click", () => clickableButton( 3 ) );
-    n_0.addEventListener("click", () => clickableButton( 0 ) );
+    // n_7.addEventListener('click', () => clickableButton( 7 ) );
+    // n_8.addEventListener('click', () => clickableButton( 8 ) );
+    // n_9.addEventListener('click', () => clickableButton( 9 ) );
+    // n_4.addEventListener('click', () => clickableButton( 4 ) );
+    // n_5.addEventListener("click", () => clickableButton( 5 ));
+    // n_6.addEventListener('click', () => clickableButton( 6 ) );
+    // n_1.addEventListener('click', () => clickableButton( 1 ) );
+    // n_2.addEventListener("click", () => clickableButton( 2 ) );
+    // n_3.addEventListener("click", () => clickableButton( 3 ) );
+    // n_0.addEventListener("click", () => clickableButton( 0 ) );
 
-    multiply.addEventListener('click', () => clickableButton('*') );
-    division.addEventListener('click', () => clickableButton('/') );
-    plus.addEventListener('click', () => clickableButton('+') );
-    minus.addEventListener('click', () => clickableButton('-') );
-    point.addEventListener('click', () => clickableButton('.') );
-    clean.addEventListener('click', () => clearInputText('c') );
+    // multiply.addEventListener('click', () => clickableButton('*') );
+    // division.addEventListener('click', () => clickableButton('/') );
+    // plus.addEventListener('click', () => clickableButton('+') );
+    // minus.addEventListener('click', () => clickableButton('-') );
+    // point.addEventListener('click', () => clickableButton('.') );
+    // clean.addEventListener('click', () => clearInputText('c') );
 
     equal.addEventListener('click', calculate );
 }
