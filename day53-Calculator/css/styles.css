@@ -63,8 +63,8 @@ body {
   position: relative;
   padding: 1.5rem 2rem;
   margin-top: 1.725rem;
-  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(0, 0, 0, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(255, 255, 255, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
-          box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(0, 0, 0, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(255, 255, 255, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
+  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(43, 61, 79, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(236, 240, 241, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
+          box-shadow: 0.125vmin 0.1875vmin 0.675vmin rgba(43, 61, 79, 0.2) inset, -0.125vmin -0.1875vmin 0.675vmin rgba(236, 240, 241, 0.2) inset, 0.1875vmin 0.125vmin 0.125vmin rgba(43, 61, 79, 0.3) inset;
   border-radius: 0.5rem;
 }
 
@@ -77,6 +77,7 @@ body {
   height: 1.5rem;
   padding: 1.5rem 0.5rem;
   display: block;
+  position: relative;
   font-family: "Abel", sans-serif;
   border: 0.1vmin solid rgba(43, 61, 79, 0.95);
   background: rgba(43, 61, 79, 0.95);
@@ -201,7 +202,8 @@ body {
           filter: brightness(110%);
 }
 
-.container .calculator .buttons--container .btn:hover .front {
+.container .calculator .buttons--container .btn:hover .front,
+.container .calculator .buttons--container .btn:hover .equal {
   -webkit-transform: translateY(-0.6rem);
           transform: translateY(-0.6rem);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.3, 0.4, 0.7, 1.5);
@@ -219,7 +221,8 @@ body {
   transition: transform 250ms cubic-bezier(0.3, 0.4, 0.7, 1.5), -webkit-transform 250ms cubic-bezier(0.3, 0.4, 0.7, 1.5);
 }
 
-.container .calculator .buttons--container .btn:active .front {
+.container .calculator .buttons--container .btn:active .front,
+.container .calculator .buttons--container .btn:active .equal {
   -webkit-transform: translateY(-0.2rem);
           transform: translateY(-0.2rem);
   -webkit-transition: -webkit-transform 34ms;
@@ -267,7 +270,8 @@ body {
   background: linear-gradient(to left, #52001b 0%, #a30036 8%, #a30036 92%, #a30036 100%);
 }
 
-.container .calculator .buttons--container .btn .front {
+.container .calculator .buttons--container .btn .front,
+.container .calculator .buttons--container .btn .equal {
   display: block;
   position: relative;
   padding: 3rem 3rem;

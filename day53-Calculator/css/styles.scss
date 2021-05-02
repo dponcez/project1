@@ -64,7 +64,7 @@ body {
             position: relative;
             padding: $padding 2rem;
             margin-top: $padding * 1.15;
-            box-shadow: .125vmin .1875vmin .675vmin rgba(0, 0, 0, .2) inset, -.125vmin -.1875vmin .675vmin rgba(255, 255, 255, .2) inset, .1875vmin .125vmin .125vmin rgba($color-dark, .3) inset;
+            box-shadow: .125vmin .1875vmin .675vmin rgba($color-dark, .2) inset, -.125vmin -.1875vmin .675vmin rgba($color-light, .2) inset, .1875vmin .125vmin .125vmin rgba($color-dark, .3) inset;
             border-radius: $radius;
 
             .display {
@@ -74,6 +74,7 @@ body {
                 height: $padding;
                 padding: $padding $radius;
                 display: block;
+                position: relative;
                 font-family: $font-stack-1;
                 border: .1vmin solid $color-dark;
                 background: $color-dark;
@@ -96,7 +97,6 @@ body {
             gap: 1rem;
 
             .btn {
-                // padding: $padding * 1.7 $padding * 1.7;
                 padding: 0;
                 border-radius: $radius;
                 position: relative;
@@ -158,7 +158,8 @@ body {
                 &:hover {
                     filter: brightness(110%);
 
-                    & .front {
+                    & .front,
+                    & .equal {
                         transform: translateY(-.6rem);
                         transition: transform 250ms cubic-bezier(.3, .4, .7, 1.5);
                     }
@@ -170,7 +171,8 @@ body {
                 }
 
                 &:active {
-                    & .front {
+                    & .front,
+                    & .equal {
                         transform: translateY(-.2rem);
                         transition: transform 34ms;
                     }
@@ -212,7 +214,8 @@ body {
                     );
                 }
 
-                .front {
+                .front,
+                .equal {
                     display: block;
                     position: relative;
                     padding: $padding * 2 $padding * 2;
