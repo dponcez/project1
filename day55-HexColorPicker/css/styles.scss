@@ -49,9 +49,12 @@ body {
 
         .output {
             display: inline-block;
+            padding: $padding;
             font-size: $padding * 2 / $font-weight;
             font-weight: 800 * $font-weight;
+            background: rgba($color-dark, .5);
             color: $color-light;
+            border-radius: $radius;
         }
     }
 
