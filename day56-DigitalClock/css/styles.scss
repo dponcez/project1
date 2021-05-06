@@ -36,11 +36,6 @@ body {
     font-family: $font-stack-1;
     overflow: hidden;
     display: block;
-    // background: linear-gradient(
-    //     45deg,
-    //     $color-dark 5%,
-    //     $color-blue 98%
-    // );
     background: $color-dark;
     perspective: 300vmin;
 }

@@ -10,11 +10,6 @@
         let mins = now.getMinutes();
         let secs = now.getSeconds();
 
-        // get degress about our time
-        // let hourDeg = (( hour / 12) * 360 ) + 90;
-        // let minDeg = (( mins / 60 ) * 360 ) + 90;
-        // let secDeg = (( secs / 60 ) * 360 ) + 90;
-
         let hour_text;
         // statements
         if( hour > 12 ) {
