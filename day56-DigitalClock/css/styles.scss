@@ -8,9 +8,13 @@ $height: 100vh;
 $size: 100%;
 $padding: 1.5rem;
 $radius: .5rem;
+$vmin: 2rem;
 // ========== COLORS
-$color-dark: #2c3e50;
+$color-dark: #060a16;
+$color-asphalt: #34495e;
 $color-light: #ecf0f1;
+$color-blue: #3498db;
+$color-darken: #c0392b;
 
 * {
     &,
@@ -31,4 +35,107 @@ body {
     padding: 0;
     font-family: $font-stack-1;
     overflow: hidden;
+    display: block;
+    // background: linear-gradient(
+    //     45deg,
+    //     $color-dark 5%,
+    //     $color-blue 98%
+    // );
+    background: $color-dark;
+    perspective: 300vmin;
+}
+
+.container {
+    height: $height;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .header,
+    .clock--container {
+        transform-style: preserve-3d;
+    }
+
+    .header {
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        
+        .heading {
+            font-size: $padding / $font-weight * 3;
+            color: $color-light;
+            padding: $padding;
+            margin: 0;
+            text-transform: capitalize;
+            transform: translateZ(15vmin) rotateY(-45deg);
+        }
+    }
+
+    .clock--container {
+        position: relative;
+        display: block;
+        padding: $padding;
+
+        .clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $padding * $font-weight - .2;
+            position: relative;
+            transform: translateZ(15vmin) rotateY(-45deg) scale(1.5);
+
+            .points {
+                font-size: $padding + $font-weight;
+                color: $color-light;
+            }
+
+            .am--pm {
+                width: $padding + $font-weight;
+                height: $padding + $font-weight;
+                padding: $padding;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: $padding * -2.25;
+                background: $color-light;
+                color: $color-asphalt;
+                font-size: $padding;
+                font-weight: 700 * $font-weight;
+                text-transform: uppercase;
+                box-shadow: $vmin * .075 $vmin * .075 $vmin * .1 rgba($color-light, $alpha: .4);
+            }
+
+            .hand {
+                width: $width * .1;
+                padding: $padding $padding * $font-weight + 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: $vmin * .075 $vmin * .075 $vmin * .1 0 rgba($color-light, $alpha: .4), $vmin * .1 $vmin * .1 $vmin * .15 0 rgba($color-darken, $alpha: .1), $vmin * .0275 $vmin * .0625 $vmin * .125 rgba($color-light, $alpha: .2) inset;
+                -webkit-box-reflect:  below $radius linear-gradient( transparent, #000432); 
+                &.hr {
+                    background: $color-blue;
+                }
+
+                &.min {
+                    background: $color-asphalt
+                }
+
+                &.sec {
+                    background: $color-darken;
+                }
+
+                .time {
+                    font-size: $padding + 2;
+                    color: $color-light;
+                    font-family: $font-stack-2;
+                    font-weight: 800 * $font-weight;
+                }
+            }
+        }
+    }
 }

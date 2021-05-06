@@ -14,5 +14,140 @@ body {
   padding: 0;
   font-family: "Abel", sans-serif;
   overflow: hidden;
+  display: block;
+  background: #060a16;
+  -webkit-perspective: 300vmin;
+          perspective: 300vmin;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .header,
+.container .clock--container {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container .header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .header .heading {
+  font-size: 4.73684rem;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  margin: 0;
+  text-transform: capitalize;
+  -webkit-transform: translateZ(15vmin) rotateY(-45deg);
+          transform: translateZ(15vmin) rotateY(-45deg);
+}
+
+.container .clock--container {
+  position: relative;
+  display: block;
+  padding: 1.5rem;
+}
+
+.container .clock--container .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.225rem;
+  position: relative;
+  -webkit-transform: translateZ(15vmin) rotateY(-45deg) scale(1.5);
+          transform: translateZ(15vmin) rotateY(-45deg) scale(1.5);
+}
+
+.container .clock--container .clock .points {
+  font-size: 2.45rem;
+  color: #ecf0f1;
+}
+
+.container .clock--container .clock .am--pm {
+  width: 2.45rem;
+  height: 2.45rem;
+  padding: 1.5rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -3.375rem;
+  background: #ecf0f1;
+  color: #34495e;
+  font-size: 1.5rem;
+  font-weight: 665;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0.15rem 0.15rem 0.2rem rgba(236, 240, 241, 0.4);
+          box-shadow: 0.15rem 0.15rem 0.2rem rgba(236, 240, 241, 0.4);
+}
+
+.container .clock--container .clock .hand {
+  width: 10vw;
+  padding: 1.5rem 2.425rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0.15rem 0.15rem 0.2rem 0 rgba(236, 240, 241, 0.4), 0.2rem 0.2rem 0.3rem 0 rgba(192, 57, 43, 0.1), 0.055rem 0.125rem 0.25rem rgba(236, 240, 241, 0.2) inset;
+          box-shadow: 0.15rem 0.15rem 0.2rem 0 rgba(236, 240, 241, 0.4), 0.2rem 0.2rem 0.3rem 0 rgba(192, 57, 43, 0.1), 0.055rem 0.125rem 0.25rem rgba(236, 240, 241, 0.2) inset;
+  -webkit-box-reflect: below 0.5rem linear-gradient(transparent, #000432);
+}
+
+.container .clock--container .clock .hand.hr {
+  background: #3498db;
+}
+
+.container .clock--container .clock .hand.min {
+  background: #34495e;
+}
+
+.container .clock--container .clock .hand.sec {
+  background: #c0392b;
+}
+
+.container .clock--container .clock .hand .time {
+  font-size: 3.5rem;
+  color: #ecf0f1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 760;
 }
 /*# sourceMappingURL=styles.css.map */
