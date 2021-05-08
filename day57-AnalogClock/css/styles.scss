@@ -8,12 +8,23 @@ $height: 100vh;
 $size: 100%;
 $padding: 1.5rem;
 $radius: .5rem;
+$vmin: .2vmin;
 // ========== COLORS
 $color-dark: #2c3e50;
 $color-light: #ecf0f1;
 $color-blue: #3498db;
 $color-darken: #c0392b;
-$coor-green: #16a085;
+$color-green: #16a085;
+
+// ========== SHADOWS
+$shadow-1: $padding $padding $padding * 2 0 rgba($color-dark, .1) inset,
+        $padding * -1 $padding * -1 $padding * 2 0 rgba($color-light, .1) inset,
+        $padding * -1.2 $padding * -1.2 $padding * 2 0 rgba($color-light, .1),
+        $padding * 1.2 $padding * 1.2 $padding * 2 0 rgba($color-dark, .1);
+$shadow-2: $padding $padding $padding * 2 0 rgba($color-dark, .1),
+        $padding * -1 $padding * -1 $padding * 2 0 rgba($color-light, .1),
+        $padding * -.2 $padding * -.2 $padding * 2 0 rgba($color-light, .1),
+        $padding * .2 $padding * .2 $padding * 2 0 rgba($color-dark, .4);
 
 * {
     &,
@@ -32,6 +43,171 @@ body {
     height: $height;
     margin: 0;
     padding: 0;
-    font-family: $font-stack-1;
+    font-family: $font-stack-2;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-light;
+}
+
+.container {
+    position: relative;
+    padding: 0;
+
+    .clock--container {
+        width: 30rem;
+        height: 30rem;
+        position: relative;
+        border: $padding solid $color-light;
+        border-radius: $size * .5;
+        box-shadow: $shadow-1;
+
+        .clock {
+            width: 20rem;
+            height: 20rem;
+            position: absolute;
+            margin: auto;
+            top: $size * .5;
+            left: $size * .5;
+            transform: translate(-50%, -50%);
+            border-radius: $size * 5;
+            box-shadow: $shadow-2;
+
+            &::after {
+                content: '';
+                width: $padding + 1;
+                height: $padding + 1;
+                position: absolute;
+                top: $size * .5;
+                left: $size * .5;
+                transform: translate(-50%, -50%);
+                box-shadow: $shadow-2;
+                border-radius: $size * .5;
+                background: $color-light;
+                z-index: 10
+            }
+
+            // =========== Date Styles
+            .hand {
+                height: $vmin;
+                position: absolute;
+                top: $size * .5;
+                left: $size * .5;
+                // transform: translate(-50%, 50%);
+                transform-origin: 0;
+                transform: rotate(90deg);
+                border-radius: $radius * 1.5;
+                animation: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+
+                
+            }
+            .hh,
+            .mn,
+            .ss {
+                transform-origin: $size;
+
+                &::before {
+                    content: '';
+                    height: $radius;
+                    position: absolute;
+                    top: $size * .5;
+                    transform-origin: $size;
+                    transform: translate(-50%, -50%);
+                    border-radius: 0 $vmin$vmin 0;
+                }
+            }
+
+            .hh {
+                width: $padding * $font-weight + 10;
+                background: $color-blue;
+                left: $size * -.07;
+                z-index: 2;
+
+                &::before {
+                    width: $padding * 1.5;
+                    top: 0.031rem;
+                    right: $padding * -2.5;
+                    background: $color-blue;
+                }
+            }
+
+            .mn {
+                width: $padding * $font-weight + 12;
+                background: $color-darken;
+                top: $size * .48;
+                left: $size * -.16;
+                z-index: 4;
+
+                &::before {
+                    width: $padding * 1.75;
+                    top: .1rem;
+                    right: $padding * -2.5;
+                    background: $color-darken;
+                }
+            }
+
+            .ss {
+                width: $padding * $font-weight + 12.5;
+                background: $color-green;
+                left: $size * -.19195;
+                z-index: 6;
+
+                &::before {
+                    width: $padding * 1.95;
+                    top: 0.03rem;
+                    right: $padding * -2.5;
+                    background: $color-green;
+                }
+            }
+
+            .indicators {
+                width: $size;
+                height: $size;
+                position: absolute;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto;
+
+                .dials  {
+                    width: inherit;
+                    height: inherit;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    font-size: $padding + 1;
+                    font-weight: 800 * $font-weight;
+                    margin: auto;
+                    color: $color-dark;
+
+                    &:first-child {
+                        grid-column: 3;
+                        grid-row: 2;
+                        top: $padding;
+                        right: -5.4rem;
+                    }
+
+                    &:nth-child(2) {
+                        grid-column: 2;
+                        grid-row: 4;
+                        bottom: -5rem;
+                    }
+
+                    &:nth-child(3) {
+                        grid-column: 1;
+                        grid-row: 2;
+                        top: $padding;
+                        left: -5.4rem;
+                    }
+
+                    &:last-child {
+                        grid-column: 2;
+                        grid-row: 1;
+                        top: -5rem
+                    }
+                }
+            }
+        }
+    }
 }
