@@ -135,8 +135,9 @@ body {
             .mn {
                 width: $padding * $font-weight + 12;
                 background: $color-darken;
-                top: $size * .48;
-                left: $size * -.16;
+                top: $size * .5;
+                left: $size * .5;
+                margin: -0.03rem $padding * -9;
                 z-index: 4;
 
                 &::before {

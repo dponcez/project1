@@ -123,8 +123,9 @@ body {
 .container .clock--container .clock .mn {
   width: 13.425rem;
   background: #c0392b;
-  top: 48%;
-  left: -16%;
+  top: 50%;
+  left: 50%;
+  margin: -0.03rem -13.5rem;
   z-index: 4;
 }
 
