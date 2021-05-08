@@ -126,19 +126,19 @@ body {
             font-family: $font-stack-1;
             font-weight: 800 * $font-weight;
             background: transparent;
-            cursor: pointer;
             z-index: 1;
-
+            
             &:focus {
                 outline: none;
             }
-
+            
             &.start {
                 color: $color-blue;
+                cursor: pointer;
             }
 
             &.stop {
-                color: $color-red
+                color: $color-red;
             }
         }
     }

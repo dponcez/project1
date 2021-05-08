@@ -127,7 +127,6 @@ body {
   font-family: "Abel", sans-serif;
   font-weight: 760;
   background: transparent;
-  cursor: pointer;
   z-index: 1;
 }
 
@@ -137,6 +136,7 @@ body {
 
 .container .stoptimer .buttons__container button.start {
   color: #2900f9;
+  cursor: pointer;
 }
 
 .container .stoptimer .buttons__container button.stop {
