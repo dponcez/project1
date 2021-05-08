@@ -27,6 +27,8 @@
         secondCount: null
     }
 
+    let isActive = false;
+
     // defined destructuring method
     let { interval, displayTimer, secondCount } = options;
 
@@ -58,7 +60,10 @@
         stopBtn.disabled = false;
 
         startBtn.style.color = '#3498db';
-        stopBtn.style.color = '#c0399b'
+        stopBtn.style.color = '#c0399b';
+
+        startBtn.style.cursor = 'default';
+        stopBtn.style.cursor = 'pointer'
     }) )
 
     stopBtn.addEventListener('click', debounce( () => {
@@ -69,5 +74,8 @@
 
         startBtn.style.color = "#2900f9";
         stopBtn.style.color = "#e74c3c";
+
+        startBtn.style.cursor = 'pointer';
+        stopBtn.style.cursor = 'default';
     }) )
 })()
