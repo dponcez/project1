@@ -1,4 +1,4 @@
-# Learning to < code /> 📚
+# Learning to < code /> 📚 
 
 <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
 
@@ -7,9 +7,9 @@
 ---
 ## About Me!
 
-My name is <span style="font-weight: bold">Damian Ponce</span>, from Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an Open Source Project or may be, help to translate some Open Source Project, but when I could do it, I'll do it well.
+My name is **Damian Ponce**, from  Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an 📜 Open Source Project or may be, help to translate some Open Source Project, but when I could do it, I'll do it well.
 
-Also, I am a dogs walker and dogs trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens in the future, but the moment I just follow my way and my dreams.
+Also, I am a 🐕 dogs' walker and 🐕 dogs' trainer, I love this amazing job, I think I've been in this job for 20 years and think it took me a long time to realize that  I wanted to get my own Web Page or may be, get a better job, I don't know what happens in the future, but the moment I just follow my way and my dreams.
 
 All my personal projects help me so much to grow me up to get knowledge about Web Techs and so I could have my own personal Web Page.
 
@@ -18,27 +18,42 @@ All my personal projects help me so much to grow me up to get knowledge about We
 ### 🚀 Coding
 
 <img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>
-<img alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
-<img  alt="HTML5" width="21px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
+<img alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
+<img  alt="JavaScript" width="21px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"/>
 
-Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/github/)
+
+### 🛠️ Tools
+<img width="100px" src="https://camo.githubusercontent.com/3f289d98c7b8dc0adb54cbeebcac97d462b8f027f9b3b88deaaab35eddba49b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5653253230436f64652d3238324333343f6c6f676f3d76697375616c2d73747564696f2d636f6465266c6f676f436f6c6f723d303037414343"/>
+
+<img width="60px" src="https://camo.githubusercontent.com/6872de59dac86ded0a8d5d2beb0cb20b0a9cd7e2bbd578493baa084ad5aa2700/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769742d3238324333343f6c6f676f3d676974266c6f676f436f6c6f723d463035303332"/>
+
+### Learning Process 📚
+<img width="80px" src="https://camo.githubusercontent.com/d7acbbe6bd9702a2a1507f74de23919e5c1a5f9373c7b7cb94fb4074f42d1a9c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3238324333343f6c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d333339393333" />
+
+<img width="70px" src="https://camo.githubusercontent.com/d8a38a3da1b8512af061dec74f1d6613a8f3fa39c5f20179103c28196e8a56da/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3238324333343f6c6f676f3d7265616374266c6f676f436f6c6f723d363144414642" />
+
+<img width="100px" src="https://camo.githubusercontent.com/143b42838efad2c30d8e0d05eb3dea6996e52a03b99576d8318edffd9bdd6155/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3238324333343f6c6f676f3d74797065736372697074266c6f676f436f6c6f723d333137384336" />
+
+<img width="25px" src="https://github.com/hussainweb/hussainweb/raw/main/icons/python.png" />
+
+Note: The logos used above are from [raw.githubusercontent.com](https://raw.githubusercontent.com/github/), [camo.githubusercontent.com](https://camo.githubusercontent.com/) and [hussainweb](https://github.com/hussainweb/hussainweb/)
 
 ---
 
 ## Personal Project Using HTML5, CSS3 and Vanilla JavaScript.
 
-The examples below are my personal projects using HTML5, CSS3 and JS. I also looked at some Traversy Media projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
+The examples below are my personal 📁 projects using **HTML5**, **CSS3** and **JS**. I also looked at some **Traversy Media** projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
 
 |  # |    Personal Projects   📁  |
 |----|-----------------|
-| 1. | Custom Button   |
-| 2. | Floppy Disk     |
-| 3. | Bubbles         |
-| 4. | Mario Mushroom  |
-| 5. | Menu            |
-| 6. | Nintendo Switch |
-| 7. | Player          |
-| 8. | Animated Navigation          |
+| 1. | 🆒   Custom Button   |
+| 2. | 💾   Floppy Disk     |
+| 3. | 🎈    Bubbles         |
+| 4. | 🍄   Mario Mushroom  |
+| 5. | 📃   Menu            |
+| 6. | 🎮   Nintendo Switch |
+| 7. | 🎧   Player          |
+| 8. | 📄   Animated Navigation          |
 |
 
 * El proposito de los elementos de audio y vídeo, que se encuentran en las carpeta de  audio y video respectivamente, son para uso de la creación del AUDIO PLAYER 🎧 y VIDEO PLAYER y los derechos están reservados a cada artista y/o disquera.
