@@ -135,3 +135,4 @@ Live User Filter project was updated! Added 'hide' class on styles.css
 | 55. | [Hex Color Picker](https://github.com/dponcez/project1/tree/master/day55-HexColorPicker)    |
 | 56. | [Digital Clock](https://github.com/dponcez/project1/tree/master/day56-DigitalClock)    |
 | 57. | [Analog Clock](https://github.com/dponcez/project1/tree/master/day57-AnalogClock)    |
+| 58. | [StopTimer Ui](https://github.com/dponcez/project1/tree/master/day58-StopTimerUi)    |

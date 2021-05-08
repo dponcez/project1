@@ -202,10 +202,42 @@ body {
                         left: -5.4rem;
                     }
 
-                    &:last-child {
+                    &:nth-child(4) {
                         grid-column: 2;
                         grid-row: 1;
                         top: -5rem
+                    }
+                }
+
+                & div {
+                    width: $vmin;
+                    height: $padding;
+                    position: absolute;
+                    background: $color-darken;
+
+                    &:nth-child(5) {
+                        transform: rotate(30deg) translate(140.5px, -100px);
+                    }
+                    &:nth-child(6) {
+                        transform: rotate(60deg) translate(136.5px, -172px);
+                    }
+                    &:nth-child(7) {
+                        transform: rotate(-60deg) translate(-32px, 271px);
+                    }
+                    &:nth-child(8) {
+                        transform: rotate(150deg) translate(-41px, -267.8px);
+                    }
+                    &:nth-child(9) {
+                        transform: rotate(210deg) translate(-139.1px, -164px);
+                    }
+                    &:nth-child(10) {
+                        transform: rotate(240deg) translate(-136px, -90px);
+                    }
+                    &:nth-child(11) {
+                        transform: rotate(300deg) translate(-32px, 5px);
+                    }
+                    &:last-child {
+                        transform: rotate(330deg) translate(41.5px, 3px);
                     }
                 }
             }
