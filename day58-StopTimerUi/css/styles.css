@@ -21,8 +21,7 @@ body {
 }
 
 .container {
-  width: 30rem;
-  height: 45rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,9 +31,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0.2vmin 0.06vmin 0.2vmin 0 rgba(44, 62, 80, 0.2), 0.2vmin -0.06vmin 0.2vmin 0 rgba(44, 62, 80, 0.2), 0.04vmin 0.2vmin 0.04vmin rgba(44, 62, 80, 0.4), -0.04vmin 0.2vmin 0.04vmin rgba(44, 62, 80, 0.4);
-          box-shadow: 0.2vmin 0.06vmin 0.2vmin 0 rgba(44, 62, 80, 0.2), 0.2vmin -0.06vmin 0.2vmin 0 rgba(44, 62, 80, 0.2), 0.04vmin 0.2vmin 0.04vmin rgba(44, 62, 80, 0.4), -0.04vmin 0.2vmin 0.04vmin rgba(44, 62, 80, 0.4);
   overflow: hidden;
 }
 
@@ -59,14 +55,14 @@ body {
 
 .container .stoptimer::before, .container .stoptimer::after {
   content: '';
-  width: 50vw;
+  width: 100vw;
   height: 40%;
   position: absolute;
   left: 0;
   bottom: 0;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  border-radius: 40% 80% 10% 70% / 30% 50% 90% 85%;
+  border-radius: 90% 80% 50% 70% / 90% 50% 90% 85%;
 }
 
 .container .stoptimer::before {
@@ -88,16 +84,17 @@ body {
 
 .container .stoptimer .timer {
   width: 100%;
-  color: #2c3e50;
-  font-size: 4.35rem;
   padding: 0;
   margin: 0;
+  color: #2c3e50;
+  font-size: 4.35rem;
+  text-align: center;
   opacity: 0.65;
 }
 
 .container .stoptimer label {
   display: inline-block;
-  font-size: 3.4rem;
+  font-size: 6.25rem;
   color: #808090;
 }
 
@@ -108,7 +105,7 @@ body {
 }
 
 .container .stoptimer label span::first-letter {
-  font-size: 6.425rem;
+  font-size: 9.425rem;
 }
 
 .container .stoptimer label,
@@ -120,7 +117,7 @@ body {
 
 .container .stoptimer .buttons__container button {
   position: relative;
-  font-size: 2.425rem;
+  font-size: 3.425rem;
   border: none;
   border-radius: 0.5rem;
   padding: 0 1.5rem;
@@ -140,6 +137,6 @@ body {
 }
 
 .container .stoptimer .buttons__container button.stop {
-  color: #e74c3c;
+  color: #b02d2d;
 }
 /*# sourceMappingURL=styles.css.map */
