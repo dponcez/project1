@@ -27,8 +27,6 @@
         secondCount: null
     }
 
-    let isActive = false;
-
     // defined destructuring method
     let { interval, displayTimer, secondCount } = options;
 
