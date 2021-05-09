@@ -20,14 +20,16 @@ Also we used an IIFE and a debounce function.
 
         elements.forEach( element => {
             console.log( element )
-        } )
+        } );
+
     })()
 
    //  With ES6 arrow function
    ( () => {
        const elements = document.querySelectorAll('.element);
 
-       elements.forEach( element => console.log( element ) )
+       elements.forEach( element => console.log( element ) );
+       
    })()
 ```
 **Example of a debounce() function**
