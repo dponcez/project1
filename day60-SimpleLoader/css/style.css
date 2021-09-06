@@ -1,0 +1,122 @@
+/* 
+    ========== CUSTOM PROPERTIES ========== 
+    The Custom Properties does not appear on styles.css
+*/
+/* ========== BRAKEPOINTS ========== */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== STYLES ========== */
+.container {
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 50% 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.loader--container {
+  width: 7.5em;
+  height: 7.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1.7vmin solid transparent;
+  border-top-color: rgba(44, 62, 80, 0.5);
+  border-radius: 50%;
+}
+
+@-webkit-keyframes reverseload {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseload {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader--container .loader {
+  display: block;
+  width: 5em;
+  height: 5em;
+  border: 1.5vmin solid transparent;
+  border-top-color: #3498db;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes load {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: -webkit-transform 1s ease-in;
+    transition: -webkit-transform 1s ease-in;
+    transition: transform 1s ease-in;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+  }
+}
+
+@keyframes load {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: -webkit-transform 1s ease-in;
+    transition: -webkit-transform 1s ease-in;
+    transition: transform 1s ease-in;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+  }
+}
+/*# sourceMappingURL=style.css.map */

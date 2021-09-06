@@ -1,0 +1,136 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+}
+
+.container,
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    height: inherit;
+    padding: 2rem;
+
+    & h2 {
+        display: block;
+        font-size: clamp(3vw, 5vw, 3rem);
+        font-weight: 700 * $font-weight;
+        color: $color-dark;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    .content {
+        position: relative;
+        padding: 2rem 0;
+        width: 30rem;
+
+        .toggle--container {
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+
+            & input {
+                visibility: hidden;
+
+                &:checked + label {
+                    background: $color-dark !important;
+                }
+
+                &:checked + label .ball {
+                    animation: slideOn .5s linear forwards;
+
+                    @keyframes slideOn {
+                        0% {
+                            transform: translateX(0) scale(1);
+                        }
+                        50% {
+                            transform: translateX(2rem) scale(1.2);
+                        }
+                        100% {
+                            transform: translateX(5.12rem) scale(1);
+                        }
+                    }
+                }
+            }
+
+            & span {
+                display: inline-block;
+                font-size: 1.6rem;
+                font-family: $font-stack-2;
+                color: $color-dark;
+                text-transform: capitalize;
+                font-weight: 800 * $font-weight;
+            }
+            
+            & label {
+                width: 10rem;
+                height: 5rem;
+                position: relative;
+                margin: 0 1.5rem 0;
+                display: inline-block;
+                border-radius: 5rem;
+                background: rgba($color: $color-light, $alpha: 1);
+                cursor: pointer;
+
+                .ball {
+                     width: 4.25rem;
+                    height: 4.25rem;
+                    position: absolute;
+                    top: .3rem;
+                    left: .3rem;
+                    border-radius: 50%;
+                    background: white;
+                    border-radius: $size * .5;
+                    background: rgba($color: #fff, $alpha: 1);
+                    animation: slideOff .5s linear forwards;
+
+                    @keyframes slideOff {
+                        0% {
+                            transform: translateX(4rem) scale(1);
+                        }
+                        50% {
+                            transform: translateX(2rem) scale(1.2);
+                        }
+                        100% {
+                            transform: translateX(0) scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

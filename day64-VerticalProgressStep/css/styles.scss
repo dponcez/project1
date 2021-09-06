@@ -1,0 +1,179 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Orbitron', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+$pos: 50%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+$color-grey: #d5dad3;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    color: $color-dark;
+    background: $color-light;
+    overflow: hidden;
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+
+    .heading {
+        padding: 0;
+        margin: 0;
+        font-size: clamp(4rem, 3vw, 4.5rem);
+        font-weight: 500 * $font-weight;
+
+        &::first-letter {
+            font-size: clamp(7rem, 3.5vw, 5.9rem);
+        }
+
+        & span {
+            display: inline-block;
+            font-family: $font-stack-2;
+        }
+    }
+
+    .progress--container {
+        height: $size;
+        max-height: 38.125rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: $pos - 2;
+            width: 0.325rem;
+            height: $size;
+            background: $color-grey;
+            z-index: -1;
+        }
+
+        .progress--bar {
+            width: 0.325rem;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: $pos - 2;
+            background: $color-blue;
+            transition: .125s cubic-bezier(0.075, 0.82, 0.165, 1);
+            z-index: -1;
+        }
+
+        .circle {
+            width: $padding * 4;
+            height: $padding * 4;
+            display: grid;
+            place-items: center;
+            border-radius: $pos;
+            border: 0.325rem solid $color-grey;
+            background: $color-light;
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 6rem;
+                position: absolute;
+                inset: 50%;
+                transform: translate(-50%, -50%);
+                border: 0;
+                border-color: $color-blue transparent transparent transparent;
+                border-radius: inherit;
+            }
+            
+            &.active {
+                position: relative;
+                
+                &::before {
+                    width: 6rem;
+                    height: 6rem;
+                    border: 0.325rem solid;
+                    border-color: $color-blue;
+                    transition:  color 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-color 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+
+                & span {
+                    display: block;
+                    position: relative;
+                    color: $color-blue !important;
+                }
+            }   
+
+            & span {
+                font-size: $padding * $font-weight + 0.5;
+                font-family: $font-stack-2;
+            }
+        }
+    }
+
+    .button--container {
+        position: relative;
+        display: block;
+        padding: $padding * .4;
+        margin: $radius;
+
+        & button {
+            padding: $padding / 1.5;
+            border-radius: $radius;
+            border: none;
+            font-size: $padding;
+            background: $color-blue;
+            color: $color-light;
+            transition: color .5s ease;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(0.98)
+            }
+
+            &:focus {
+                outline: 0
+            }
+
+            &:focus-visible {
+                outline: 0.125rem solid $color-dark
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+                background-color: $color-grey;
+            }
+
+            &.prev .fas {
+                color: $color-blue;
+            }
+        }
+    }
+}

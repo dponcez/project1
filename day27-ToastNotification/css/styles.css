@@ -1,0 +1,96 @@
+:root {
+    /* ========== FONTS ========== */
+    --font-stack-1: 'Abel', sans-serif;
+    --font-stack-2: 'Montserrat', sans-serif;
+    --font-weight: .95;
+    /* ========== COLORS ========== */
+    --dark-color: #000000;
+    --light-color: #eef7ef;
+    --blue-color: #3498db;
+    /* ========== VIEWPORT ========== */
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: var(--width);
+    height: var(--height);
+    font-family: var(--font-stack-1);
+    background: var(--blue-color);
+}
+
+.container {
+    width: var(--width);
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+button {
+    padding: 1.5rem 3rem;
+    border: 0;
+    border-radius: .5rem;
+    background: var(--light-color);
+    color: var(--dark-color);
+    font-size: 1.85rem;
+    text-transform: capitalize;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.4);
+    cursor: pointer;
+    letter-spacing: .1rem;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Notification */
+#toast {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.toast {
+    padding: 1rem 2rem;
+    margin: .5rem;
+    background: var(--light-color);
+    border-radius: .5rem;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    box-shadow: 0 .2rem .4rem rgba(0,0,0,.4);
+}
+
+.toast.info {
+    color: #663399
+}
+
+.toast.success {
+    color: #21CC79
+}
+
+.toast.error {
+    color: #ff000f
+}

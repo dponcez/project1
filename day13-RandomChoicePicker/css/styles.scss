@@ -1,0 +1,98 @@
+$bg-color: #3498db;
+$text-color: #ecf0f1;
+$dark-color: #2c3e50;
+$font-stack: 'Abel', sans-serif; 
+$size: 100vw;
+$height: 100vh;
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    --font-weight: .85;
+    width: $size;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background: $bg-color;
+    font-family: $font-stack;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    & h3 {
+        padding: 2.5rem 0;
+        font-size: clamp(3vw, 3rem, 5vw);
+        font-weight: calc( 700 * var(--font-weight, 1) );
+        color: $text-color;
+        letter-spacing: .1rem;
+        &::first-letter {
+            display: block;
+            text-transform: uppercase;
+        }
+
+        & span {
+            display: block;
+            text-align: center;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .input--container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: $size * .5;
+        padding: 1.5rem 2.5rem;
+        position: relative;
+        & .picker {
+            width: 100%;
+            height: $height * .15;
+            max-width: 50rem;
+            padding: 1rem;
+            border-radius: .75rem;
+            font-size: 2rem;
+            border: 0;
+            
+        }
+
+        .tags {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 52rem;
+            padding: .75rem;
+
+            .tag {
+                display: inline-block;
+                padding: 1rem 2rem;
+                margin: 0 .5rem 1rem 0;
+                background: $text-color;
+                font-size: 1.8rem;
+                font-weight: calc( 800 * var(--font-weight, 1) );
+                color: $dark-color;
+                border-radius: .8rem;
+
+                &.highlight {
+                    background: $dark-color;
+                    color: $text-color;
+                }
+            }
+        }
+
+    }
+}

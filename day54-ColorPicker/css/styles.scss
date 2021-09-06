@@ -1,0 +1,67 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+$vmin: 2vmin;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: $color-dark;
+}
+
+.container {
+    position: relative;
+    display: block;
+    border: $vmin * .2 solid rgba($color-light, $alpha: .2 );
+    padding: $padding;
+    border-radius: $radius;
+
+    .btn {
+        padding: $padding $padding * $font-weight + $font-weight;
+        font-size: $padding;
+        font-weight: 700 * $font-weight;
+        font-family: $font-stack-2;
+        border: none;
+        border-radius: $radius;
+        background: $color-dark;
+        color: $color-light;
+        text-transform: capitalize;
+        box-shadow: 0 $vmin * .1 $vmin * .2 $vmin * .15 rgba($color-light, $alpha: .4) inset, 0 $vmin * -.1 $vmin * .07 $vmin * .05 rgba($color-light, $alpha: .3) inset;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(.97);
+        }
+
+        &:focus {
+            box-shadow: 0 $vmin * .1 $vmin * .3 $vmin * .15 rgba($color-light, $alpha: .4 ), 0 $vmin * .1 $vmin * .02 $vmin * .015 rgba($color-light, $alpha: .3) inset ;
+        }
+    }
+}

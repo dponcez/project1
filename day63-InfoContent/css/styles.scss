@@ -1,0 +1,200 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Ubuntu', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: auto;
+}
+
+img {
+    width: $size;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: inherit;
+    display: grid;
+    place-items: center;
+}
+
+.info--box {
+    width: $padding * 30;
+    height: auto;
+    margin: $padding * .075 0;
+    position: relative;
+    box-shadow: $radius * .5 $radius * .5 $radius * .975 rgba($color-dark, .75);
+    border-radius: 0 $radius 0 0;
+
+    .header {
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0;
+
+        .nav {
+            display: block;
+            padding: 0;
+            margin: 0;
+
+            &--menu {
+                width: $size;
+                height: $padding * 4.5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                border: $radius * .1 solid $color-dark;
+                border-radius: $radius $radius 0 0;
+                
+                &__item {
+                    width: $padding * 10;
+                    height: $size;
+                    list-style: none;
+                    padding: 0;
+                    text-align: center;
+                    line-height: 4rem;
+                }
+                &__link {
+                    width: $size;
+                    height: $size;
+                    display: block;
+                    padding: $padding * $font-weight;
+                    text-transform: uppercase;
+                    font-size: $padding * 1.4;
+                    font-weight: 800 * $font-weight;
+                    color: $color-dark !important;
+                    background: $color-light !important;
+                    transition: background-color .95s ease, opacity .95s ease-in;
+  
+                    &:hover,
+                    &:focus {
+                        background: $color-dark !important;
+                        color: $color-light !important;
+                    }
+                    
+                    &.active {
+                        background: $color-dark !important;
+                        color: $color-light !important;
+                        transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+                    }
+                }                
+            }
+        }
+    }
+
+    .panels {
+        display: flex;
+        height: 56.75rem;
+        padding: 0; 
+        margin: 0;
+        position: relative;
+        border: $radius * .2 solid $color-dark;
+
+        & article {
+            height: $size;
+            padding: $padding;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            background: $color-dark;
+            opacity: 0;
+            transition: background-color 1s ease, opacity 1s ease-in;
+
+            & h2,
+            & p {
+                display: block;
+                padding: $radius $padding;
+                color: $color-light;
+                margin: 0;
+            }
+
+            .heading {
+                font-size: $padding * $font-weight + 0.5;
+                font-family: $font-stack-2;
+                font-weight: 700 * $font-weight;
+                text-align: center;
+                text-transform: capitalize;
+            }
+
+            & p {
+                font-size: $padding * $font-weight / 1.025;
+                letter-spacing: 0.2vmin;
+
+                & a {
+                    color: #3498db !important
+                }
+            }
+
+            & picture {
+                & .image { 
+                    display: block; 
+                    padding: $padding * .2 0 0 0;
+                }
+
+                & figcaption {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    color: rgba($color-light, .5);
+                    font-size: $radius * 2.5;
+
+                    & a {
+                        font-size: $padding;
+                        color: $color-light;
+                    }
+                }
+            }
+
+            & ol {
+                padding: $radius 0 0 $padding;
+                margin: $radius;
+
+                & li {
+                    font-size: $padding / 1.2;
+                    color: rgba($color-light, .5)
+                }
+            }
+
+            &.active--panel {
+                opacity: 1;
+                transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+                z-index: 1;
+            }
+        }
+    }
+}

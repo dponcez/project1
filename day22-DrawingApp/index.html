@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset='UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <title>Drawing App</title>
+    <!-- Mobile Specific Metas -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abel&family=Roboto&display=swap'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <canvas class="canvas" id="canvas" width="500" height="500"></canvas>
+        <div class="toolbox">
+            <button class="toolbox__button decrease" id="decrease">-</button>
+            <span class="toolbox__size" id="size">1</span>
+            <button class="toolbox__button increase" id="increase">+</button>
+            <input type="color" name="color" id="bg" class="toolbox__color">
+            <button class="toolbox__button clear" id="clear">x</button>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>

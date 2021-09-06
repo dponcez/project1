@@ -1,0 +1,126 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .85;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.2rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+    position: relative;
+    .heading {
+        display: block;
+        margin: 1rem 0;
+        padding: $padding $padding * 2;
+        position: absolute;
+        top: $padding + 1;
+        font-family: $font-stack-2;
+        font-size: $padding * 10.75;
+        font-weight: $font-weight * 800;
+        color: rgba($color-dark, .5);
+        text-shadow: .3vmin .4vmin .5vmin rgba($color-dark, .4);
+        &::first-letter {
+            font-size: $padding * 16.75
+        }
+    }
+
+    .todo--container {
+        position: relative;
+        display: block;
+        top: 27rem;
+        height: $size;
+        & form {
+            max-width: $size;
+            width: 50rem;
+            box-shadow: 0 .3vmin .5vmin rgba($color-dark, .5);
+            border-radius: $radius;
+            .input {
+                width: $size;
+                display: block;
+                padding: $padding $padding + 1;
+                font-size: $padding + 0.8;
+                border: 0;
+                border-bottom: .1rem solid rgba($color-dark, .2);
+                box-shadow: .1vmin .2vmin .4vmin rgba($color-dark, .2) inset;
+                &:focus {
+                    outline-color: rgba($color-dark, .4)
+                }
+                &::placeholder {
+                    display: inline-block;
+                    font-family: $font-stack-2;
+                    text-transform: capitalize;
+                    font-weight: $font-weight * 800;
+                    color: rgba($color-dark, .4)
+                }
+            }
+            .todo--list {
+                height: auto;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                overflow: auto;
+                scroll-snap-type: y mandatory;
+                background: $color-light;
+                .list--item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: $padding $padding + 1;
+                    border-bottom: .1rem solid rgba($color-dark, .3);
+                    cursor: pointer;
+                    scroll-snap-align: start;
+                    & li {
+                        font-size: $padding + 0.8;
+                        &.completed {
+                            text-decoration: line-through;
+                            color: rgba($color-dark, .4);
+                        }
+                    }
+                    & i {
+                        font-size: $padding + 0.8;
+                        color: rgba($color-dark, .5)
+                    }
+                    &:hover {
+                        background: rgba($color-dark, .5);
+                        & li,
+                        & i {
+                            color: $color-light;
+                        }
+                        & li {
+                            font-weight: $font-weight * 700
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

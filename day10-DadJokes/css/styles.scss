@@ -1,0 +1,67 @@
+$height: 100vh;
+$size: 100%;
+$font-stack: 'Roboto', sans-serif;
+$bg-color: #3498db;
+$container-color: #ecf0f1;
+
+body {
+    margin: 0;
+    padding: 3.25rem;
+    height: $height;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: $bg-color;
+    font-family: $font-stack;
+}
+
+.container {
+    width: 50rem;
+    max-width: $size;
+    padding: 3.125rem 1.25rem;
+    background: $container-color;
+    border-radius: .625rem;
+    box-shadow: 0 .625rem 1.25rem rgba(0,0,0,.1), 0 0.375rem 0.375rem rgba(0,0,0,.1);
+    text-align: center;
+    
+    .heading,
+    .joke__btn {
+        text-transform: capitalize;
+    }
+
+    .heading {
+        margin: 0;
+        opacity: 0.5;
+        letter-spacing: .1rem;
+    }
+
+    .joke {
+        max-width: 37.5rem;
+        letter-spacing: .1rem;
+        line-height: 2.5rem;
+        margin: 3.125rem auto;
+        font-size: 1.875rem;
+    }
+
+    .joke__btn {
+        padding: 0.875rem 2.5rem;
+        background: $bg-color;
+        color: $container-color;
+        border: 0;
+        border-radius: 0.625rem;
+        box-shadow: 0 0.125vmin 0.325vmin rgba(0,0,0,.1), 0 0.275vmin 0.275vmin rgba(0,0,0,.1);
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}

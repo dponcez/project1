@@ -1,0 +1,153 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    --font-weight: .95;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    width: $width;
+    height: $height;
+    background: $color-light;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container {
+    width: $size;
+    height: $size;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        'header header header'
+        'main main main'
+    ;
+    & .header {
+        position: relative;
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center / cover;
+        height: $height;
+        &::before {
+            content: '';
+            position: absolute;
+            width: $size;
+            height: $size;
+            background: rgba(0,0,0,.6);
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: $size;
+            height: 10rem;
+            background: $color-dark;
+            transition: all .5s ease;
+            z-index: 2;
+            &.active {
+                height: 9rem;
+            }
+            & h2 {
+                display: flex;
+                padding-left: 2rem;
+                font-size: 3rem;
+                color: $color-light;
+                text-transform: capitalize;
+                & span {
+                    display: inline-block;
+                }
+            }
+            .menu {
+                width: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 2rem;
+                .item {
+                    list-style: none;
+                    padding: 0;
+                    .link {
+                        padding: 2rem;
+                        color: $color-light;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-size: 2.25rem;
+                    }
+                }
+            }
+        }
+        & h1, p {
+            color: $color-light;
+            z-index: 1
+        }
+
+        & h1 {
+            font-size: clamp(5vw, 5rem, 3vw);
+            font-weight: calc( 500 * var(--font-weight, 1) );
+            padding: 0;
+            margin: 0;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        & p {
+            font-size: 2rem;
+        }
+    }
+    .main__section {
+        grid-area: main;
+        height: $height;
+        margin: 2rem auto;
+        padding: 2rem 1.8rem;
+        & section {
+            padding: 2rem;
+            margin: 0;
+            display: block;
+            & article {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                &h2,
+                & p { color: $color-dark}
+
+                & h2 {
+                    font-size: 3rem;
+                    margin: 0;
+                    padding: 0;
+                    letter-spacing: .1rem;
+                    text-transform: capitalize;
+                }
+                & p {
+                    padding: 1.5rem 2rem;
+                    font-size: 1.6rem;
+                    font-family: $font-stack-2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #ecf0f1;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.container .stoptimer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 3.425rem 0;
+  -webkit-perspective: 50vmin;
+          perspective: 50vmin;
+}
+
+.container .stoptimer::before, .container .stoptimer::after {
+  content: '';
+  width: 100vw;
+  height: 40%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 90% 80% 50% 70% / 90% 50% 90% 85%;
+}
+
+.container .stoptimer::before {
+  background: rgba(44, 62, 80, 0.03);
+  -webkit-transform: translateZ(10vmin) rotate(-25deg) skew(1deg, -9deg) scale(1.3);
+          transform: translateZ(10vmin) rotate(-25deg) skew(1deg, -9deg) scale(1.3);
+}
+
+.container .stoptimer::after {
+  background: rgba(44, 62, 80, 0.06);
+  -webkit-transform: rotate(-8deg) skew(1deg, -2deg) scale(1.4);
+          transform: rotate(-8deg) skew(1deg, -2deg) scale(1.4);
+}
+
+.container .stoptimer p,
+.container .stoptimer .timer {
+  font-weight: 475;
+}
+
+.container .stoptimer .timer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #2c3e50;
+  font-size: 4.35rem;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.container .stoptimer label {
+  display: inline-block;
+  font-size: 6.25rem;
+  color: #808090;
+}
+
+.container .stoptimer label span {
+  display: inline-block;
+  text-transform: lowercase;
+  font-weight: 760;
+}
+
+.container .stoptimer label span::first-letter {
+  font-size: 9.425rem;
+}
+
+.container .stoptimer label,
+.container .stoptimer .buttons__container button {
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+
+.container .stoptimer .buttons__container button {
+  position: relative;
+  font-size: 3.425rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  font-family: "Abel", sans-serif;
+  font-weight: 760;
+  background: transparent;
+  z-index: 1;
+}
+
+.container .stoptimer .buttons__container button:focus {
+  outline: none;
+}
+
+.container .stoptimer .buttons__container button.start {
+  color: #2900f9;
+  cursor: pointer;
+}
+
+.container .stoptimer .buttons__container button.stop {
+  color: #b02d2d;
+}
+/*# sourceMappingURL=styles.css.map */

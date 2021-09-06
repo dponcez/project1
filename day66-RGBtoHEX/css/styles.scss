@@ -1,0 +1,163 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Ubuntu', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ffffff;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    color: $color-dark;
+    overflow: hidden;
+}
+
+.container {
+    width: $size;
+    display: grid;
+    place-items: center;
+
+    .header {
+        width: inherit;
+        display: grid;
+        place-items: center;
+        padding: $padding + 2;
+        margin: 0;
+
+        .heading {
+            font-weight: 500 * $font-weight;
+            font-size: $padding * 2.35;
+            
+            & span {
+                font-size: $padding * 4;
+                font-family: $font-stack-2;
+                font-weight: 700 * $font-weight;
+            }
+        }
+    }
+
+    .main {
+        .display--panel,
+        & fieldset {
+            width: $size;
+            min-width: 25rem;
+            border: $radius * .1 solid rgba($color-dark, .5);
+            border-radius: $radius;
+        }
+        .display--panel {
+            height: $padding * 9.75;
+            margin: 0 auto $padding;
+            background: #000000;
+        }
+
+        & fieldset {
+            padding: $padding;
+            border-radius: $radius;
+
+            & legend {
+                font-size: $padding * 1.25;
+                text-transform: uppercase;
+                font-weight: 800 * $font-weight;
+                font-family: $font-stack-2;
+            }
+
+            .panel {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: $radius * .5 0;
+
+                & label,
+                & output {
+                    width: $padding * 1.2;
+                    display: block;
+                    font-size: $padding;
+                    text-align: center;
+                }
+                
+                & label {
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                & output {
+                    width: $padding * 1.7
+                }
+
+                & .red {
+                    color: #e00e0e;
+                }
+
+                & .green {
+                    color: #008000;
+                }
+
+                & .blue {
+                    color: #0000ff
+                }
+
+                & input {
+                    width: 12.9rem;
+                    height: $radius;
+                    border: $radius * .15 solid rgba($color-dark, .45);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .description {
+            padding: $padding $radius;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            & span,
+            .output {
+                font-size: $padding;
+            }
+
+            & span {
+                display: inline-block;
+                font-weight: 700 * $font-weight;
+                
+                &::first-letter {
+                    text-transform: capitalize;
+                }
+            }
+
+            .output {
+                padding: $radius;
+                margin-left: $radius;
+                color: $color-light;
+                background: rgba($color-dark, .7);
+                border-radius: $radius;
+            }
+        }
+    }
+}

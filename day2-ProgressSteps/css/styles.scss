@@ -1,0 +1,134 @@
+// VARIABLES
+// sizes
+$width      : 100vw;
+$height    : 100vh;
+$pos       : 50%;
+$size: 100%;
+// colors
+$cloud     : #ecf0f1;
+$blue  : #3498db;
+$dark: #2c3e50;
+$bar: #d5dad3;
+// fonts
+$font-stack: 'Abel',
+sans-serif;
+$orbitron: 'Orbitron',
+sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+    background: $cloud;
+}
+
+.container {
+    width: $width;
+    height: $height;
+    display: grid;
+    place-items: center;
+
+    .heading {
+        font-size: clamp(4rem, 3vw, 4.5rem);
+        font-weight: 400;
+        color: $dark;
+
+        &::first-letter {
+            font-size: clamp(7rem, 3.5vw, 5.9rem);
+        }
+        
+        & span {
+            font-family: $orbitron;
+            display: inline-block;
+        }
+    }
+    .progress--container {
+        width: $size;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 38.125em;
+        position: relative;
+        margin: 0 auto;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: $pos - 2;
+            left: 0;
+            width: $size;
+            height: 0.225em;
+            background: $bar;
+            z-index: -1;
+        }
+
+        .progress--bar {
+            width: 0%;
+            height: .225em;
+            position: absolute;
+            top: $pos - 2;
+            left: 0;
+            background: $blue;
+            z-index: -1;
+            transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .circle {
+            width: 3em;
+            height: 3em;
+            display: grid;
+            place-items: center;
+            border-radius: $pos;
+            border: 0.125em solid $bar;
+            background: $cloud;
+            font-size: 1.5rem;
+            font-family: $orbitron;
+
+            &.active {
+                border: 0.125em solid $blue;
+                color: $blue;
+                transition: color .5s cubic-bezier(0.075, 0.82, 0.165, 1), border .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+
+    .button--container {
+        position: relative;
+        width: $pos * .25;
+        display: flex;
+        justify-content: space-between;
+        padding: .2rem;
+        margin: .2rem;
+
+        .button {
+            font-size: 1.1235rem;
+            padding: 0.35rem 1rem;
+            margin: 0.3125rem;
+            text-transform: capitalize;
+            font-family: $orbitron;
+            border: none;
+            background: $blue;
+            color: $cloud;
+            transition: color .5s ease;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(0.98);
+            }
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:focus-visible {
+                outline: 0.125rem solid $dark;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+                background: $bar;
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+    background: $color-light;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 40rem;
+    height: 50rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: .3rem .2rem .3rem 0 rgba($color-dark, .5), -.3rem -.2rem .3rem 0 rgba($color-dark, .5);
+    
+    .gallery--container {
+        display: flex;
+        transform: translateX(0);
+        transition: transform .5s ease-in-out;
+
+        & img {
+            width: $size;
+            height: $size;
+            max-width: 40rem;
+            // max-height: 50rem;
+            object-fit: cover;
+        }
+    }
+    
+    .buttons--container {
+        width: $size;
+        height: 3rem;
+        position: absolute;
+        display: flex;
+        margin: .2rem 0;
+        bottom: .5rem;
+    
+        & button {
+            width: 20rem;
+            height: $size;
+            margin: .5rem .1rem;
+            border: 0;
+            border-radius: .5rem;
+            background: rgba($color-light, .5);
+            color: $color-dark;
+            font-size: 1.65rem;
+            font-weight: 700 * $font-weight;
+            box-shadow: 0 .2rem .4rem .2rem rgba($color-dark, .5);
+            backdrop-filter: blur(.25rem);
+            cursor: pointer;
+    
+            &:active {
+                transform: scale(.97)
+            }
+    
+            &:focus {
+                outline: 0;
+            }
+
+            &.prev.left,
+            &.next.right {
+                transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            
+            &.prev:hover .left {
+                transform: translateX(-2rem);
+            }
+    
+            &.next:hover .right {
+                transform: translateX(2rem);
+            }
+    
+            &::before,
+            &::after {
+                position: absolute;
+                text-transform: capitalize;
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: inline-flex;
+            }
+
+            &.prev::before {
+                content: attr(data-prev);
+                opacity: 0;
+            }
+
+            &.next::before {
+                content: attr(data-next);
+                opacity: 0;
+            }
+    
+            &.prev:hover::before {
+                opacity: 1;
+            }
+    
+            &.next:hover::before {
+                transform: translateX(-2.5rem);
+                opacity: 1
+            }
+        }
+    }
+}

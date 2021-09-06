@@ -1,0 +1,153 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    background: linear-gradient(
+        45deg,
+        $color-blue 40%,
+        $color-dark 80%
+    );
+    overflow: hidden;
+}
+
+.container {
+    width: 30rem;
+    height: 40rem;
+    background: $color-light;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.4), .2rem .5rem rgba(0,0,0,.2);
+
+    & button {
+        border-radius: .25rem;
+        border: 0;
+        color: $color-light;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(0.95)
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus-visible {
+            outline: .1rem solid $color-dark;
+        }
+    }
+
+    .heading {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: $color-dark;
+        text-align: center;
+        padding: 1.5rem 0;
+        letter-spacing: .1rem;
+    }
+
+    .result--container {
+        width: $size;
+        height: 2.5rem;
+        max-width: 25rem;
+        background: $color-dark;
+        box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
+        padding: 2.5rem 1rem;
+        border-radius: .4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem auto;
+
+        .result {
+            display: inline-block;
+            font-size: 1.6rem;
+            color: $color-light;
+            font-weight: 600 * $font-weight;
+        }
+
+        .button {
+            font-size: 2rem;
+            padding: .75rem 1rem;
+            background: linear-gradient(45deg,
+                $color-blue 1.5%,
+                $color-dark 25%,
+                $color-blue 80%
+            );
+            box-shadow: 0 .2rem .3rem rgba(255,255,255,.2) inset, 0 .2vmin .5vmin rgba(0,0,0,.42)
+        }
+    }
+
+    .settings--container {
+        width: $size;
+        height: 20rem;
+        max-width: 25rem;
+        padding: 2rem 1rem;
+        background: rgba($color-dark, .1);
+        margin: auto;
+        border-radius: 0 0 .5rem .5rem;
+        box-shadow: 0 .2vmin .5vmin rgba($color-dark, .4);
+        display: block;
+
+        .setting {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+
+            & label {
+                font-size: 1.6rem;
+                color: $color-dark;
+                text-transform: capitalize;
+                font-weight: 800 * $font-weight;
+            }
+
+            & [type="number"] {
+                border: 0;
+                box-shadow: 0 .2rem .2rem rgba($color-dark, .5) inset;
+            }
+        }
+    }
+
+    .password {
+        margin: auto;
+        margin-top: 1rem;
+        display: block;
+        background: $color-blue;
+        padding: .75rem 1rem;
+        box-shadow: 0 .2vmin .5vmin rgba($color-dark, .5);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+
+// VARIABLES
+// sizes
+$size: 100vw;
+$height: 100vh;
+$pos: 50%;
+$image-size: 100%;
+// colors
+$cloud: #ecf0f1;
+$darkblue: #2c3e50;
+// fonts
+$font-stack: 'Abel', sans-serif;
+$orbitron: 'Orbitron', sans-serif;
+
+// General Styles
+body {
+    width: $image-size;
+    height: $height;
+    display: grid;
+    place-items: center;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: $cloud;
+    font-family: $font-stack;
+    overflow: hidden
+}
+
+// img { 
+//     width: $image-size;
+//     min-width: 350px;
+//     max-width: 470px;
+//     height: $height * .5
+
+// }
+
+.container {
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    display: block;
+
+    .header {
+        width: $image-size;
+        display: grid;
+        place-content: center;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 200;
+            &::first-letter {
+                font-family: $orbitron;
+                font-size: 3.75rem;
+            }
+        }
+    }
+
+    .expand--container {
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        padding: 1rem 1.5rem;
+        margin: 0 auto;
+        width: $size * .9;
+        
+        .image--box {
+            padding: 0 .35rem;
+            margin: .5rem;
+            position: relative;
+            width: $size * .13;
+            height: $height * .7;
+            flex: 0.5;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: flex .8s ease-in-out;
+            border-radius: 3.125rem;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:first-child {
+                background-image: url('../images/header.jpg')
+            }
+
+            &:nth-child(2) {
+                background-image: url('../images/pet-blog4.jpg');
+            }
+
+            &:nth-child(3) {
+                background-image: url('../images/pet-blog5.png');
+            }
+
+            &:nth-child(4) {
+                background-image: url('../images/pet3.jpg');
+            }
+
+            &:last-child {
+                background-image: url('../images/pet6.jpg');
+            }
+
+            &.active {
+                flex: 5;
+            }
+
+            &.active .main--description {
+                opacity: 1;
+                left: 5%;
+            }
+
+            // img.image {
+            //     border-radius: .75rem;
+            // }
+
+            .main--description {
+                display: grid;
+                place-items: center;
+                width: 15.625rem;
+                height: 70px;
+                position: absolute;
+                bottom: 1rem;
+                background: rgba(0,0,0,.5);
+                padding: 0;
+                border-radius: .45rem;
+                opacity: 0;
+
+                .description {
+                    font-size: 1.375rem;
+                    font-weight: bold;
+                    color: $cloud;
+                    text-transform: capitalize;
+
+                    & span {
+                        font-weight: 200;
+                        display: inline-block;
+
+                        &::first-letter {
+                            font-family: $orbitron;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

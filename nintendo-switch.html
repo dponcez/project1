@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo Switch Clone</title>
+    <link rel="stylesheet" href="css/nintendo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" data-state="container">
+        <header class="header" role="heading">
+            <h1 class="heading" role="text">nintendo switch</h1>
+        </header>
+        <div class="switch--container" data-state="switch container">
+            <section class="switch" role="main">
+                <!-- Left Joy-Con -->
+                <div class="left--joycon joy--con" data-state="control">
+                    <button class="minus--button" role="button"></button>
+                    <button class="left--stick stick" role="button"></button>
+                    <div class="directional--buttons" data-state="direction's button">
+                        <button class="top button arrow" role="button"></button>
+                        <button class="down button arrow" role="button"></button>
+                        <button class="left button arrow" role="button"></button>
+                        <button class="right button arrow" role="button"></button>
+                    </div>
+                    <button class="capture--button" role="button"></button>
+                    <button class="shoulder __left" role="button"></button>
+                </div>
+                <!-- End Left Joy-Con -->
+                <!-- Screen -->
+                <div class="display--box" data-state="display container">
+                    <div class="switch--buttons"></div>
+                    <div class="display" data-state="display" role="banner">
+                        <div class="screen" data-state="screen">
+                            <div class="logo--container" data-state="logo container" role="textbox">
+                                <div class="left--logo" role="text"></div>
+                                <div class="right--logo" role="text"></div>
+                            </div>
+                            <h2 class="nintendo" role="doc-subtitle">nintendo <span>switch</span><small>tm</small></h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Screen -->
+                <!-- Right Joy-Con -->
+                <div class="right--joycon joy--con" data-state="control">
+                    <button class="plus--button" role="button"></button>
+                    <div class="action--buttons" data-state="action buttons">
+                        <button class="X--button button" role="button" data-letter="X"></button>
+                        <button class="B--button button" role="button" data-letter="B"></button>
+                        <button class="Y--button button" role="button" data-letter="Y"></button>
+                        <button class="A--button button" role="button" data-letter="A"></button>
+                    </div>
+                    <button class="right--stick stick" role="button"></button>
+                    <button class="home--button" role="button"></button>
+                    <button class="shoulder __right" role="button"></button>
+                </div>
+                <!-- End Right Joy-Con -->
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+$fill--color: #3498db;
+$light-blue: #35C1F1;
+$sky-blue: #1B9DE2;
+$border-color: #144fc6;
+$font-stack: 'Abel', sans-serif;
+$bg-color: #eef7fe;
+$size: 100vw;
+$height: 100vh;
+
+html {
+    font-size: 65.2%;
+}
+
+body {
+    --font-weight: .85;
+    margin: 0;
+    padding: 0;
+    width: $size;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    background: $fill--color;
+    font-family: $font-stack;
+    color: $border-color;
+    overflow: hidden;
+    overflow-y: scroll;;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    .heading,
+    .sub--heading {
+        color: $bg-color;
+        text-align: center;
+        font-weight: calc( 500 * var(--font-weight, 1) );
+    }
+    .heading {
+        display: block;
+        font-size: clamp(5vw,3rem,4vw);
+        text-transform: capitalize;
+        margin: .5rem 0 0;
+        &::first-letter {
+            text-transform: lowercase;
+            font-size: 6.75vw
+        }
+    }
+    .sub--heading {
+        position: absolute;
+        top: calc(15vw * .4);
+        font-size: clamp(2vw, 3rem, 3.4vw);
+        margin: 1.5rem 0;
+    }
+    & > .cup {
+        width: 15rem;
+        height: 33rem;
+        margin: 3rem 0;
+        .percentage {
+            width: 100%;
+            height: 0;
+            font-size: 3rem;
+            backdrop-filter: blur(.75rem);
+            background: linear-gradient(0deg, $fill--color 5.123%, $sky-blue 37.233%, $light-blue 100%);
+            font-weight: calc( 800 * var(--font-weight, 2) );
+            text-align: center;
+            transition: .5s ease;
+        }
+        .remained {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex: 1;
+            transition: .5s;
+            .liters {
+                font-size: 3rem
+            }
+            & small {
+                font-size: 1.75rem
+            }
+        }
+    }
+    .cup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: .4rem solid $border-color;
+        border-radius: 0 0 4rem 4rem;
+        background: $bg-color;
+        overflow: hidden;
+    }
+
+    .text {
+        font-size: clamp(1.75vw, 2rem, 3vw);
+        color: $bg-color;
+        margin: 0 0 .5rem;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .cups--container {
+        width: 28rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .cup.small--cup {
+            width: 5rem;
+            height: 9.5rem;
+            margin: .2rem;
+            display: flex;
+            border-radius: 0 0 1.75rem 1.75rem;
+            cursor: pointer;
+            &.full {
+                background: linear-gradient(0deg, $fill--color 5.123%, $sky-blue 37.233%, $light-blue 100%);
+                color: $bg-color;
+            }
+            .ml {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

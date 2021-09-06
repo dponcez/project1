@@ -1,0 +1,487 @@
+/* =================================================
+                                                Global styles
+================================================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    box-sizing: inherit;
+}
+
+:root {
+    /* Colors */
+    --bg-color-dark-blue: #2c3e50;
+    --bg-color-light-blue: #3498db;
+    --bg-color-dark-red: #940606;
+    --bg-color-dark: #26282c;
+    --bg-alpha: rgba(0,0,0,.2);
+    --white: #fff;
+
+    /* Fonts */
+    --font-stack: 'Orbitron', sans-serif;
+
+    /* Layout */
+    --size: 100%;
+    --v-height: 50vh;
+    --pos: 50%;
+}
+
+/* =================================================
+                                                General styles
+================================================= */
+.container {
+    width: var(--size);
+    height: var(--v-height);
+    display: grid;
+    place-items: center;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+h1.heading {
+    font: bold 2.8659rem var(--font-stack);
+    color: var(--bg-color-dark-blue);
+    letter-spacing: 1px
+}
+/* =================================================
+                                                Audio container
+================================================= */
+.audio--container {
+    width: var(--size);
+    max-width: calc(var(--size) - 320px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color-dark);
+    border-radius: 0 var(--pos);
+}
+
+.audio--player {
+    position: relative;
+}
+
+/* =================================================
+                                                Controls
+================================================= */
+.audio--controls {
+    width: var(--size);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio--controls .progress--bar {
+    width: calc(var(--size) - 320px);
+    height: 10px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    background: var(--bg-alpha);
+    border-radius: 0 100px 0 100px;
+    transform: translateX(-50%);
+}
+
+.progress {
+    width: 0;
+    height: inherit;
+    background: var(--bg-color-dark-red);
+    border-radius: 0 100px 0 100px;
+    z-index: 3
+}
+
+/* =================================================
+                                                Audio button
+================================================= */
+.audio--buttons {
+    width: var(--size);
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.player {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--pos);
+    border: 1px var(--bg-alpha);
+    background: var(--bg-color-dark);
+    box-shadow: 1px 0 3px rgba(0,0,0,.3),
+                            -1px 0 1px #999 inset
+                            -1px 0 3px var(--bg-color-dark) inset;
+    margin-left: -150px;
+    grid-column: 1;
+     z-index: 3;
+}
+
+.player::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: var(--pos);
+    background: rgba(144,5,5,.5);
+    border: 1px solid rgba(144,5,5,.3);
+    box-shadow: 1px 1px 3px 0  #b90808, 
+                            -1px -2px 10px 0 #bf0909 inset,
+                            1px 0 3px var(--white) inset;
+    z-index: 1
+}
+
+.fas {
+    color: var(--white);
+    position: relative;
+    cursor: pointer;
+}
+
+.lg-play {
+    font-size: 4.534rem;
+    position: absolute;
+    align-self: center;
+    z-index: 5
+}
+
+.muted {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    grid-column: 2;
+    left: -20px;
+}
+
+.md-mute {
+    font-size: 2.534rem;
+}
+
+.slide--control {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-self: center;
+    left: -100px;
+    grid-column: 3;
+}
+
+input[type='range'] {
+    width: 250px;
+    height: 5px;
+    -webkit-appearance: none;
+    border-radius: 25px;
+    outline: none;
+    background: var(--white);
+    cursor: pointer;
+}
+
+/* Works on Mozilla */
+input[type='range']::-moz-range-progress {
+    height: 5px;
+    border-radius: 25px;
+    background: var(--bg-color-light-blue);
+}
+
+/* Works on Chrome */
+input[type='range']::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: var(--white);
+    border-radius: var(--pos);
+}
+
+.counters {
+    display: block;
+    position: relative;
+    right: 45px
+}
+
+.counters span {
+    font-size: 1rem;
+    font-family: var(--font-stack);
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.slashes {
+    color: var(--white)
+}
+
+/* =================================================
+                                                Media queries
+================================================= */
+/* tables */
+@media screen and (max-width: 1024px){
+    .muted {
+        left: -35%;
+    }
+
+    .counters span {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (max-width: 834px){
+    .container {
+        height: 50vh;
+    }
+
+    .audio--container {
+        width: var(--size);
+        max-width: calc(var(--size) - 230px);
+        border-radius: 0 80px 0 100px;
+    }
+
+    .progress--bar  {
+        width: 530px !important;
+        margin-left: 25px;
+        top: 0
+    }
+
+    .progress {
+        border-color: var(--bg-alpha);
+        border-right-width: 0;
+        border-style: solid;
+    }
+
+    .player {
+        position: relative;
+        display: flex;
+        align-items: inherit;
+        justify-content: center;
+    }
+
+    .muted {
+        left: -60%
+    }
+
+    .slide--control {
+        width: 150px;
+        left: -80%
+    }
+
+    .counters {
+        margin-left: -40%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .progress--bar {
+        width: 450px !important;
+        margin-left: 5%;
+    }
+
+    .muted {
+        margin-left: -30%
+    }
+}
+
+@media screen and (max-width: 667px) {
+
+    .progress--bar {
+        width: 350px !important;
+        margin-left: 0;
+    }
+
+    .md-mute {
+        font-size: 1.849rem;
+    }
+
+    .slide--control {
+        width: 120px
+    }
+
+    .counters {
+        display: flex;
+        right: 12px;
+    }
+    .counters span {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .audio--container {
+        width: 120vw !important;;
+        height: 30vh;
+        display: flex;
+        
+    }
+    
+    .audio--player {
+        grid-column: 1;
+        grid-row: 1
+    }
+    
+    .audio--controls {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        grid-row: 2
+    }
+    
+    .progress--bar {
+        width: 220px !important;;
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        top: 10px
+    }
+    
+    .audio--buttons {
+        display: grid;
+        height: 10vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr)
+    }
+    
+    .player {
+        position: relative;
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .muted {
+        grid-column: 2;
+        grid-row: 4;
+        margin-right: 10px
+    }
+    
+    .slide--control {
+        grid-column: 3;
+        grid-row: 4;
+    }
+    
+    input[type="range"]{
+        width: 100px;
+        position: relative;
+        left: 80px
+    }
+    
+    .counters {
+        grid-row: 5;
+        top: 50%;
+        left: 100%
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 375px){
+    .container {
+        height: var(--v-height);
+    }
+
+    .audio--container {
+        max-width: calc(var(--size) - 50px);
+        height: 35vh;
+        border-radius: var(--pos);
+        margin: auto;
+    }
+    
+    .progress--bar {
+        width: 150px !important;
+        display: block;
+        top: -100% !important;
+        left: 61% !important;
+        border-radius: 100px 0 100px 0 !important
+    }
+
+    .progress {
+        border-radius: 100px 0 100px 0 !important
+    }
+
+    .audio--buttons {
+        width: var(--size);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .player {
+        position: absolute;
+        bottom: 50%;
+    }
+
+    .muted {
+        left: -25%;
+        bottom: -25px
+    }
+
+    .muted .md-mute {
+        font-size: 2rem;
+    }
+
+    .slide--control {
+        left: 30px;
+        top: 7px
+    }
+
+    .counters {
+        position: absolute;
+        bottom: 35%;
+        left: 90%;
+    }
+
+    .counters span {
+        display: inline;
+        font-size: .55rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1.heading {
+        font-size: 2rem
+    }
+
+    .progress--bar {
+        width: 120px !important;
+        left: 55% !important
+    }
+
+    .player {
+        width: 110px;
+        height: 110px;
+    }
+
+    .player::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .lg-play {
+        font-size: 3.825rem;
+    }
+
+    .counters {
+        display: flex;
+        top: -15% !important;
+        left: 80% !important
+    }
+
+    .counters span {
+        display: inline-block;
+        font-size: .60rem;
+    }
+}

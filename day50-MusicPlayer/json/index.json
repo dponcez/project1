@@ -1,0 +1,122 @@
+[
+    {
+        "song": "audio/id1-21-questions",
+        "cover": "image/image1",
+        "artist": "50 cent ft. nate dogg",
+        "title" : "21 questions"
+    },
+    {
+        "song": "audio/id2-all-eyez-on-me",
+        "cover": "image/image2",
+        "artist": "2Pac",
+        "title" : "all eyez on me"
+    },
+    {
+        "song": "audio/id3-all-the-stars",
+        "cover": "image/image3",
+        "artist": "SZA ft. kendrick lamar",
+        "title" : "all the stars"
+    },
+    {
+        "song": "audio/id4-boyfriend",
+        "cover": "image/image4",
+        "artist": "ariana grande ft. social house",
+        "title": "boyfriend"
+    },
+    {
+        "song": "audio/id5-go-crazy",
+        "cover": "image/image5",
+        "artist": "chris brown ft. young thug",
+        "title": "go crazy"
+    },
+    {
+        "song": "audio/id6-slipping",
+        "cover": "image/image6",
+        "artist": "DMX",
+        "title": "slipping"
+    },
+    {
+        "song": "audio/id7-shot-clock",
+        "cover": "image/image7",
+        "artist": "ella mai",
+        "title": "shot clock"
+    },
+    {
+        "song": "audio/id8-bitch-please",
+        "cover": "image/image8",
+        "artist": "eminem, dr. dre, xzibit & nate dogg",
+        "title": "bitch please"
+    },
+    {
+        "song": "audio/id9-finally",
+        "cover": "image/image9",
+        "artist": "joyner lucas ft. chris brown",
+        "title": "finally"
+    },
+    {
+        "song": "audio/id10-b.s",
+        "cover": "image/image10",
+        "artist": "jhené aiko ft. H.E.R",
+        "title": "b.s"
+    },
+    {
+        "song": "audio/id11-how-did-that-to-you",
+        "cover": "image/image11",
+        "artist": "john legend",
+        "title": "how did that to you"
+    },
+    {
+        "song": "audio/id12-rise",
+        "cover": "image/image12",
+        "artist": "katy perry",
+        "title": "rise"
+    },
+    {
+        "song": "audio/id13-private-show",
+        "cover": "image/image13",
+        "artist": "t.i ft. chris brown",
+        "title": "private show"
+    },
+    {
+        "song": "audio/id14-regulate",
+        "cover": "image/image14",
+        "artist": "warren g ft. nate dogg",
+        "title": "regulate"
+    },
+    {
+        "song": "audio/id15-good-thing",
+        "cover": "image/image15",
+        "artist": "zedd ft. kehlani" ,   
+        "title": "good thing"
+    },
+    {
+        "song": "audio/id16-young-dumb-and-broke",
+        "cover": "image/image16",
+        "artist": "khalid",
+        "title": "young dumb & broke"
+    },
+    {
+        "song": "audio/id17-real-hip-hop-3",
+        "cover": "image/image17",
+        "artist": "chris brown ft. kevin mcCall",
+        "title": "real hip hop 3"
+    },
+    {
+        "song": "audio/id18-real-hip-hop-4",
+        "cover": "image/image17",
+        "artist": "chris brown ft. kevin mcCall",
+        "title": "real hip hop 4"
+    },
+    {
+        "song": "audio/id19-before-you-go",
+        "cover": "image/image18",
+        "artist": "lewis capaldi",
+        "title": "before you go"
+    },
+    {
+        "song": "audio/id20-peaches",
+        "cover": "image/image19",
+        "artist": "justin bieber ft daniel caesar & giveon",
+        "title": "peaches"
+    }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation menu</title>
+    <link rel="stylesheet" href="css/app-menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
+</head>
+
+<body>
+    <div class="container" data-state="container">
+        <header class="app--container" role="contentinfo">
+            <nav class="app--navigation" role="navigation">
+                <a href="#" class="logo" data-state="logo" role="link">doggy´s world</a>
+                <div class="toggler" data-state="menu button" role="button">
+                    <div class="bar half start"></div>
+                    <div class="bar"></div>
+                    <div class="bar half end"></div>
+                </div>
+                <ul class="app--navigation__menu" role="menu">
+                    <li class="home app--item" role="listitem"><a href="#" class="app--link" role="link">home</a></li>
+                    <li class="about app--item" role="listitem"><a href="#" class="app--link" role="link">about</a></li>
+                    <li class="info app--item" role="listitem"><a href="#" class="app--link" role="link">info</a></li>
+                    <li class="blog app--item" role="listitem"><a href="#" class="app--link" role="link">blog</a></li>
+                    <li class="contact app--item" role="listitem"><a href="#" class="app--link" role="link">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/single.js"></script>
+    <script>
+        const handle = new HandleToggle();
+        handle.update('open', 'active', 'show', 50, 0, 0, 1);
+        handle.handleNavigation('.toggler', '.app--navigation',  '.app--navigation__menu', 'app--item', '.logo')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+:root {
+    /* ========== FONTS ========== */
+    --font-stack-1: 'Abel', sans-serif;
+    --font-stack-2: 'Montserrat', sans-serif;
+    --font-weight: .95;
+    /* ========== COLORS ========== */
+    --dark-color: #2c3e50;
+    --light-color: #ffffff;
+    --color-blue: #3498db;
+    /* ========== VIEWPORT ========== */
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: var(--width);
+    height: var(--height);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack-1);
+    background: var(--color-blue);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    position: relative;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    color: var(--light-color);
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: calc( 500 * var(--font-weight));
+    font-family: var(--font-stack-2);
+    background: var(--dark-color);
+    box-shadow: 0 .2rem .5rem rgb(32, 20, 20), 0 -.2rem .3rem rgba(255, 255, 255, .2) inset;
+}
+
+.add:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+.add:focus {
+    outline: 0;
+}
+
+.add .fas {
+    font-weight: calc(800 * var(--font-weight));
+}
+
+.note {
+    margin: 30px 20px;
+    background: var(--light-color);
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 1rem .4rem rgba(0 0 0 / 10%);
+}
+
+.note textarea {
+    width: var(--size);
+    height: 400px;
+    outline: 0;
+    padding: 2rem;
+    border: 0;
+    font-size: 1.6rem;
+    font-family: inherit;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5rem;
+    background: var(--dark-color);
+}
+
+.tools button {
+    padding: .5rem;
+    background: none;
+    margin: 0 .25rem;
+    font-size: 1.7rem;
+}
+
+.tools button .fas {
+    font-weight: calc(400 * var(--font-weight));
+}
+
+.main {
+    padding: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 1.6rem;
+    font-family: var(--font-stack-2);
+}

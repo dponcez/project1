@@ -1,0 +1,118 @@
+html {
+  font-size: 65.2%;
+}
+
+body {
+  --font-weight: .85;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #3498db;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.container h3 {
+  padding: 2.5rem 0;
+  font-size: clamp(3vw, 3rem, 5vw);
+  font-weight: calc( 700 * var(--font-weight, 1));
+  color: #ecf0f1;
+  letter-spacing: .1rem;
+}
+
+.container h3::first-letter {
+  display: block;
+  text-transform: uppercase;
+}
+
+.container h3 span {
+  display: block;
+  text-align: center;
+}
+
+.container h3 span::first-letter {
+  text-transform: uppercase;
+}
+
+.container .input--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50vw;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+}
+
+.container .input--container .picker {
+  width: 100%;
+  height: 15vh;
+  max-width: 50rem;
+  padding: 1rem;
+  border-radius: .75rem;
+  font-size: 2rem;
+  border: 0;
+}
+
+.container .input--container .tags {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 52rem;
+  padding: .75rem;
+}
+
+.container .input--container .tags .tag {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0 .5rem 1rem 0;
+  background: #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: calc( 800 * var(--font-weight, 1));
+  color: #2c3e50;
+  border-radius: .8rem;
+}
+
+.container .input--container .tags .tag.highlight {
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+/*# sourceMappingURL=styles.css.map */

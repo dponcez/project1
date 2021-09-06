@@ -1,0 +1,87 @@
+:root {
+    /* ========== FONTS ========== */
+    --font-stack-1: 'Abel', sans-serif;
+    --font-stack-2: 'Montserrat', sans-serif;
+    --font-weight: .95;
+    /* ========== COLORS ========== */
+    --dark-color: #2c3e50;
+    --light-color: #eef7ef;
+    /* ========== VIEWPORT ========== */
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack-1);
+    width: var(--width);
+    height: var(--height);
+    background: #e9967a;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h3,
+.container small {
+    color: var(--dark-color);
+    position: relative;
+    padding: 1rem 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.container h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.fa-heart {
+    color: #ff000f;
+}
+
+.container small {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.car {
+    width: 30rem;
+    height: 45rem;
+    max-width: var(--size);
+    background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center / cover;
+    position: relative;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3), 0 .3rem .5rem rgba(0,0,0,.4);
+    cursor: pointer;
+}
+
+.car .fa-heart {
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    animation: pulse .4s linear;
+}
+
+@keyframes pulse {
+    to {
+        transform: translate(-50%,-50%) scale(15);
+        opacity: 0;
+    }
+}

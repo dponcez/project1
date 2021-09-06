@@ -1,0 +1,409 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  background: #ecf0f1;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container .mobile {
+  width: 375px;
+  height: 60rem;
+  position: relative;
+  background: #433c58;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 0.2vmin solid rgba(44, 62, 80, 0.4);
+  -webkit-box-shadow: 0 0.3vmin 0.2vmin 0.3vmin rgba(44, 62, 80, 0.3), 0.1vmin 0.3vmin 0.4vmin 0 rgba(44, 62, 80, 0.4), 0.4vmin 0.2vmin 0.3vmin 0.3vmin rgba(44, 62, 80, 0.3) inset;
+          box-shadow: 0 0.3vmin 0.2vmin 0.3vmin rgba(44, 62, 80, 0.3), 0.1vmin 0.3vmin 0.4vmin 0 rgba(44, 62, 80, 0.4), 0.4vmin 0.2vmin 0.3vmin 0.3vmin rgba(44, 62, 80, 0.3) inset;
+}
+
+.container .mobile::before, .container .mobile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+}
+
+.container .mobile::before {
+  width: 375px;
+  height: 67px;
+  background: rgba(236, 240, 241, 0.12);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.container .mobile::after {
+  width: 26.8px;
+  height: 26.8px;
+  border-radius: 50%;
+  background: black;
+  opacity: .75;
+  top: 2.5%;
+  -webkit-box-shadow: 0.1vmin 0.175vmin 0.675vmin 0.3vmin rgba(44, 62, 80, 0.75), 0 0 0.3vmin 0.3vmin rgba(236, 240, 241, 0.2) inset, 0 0 0 0.3vmin rgba(236, 240, 241, 0.72) inset;
+          box-shadow: 0.1vmin 0.175vmin 0.675vmin 0.3vmin rgba(44, 62, 80, 0.75), 0 0 0.3vmin 0.3vmin rgba(236, 240, 241, 0.2) inset, 0 0 0 0.3vmin rgba(236, 240, 241, 0.72) inset;
+}
+
+.container .mobile .app--header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .mobile .app--header .logo {
+  width: 100%;
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.2rem 0 0 1.2rem;
+  position: absolute;
+  top: 26.8px;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #1ec89d 45.76%, #22b999 98.48%);
+  color: #257470;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 475;
+  -webkit-box-shadow: 0.1875vmin 0.125vmin 0.675vmin rgba(44, 62, 80, 0.3), -0.1875vmin -0.125vmin 0.275vmin rgba(44, 62, 80, 0.3) inset, 1.01875vmin 0.675vmin 0.375vmin rgba(236, 240, 241, 0.3) inset, 0.1875vmin 0.1875vmin 0.275vmin rgba(236, 240, 241, 0.3);
+          box-shadow: 0.1875vmin 0.125vmin 0.675vmin rgba(44, 62, 80, 0.3), -0.1875vmin -0.125vmin 0.275vmin rgba(44, 62, 80, 0.3) inset, 1.01875vmin 0.675vmin 0.375vmin rgba(236, 240, 241, 0.3) inset, 0.1875vmin 0.1875vmin 0.275vmin rgba(236, 240, 241, 0.3);
+}
+
+.container .mobile .app--header .logo span {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #ecf0f1;
+}
+
+.container .mobile .app--header .logo span::first-letter {
+  font-size: 3.75rem;
+}
+
+.container .mobile .app--header .nav--header {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 116.58px;
+  z-index: 1;
+}
+
+.container .mobile .app--header .nav--header .nav--menu {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item {
+  width: inherit;
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-shadow: 0.1875vmin 0.125vmin 0.675vmin rgba(44, 62, 80, 0.3), -0.1875vmin -0.125vmin 0.275vmin rgba(44, 62, 80, 0.3) inset, 1.01875vmin 0.675vmin 0.375vmin rgba(236, 240, 241, 0.3) inset, 0.1875vmin 0.1875vmin 0.275vmin rgba(236, 240, 241, 0.3);
+          box-shadow: 0.1875vmin 0.125vmin 0.675vmin rgba(44, 62, 80, 0.3), -0.1875vmin -0.125vmin 0.275vmin rgba(44, 62, 80, 0.3) inset, 1.01875vmin 0.675vmin 0.375vmin rgba(236, 240, 241, 0.3) inset, 0.1875vmin 0.1875vmin 0.275vmin rgba(236, 240, 241, 0.3);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:first-child, .container .mobile .app--header .nav--header .nav--menu .item:nth-child(2), .container .mobile .app--header .nav--header .nav--menu .item:nth-child(3), .container .mobile .app--header .nav--header .nav--menu .item:nth-child(4), .container .mobile .app--header .nav--header .nav--menu .item:nth-child(5), .container .mobile .app--header .nav--header .nav--menu .item:last-child {
+  height: 67px;
+  border-radius: 0 0 1.2rem 0;
+  left: -10%;
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:first-child.active, .container .mobile .app--header .nav--header .nav--menu .item:nth-child(2).active, .container .mobile .app--header .nav--header .nav--menu .item:nth-child(3).active, .container .mobile .app--header .nav--header .nav--menu .item:nth-child(4).active, .container .mobile .app--header .nav--header .nav--menu .item:nth-child(5).active, .container .mobile .app--header .nav--header .nav--menu .item:last-child.active {
+  left: 0;
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:first-child {
+  width: 375px;
+  left: -17.89%;
+  background: #1ec89d;
+  -webkit-transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:nth-child(2) {
+  width: 335px;
+  left: -15.9%;
+  background: #22b999;
+  -webkit-transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:nth-child(3) {
+  width: 298.625px;
+  left: -14.25%;
+  background: #23a98e;
+  -webkit-transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:nth-child(4) {
+  width: 261.125px;
+  left: -12.54%;
+  background: #269784;
+  -webkit-transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:nth-child(5) {
+  width: 223.625px;
+  left: -10.8%;
+  background: #25887d;
+  -webkit-transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .item:last-child {
+  width: 186.125px;
+  left: -9%;
+  background: #257470;
+  -webkit-transition: left 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .link {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.1rem;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.container .mobile .app--header .nav--header .nav--menu .link span {
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.84, 0.16, 0.32, 0.9);
+  transition: opacity 250ms cubic-bezier(0.84, 0.16, 0.32, 0.9);
+}
+
+.container .mobile .app--header .nav--header .nav--menu .link span.remove {
+  opacity: 0;
+}
+
+.container .mobile .app--header .heading {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  -webkit-transform: translate(-15%, -50%);
+          transform: translate(-15%, -50%);
+  font-size: 4rem;
+  color: #1ec89d;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 380;
+}
+
+.container .mobile .app--header .heading span {
+  display: inline-block;
+  font-family: "Abel", sans-serif;
+  text-transform: lowercase;
+  color: #ecf0f1;
+}
+
+.container .mobile .app--header .heading span::first-letter {
+  font-size: 7rem;
+}
+
+.container .mobile .app--header .toggle--container {
+  position: absolute;
+  left: 18%;
+  bottom: 15%;
+  width: 5.7rem;
+  height: 5.7rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #1ec89d 45.76%, #22b999 98.48%);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container .mobile .app--header .toggle--container::before, .container .mobile .app--header .toggle--container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.container .mobile .app--header .toggle--container::before {
+  -webkit-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+  z-index: -1;
+}
+
+.container .mobile .app--header .toggle--container::after {
+  background: #22b999;
+  -webkit-animation: pulse 1350ms infinite;
+          animation: pulse 1350ms infinite;
+  z-index: 1;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: .85;
+  }
+  100% {
+    -webkit-transform: scale(1.32);
+            transform: scale(1.32);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: .85;
+  }
+  100% {
+    -webkit-transform: scale(1.32);
+            transform: scale(1.32);
+    opacity: 0;
+  }
+}
+
+.container .mobile .app--header .toggle--container:hover::before {
+  background: #269784;
+}
+
+.container .mobile .app--header .toggle--container .toggle {
+  width: 2.975rem;
+  height: 1.75rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: -webkit-transform 350ms cubic-bezier(0.75, 0.35, 0.35, 0.75);
+  transition: -webkit-transform 350ms cubic-bezier(0.75, 0.35, 0.35, 0.75);
+  transition: transform 350ms cubic-bezier(0.75, 0.35, 0.35, 0.75);
+  transition: transform 350ms cubic-bezier(0.75, 0.35, 0.35, 0.75), -webkit-transform 350ms cubic-bezier(0.75, 0.35, 0.35, 0.75);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.container .mobile .app--header .toggle--container .toggle .bar {
+  width: 100%;
+  height: .375rem;
+  background: #2c3e50;
+  border-radius: 1.2rem;
+}
+
+.container .mobile .app--header .toggle--container .toggle .bar.half {
+  width: 50%;
+}
+
+.container .mobile .app--header .toggle--container .toggle .bar.start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65), -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+}
+
+.container .mobile .app--header .toggle--container .toggle .bar.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+  transition: transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65), -webkit-transform 350ms cubic-bezier(0.65, 0.96, 0.96, 0.65);
+}
+
+.container .mobile .app--header .toggle--container .toggle.open {
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+.open .bar.start {
+  -webkit-transform: translate(1.5rem, 0.7rem) rotate(270deg);
+          transform: translate(1.5rem, 0.7rem) rotate(270deg);
+}
+
+.open .bar.end {
+  -webkit-transform: translate(-1.495rem, -0.65rem) rotate(270deg);
+          transform: translate(-1.495rem, -0.65rem) rotate(270deg);
+}
+/*# sourceMappingURL=styles.css.map */

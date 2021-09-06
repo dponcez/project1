@@ -1,0 +1,148 @@
+// Colors
+$white: #ffffff;
+$left-bg-color: rgba(87,84,236,.7);
+$right-bg-color: rgba(43,43,43,.8);
+$left-btn-hover-color: rgba(87, 84, 236, 1);
+$right-btn-hover-color: rgba(28,122,28,1);
+// Sizes
+$pos: 50%;
+$size: 100vw;
+$height: 100vh;
+$percent: 100%;
+$hover-width-75: 75%;
+$hover-width-25: 25%;
+// Transition
+$speed: 1000ms;
+// Font
+$font-stack: 'Roboto', sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    height: $height;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.landing--title {
+    position: absolute;
+    top: 20%;
+    left: $pos;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: $white;
+    font-size: 4rem;
+    text-transform: capitalize;
+
+    & span {
+        display: inline-block;
+        text-transform: capitalize;
+    }
+}
+
+.container {
+    position: relative;
+    width: $percent;
+    height: $percent;
+    background: #333;
+
+    .split {
+        position: absolute;
+        width: $pos;
+        height: $percent;
+        overflow: hidden;
+        &.left {
+            left: 0;
+            background: url('../images/ps5.jpg') no-repeat center / cover;
+            &::before {
+                content: '';
+                position: absolute;
+                width: $percent;
+                height: $percent;
+                background: $left-bg-color;
+            }
+        }
+
+        &.right {
+            right: 0;
+            background: url('../images/xbox.webp') no-repeat center / cover;
+            &::before {
+                content: '';
+                position: absolute;
+                width: $percent;
+                height: $percent;
+                background: $right-bg-color;
+            }
+        }
+
+        &.right,
+        &.left,
+        &.right::before,
+        &.left::before {
+            transition: all $speed ease-in-out;
+        }
+
+        .landing--btn {
+            width: 15rem;
+            padding: 1.5rem;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: $pos * .8;
+            left: $pos;
+            transform: translateX(-50%);
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $white;
+            border: .2rem solid $white;
+            font-size: 1rem;
+            font-weight: bold;
+            &:visited {
+                color: #ecf0f1 !important; 
+            }
+        }
+
+        &.left .landing--btn:hover {
+            background: $left-btn-hover-color;
+            border-color: $left-btn-hover-color
+        }
+
+        &.right .landing--btn:hover {
+            background: $right-btn-hover-color;
+            border-color: $right-btn-hover-color;
+        }
+    }
+}
+
+.hover--left .left {
+    width: $hover-width-75;
+}
+
+.hover--right .left {
+    width: $hover-width-25;
+}
+
+.hover--left .right {
+    width: $hover-width-25;
+}
+
+.hover--right .right {
+    width: $hover-width-75
+}
+
+@media (max-width: 50rem) {
+    .landing--title {
+        font-size: 2rem;
+        top: $pos * .3;
+    }
+
+    .landing--btn {
+        width: 12rem;
+        padding: 1.2rem;
+    }
+}

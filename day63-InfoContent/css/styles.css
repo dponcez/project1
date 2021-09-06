@@ -1,0 +1,195 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.info--box {
+  width: 45rem;
+  height: auto;
+  margin: 0.1125rem 0;
+  position: relative;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.4875rem rgba(44, 62, 80, 0.75);
+          box-shadow: 0.25rem 0.25rem 0.4875rem rgba(44, 62, 80, 0.75);
+  border-radius: 0 0.5rem 0 0;
+}
+
+.info--box .header {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.info--box .header .nav {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.info--box .header .nav--menu {
+  width: 100%;
+  height: 6.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0.05rem solid #2c3e50;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.info--box .header .nav--menu__item {
+  width: 15rem;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  line-height: 4rem;
+}
+
+.info--box .header .nav--menu__link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 1.425rem;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 760;
+  color: #2c3e50 !important;
+  background: #ecf0f1 !important;
+  -webkit-transition: background-color .95s ease, opacity .95s ease-in;
+  transition: background-color .95s ease, opacity .95s ease-in;
+}
+
+.info--box .header .nav--menu__link:hover, .info--box .header .nav--menu__link:focus {
+  background: #2c3e50 !important;
+  color: #ecf0f1 !important;
+}
+
+.info--box .header .nav--menu__link.active {
+  background: #2c3e50 !important;
+  color: #ecf0f1 !important;
+  -webkit-transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+  transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+}
+
+.info--box .panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56.75rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: 0.1rem solid #2c3e50;
+}
+
+.info--box .panels article {
+  height: 100%;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2c3e50;
+  opacity: 0;
+  -webkit-transition: background-color 1s ease, opacity 1s ease-in;
+  transition: background-color 1s ease, opacity 1s ease-in;
+}
+
+.info--box .panels article h2,
+.info--box .panels article p {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #ecf0f1;
+  margin: 0;
+}
+
+.info--box .panels article .heading {
+  font-size: 1.925rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 665;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.info--box .panels article p {
+  font-size: 1.39024rem;
+  letter-spacing: 0.2vmin;
+}
+
+.info--box .panels article p a {
+  color: #3498db !important;
+}
+
+.info--box .panels article picture .image {
+  display: block;
+  padding: 0.3rem 0 0 0;
+}
+
+.info--box .panels article picture figcaption {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: rgba(236, 240, 241, 0.5);
+  font-size: 1.25rem;
+}
+
+.info--box .panels article picture figcaption a {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+}
+
+.info--box .panels article ol {
+  padding: 0.5rem 0 0 1.5rem;
+  margin: 0.5rem;
+}
+
+.info--box .panels article ol li {
+  font-size: 1.25rem;
+  color: rgba(236, 240, 241, 0.5);
+}
+
+.info--box .panels article.active--panel {
+  opacity: 1;
+  -webkit-transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+  transition: background-color 0.75s ease-in, opacity 0.75s ease-in-out;
+  z-index: 1;
+}
+/*# sourceMappingURL=styles.css.map */

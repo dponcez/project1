@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset='UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <title>Image Carousel</title>
+    <!-- Mobile Specific Metas -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@200;300&display=swap'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <div class="gallery--container" id="gallery" data-image="images">
+            <img src="images/image1.jpg" alt="Foto de Anna Shvets en Pexels">
+            <img src="images/image2.jpg" alt="Foto de Anna Tarazevich en Pexels">
+            <img src="images/image3.jpg" alt="Foto de Isabela Catão en Pexels">
+            <img src="images/image4.jpg" alt="Foto de Albin Biju en Pexels">
+        </div>
+        <div class="buttons--container">
+            <button id="prev" class="prev" data-prev="prev">
+                <i class="fas fa-chevron-left left"></i>
+            </button>
+            <button id="next" class="next" data-next="next">
+                <i class="fas fa-chevron-right right"></i>
+            </button>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>

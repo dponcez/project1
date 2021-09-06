@@ -1,0 +1,175 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  color: #2c3e50;
+  background: #ecf0f1;
+  overflow: hidden;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container .heading {
+  padding: 0;
+  margin: 0;
+  font-size: clamp(4rem, 3vw, 4.5rem);
+  font-weight: 475;
+}
+
+.container .heading::first-letter {
+  font-size: clamp(7rem, 3.5vw, 5.9rem);
+}
+
+.container .heading span {
+  display: inline-block;
+  font-family: "Orbitron", sans-serif;
+}
+
+.container .progress--container {
+  height: 100%;
+  max-height: 38.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.container .progress--container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 48%;
+  width: 0.325rem;
+  height: 100%;
+  background: #d5dad3;
+  z-index: -1;
+}
+
+.container .progress--container .progress--bar {
+  width: 0.325rem;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 48%;
+  background: #3498db;
+  -webkit-transition: 0.125s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.125s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: -1;
+}
+
+.container .progress--container .circle {
+  width: 6rem;
+  height: 6rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 0.325rem solid #d5dad3;
+  background: #ecf0f1;
+}
+
+.container .progress--container .circle::before {
+  content: '';
+  width: 0;
+  height: 6rem;
+  position: absolute;
+  inset: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 0;
+  border-color: #3498db transparent transparent transparent;
+  border-radius: inherit;
+}
+
+.container .progress--container .circle.active {
+  position: relative;
+}
+
+.container .progress--container .circle.active::before {
+  width: 6rem;
+  height: 6rem;
+  border: 0.325rem solid;
+  border-color: #3498db;
+  -webkit-transition: color 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-color 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: color 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-color 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container .progress--container .circle.active span {
+  display: block;
+  position: relative;
+  color: #3498db !important;
+}
+
+.container .progress--container .circle span {
+  font-size: 1.925rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.container .button--container {
+  position: relative;
+  display: block;
+  padding: 0.6rem;
+  margin: 0.5rem;
+}
+
+.container .button--container button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  background: #3498db;
+  color: #ecf0f1;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+  cursor: pointer;
+}
+
+.container .button--container button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.container .button--container button:focus {
+  outline: 0;
+}
+
+.container .button--container button:focus-visible {
+  outline: 0.125rem solid #2c3e50;
+}
+
+.container .button--container button:disabled {
+  cursor: not-allowed;
+  background-color: #d5dad3;
+}
+
+.container .button--container button.prev .fas {
+  color: #3498db;
+}
+/*# sourceMappingURL=styles.css.map */

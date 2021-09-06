@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset='UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <title>RGB to HEX</title>
+    <!-- Mobile Specific Metas -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abel&family=Ubuntu&display=swap'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+    <div class='container'>
+        <header class="header">
+            <h1 class="heading"><span>RGB</span> to <span>HEX</span></h1>
+        </header>
+        <main class="main">
+            <div class="display--panel"></div>
+            <fieldset>
+                <legend>rgb panel</legend>
+                <div class="panel">
+                    <label class="red" for="red">r</label>
+                    <input type="range" id="red" min="0" max="255" value="0">
+                    <output class="red out__red" for="red">0</output>
+                </div>
+                <div class="panel">
+                    <label class="green" for="green">g</label>
+                    <input type="range" id="green" min="0" max="255" value="0">
+                    <output class="green out__green" for="green">0</output>
+                </div>
+                <div class="panel">
+                    <label class="blue" for="blue">b</label>
+                    <input type="range" id="blue" min="0" max="255" value="0">
+                    <output class="blue out__blue" for="blue">0</output>
+                </div>
+            </fieldset>
+            <div class="description">
+                <span>color selected:</span>
+                <output class="output">#000000</output>
+            </div>
+        </main>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>

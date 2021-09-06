@@ -1,0 +1,94 @@
+/* 
+    ========== CUSTOM PROPERTIES ========== 
+    The Custom Properties does not appear on styles.css
+*/
+
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$padding: 1.5rem;
+$radius: 50%;
+$size: 7.5em;
+$vmin: 2vmin;
+$rotate: 0;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$border-color: rgba($color-dark, .5);
+
+/* ========== BRAKEPOINTS ========== */
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ========== STYLES ========== */
+.container {
+    height: inherit;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    inset: $radius 0;
+    transform: translate( 0%, -50% );
+}
+.loader--container {
+    width: $size;
+    height: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $vmin * .85 solid transparent;
+    border-top-color: $border-color;
+    border-radius: $radius;
+    
+    @keyframes  reverseload {
+        from {
+            transform: rotate( ( $rotate + 8 ) * -45deg );
+        }
+        to {
+            transform: rotate( ( $rotate + 8 ) * 45deg );
+        }
+    }
+    .loader {
+        display: block;
+        $border-color: #3498db;
+        width: ( $size * .8 ) / 1.2;
+        height: ( $size * .8 ) / 1.2;
+        border: $vmin * .75 solid transparent;
+        border-top-color: $border-color;
+        border-radius: $radius;
+        
+        @keyframes load {
+            from {
+                transform: rotate( $rotate );
+                transition: transform 1s ease
+            }
+            to {
+                transform: rotate( ( $rotate + 8 ) * 45deg );
+                transition: transform 1s ease-in
+            }
+        }
+    }
+}

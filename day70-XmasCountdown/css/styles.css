@@ -1,0 +1,212 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: block;
+  position: relative;
+}
+
+.container .xmas--container {
+  width: 100%;
+  min-width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .container .xmas--container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .xmas--container .box {
+    width: 35rem;
+    height: 15rem;
+  }
+  .container .xmas--container .box:not(:last-child) {
+    -webkit-border-after: 0.125rem solid #ecf0f1;
+            border-block-end: 0.125rem solid #ecf0f1;
+  }
+  .container .xmas--container .box span {
+    height: 7rem;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container .xmas--container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .xmas--container .box {
+    width: 30rem;
+  }
+  .container .xmas--container .box .numbs {
+    width: 10rem;
+    left: 22rem;
+    padding: 1.5rem 0.5125rem;
+    -webkit-transition: width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), left 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), left 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+.box {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  background: #2c3e50;
+}
+
+.box:not(:last-child) {
+  -webkit-border-end: 0.125rem solid #ecf0f1;
+          border-inline-end: 0.125rem solid #ecf0f1;
+}
+
+.box h2 {
+  color: #ecf0f1;
+}
+
+.box .heading {
+  font-size: 4.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 760;
+  text-transform: capitalize;
+}
+
+.box span {
+  width: 15rem;
+  display: inline-block;
+  position: absolute;
+  bottom: -5rem;
+  padding: 1.5rem 4.875rem;
+  background: #ecf0f1;
+  border-radius: 0.375rem;
+  text-align: center;
+  color: #2c3e50;
+  -webkit-box-shadow: 0 0 0.125rem 0 #2c3e50, 0.25rem 0.25rem 0 rgba(44, 62, 80, 0.5);
+          box-shadow: 0 0 0.125rem 0 #2c3e50, 0.25rem 0.25rem 0 rgba(44, 62, 80, 0.5);
+}
+
+.box .numbs {
+  font-size: 3rem;
+}
+
+.alert {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.alert--container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(45deg, #3498db 25%, #184f85 90%);
+}
+
+.alert--container .box {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.alert--container .box .paragraph,
+.alert--container .box .heading {
+  margin: 0;
+  padding: 0.5rem;
+  color: #ecf0f1;
+}
+
+.alert--container .box .paragraph {
+  font-size: 4.5rem;
+}
+
+.alert--container .box .heading {
+  font-size: 6rem;
+  font-weight: 475;
+}
+
+.alert--container .close--alert {
+  padding: 1.425rem 3rem;
+  -webkit-margin-before: 2.625rem;
+          margin-block-start: 2.625rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-size: 1.875rem;
+  font-weight: bold;
+  -webkit-box-shadow: 0.175rem 0.175rem 0.25rem rgba(44, 62, 80, 0.5);
+          box-shadow: 0.175rem 0.175rem 0.25rem rgba(44, 62, 80, 0.5);
+}
+
+.alert--container .close--alert:hover {
+  background: rgba(44, 62, 80, 0.95);
+  -webkit-box-shadow: 0 0 0.225rem 0 #ecf0f1 inset;
+          box-shadow: 0 0 0.225rem 0 #ecf0f1 inset;
+  cursor: pointer;
+}
+
+.alert--container .close--alert:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=styles.css.map */

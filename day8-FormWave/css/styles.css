@@ -1,0 +1,134 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  background: #3498db;
+  color: #ecf0f1;
+  font-family: "Abel", sans-serif;
+}
+
+.container {
+  padding: 1.5rem 2.5rem;
+  background: linear-gradient(-190deg, #3498db 50%, #35c1f1 98%);
+  border-radius: .5rem;
+  -webkit-box-shadow: 0.125vmin 0.1875vmin 0.675rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0.125vmin 0.1875vmin 0.675rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .login {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.container .text {
+  font-size: 1.15rem;
+  letter-spacing: .1rem;
+}
+
+.container .text::first-letter {
+  text-transform: capitalize;
+}
+
+.container .text a {
+  text-decoration: none;
+  color: #184f85;
+  text-transform: capitalize;
+}
+
+.container .text a::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 7.5rem;
+}
+
+.container .text a::before {
+  width: 0;
+}
+
+.container .text a:hover::before {
+  width: 4.5rem;
+  border-bottom: 0.1rem solid #ecf0f1;
+  -webkit-transition: width .3s ease-in, border .3s ease-in;
+  transition: width .3s ease-in, border .3s ease-in;
+  z-index: 1;
+}
+
+.container .login--btn {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  background: #1e8dd5;
+  color: #ecf0f1;
+  border: 0;
+  border-radius: .3rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.container .login--btn:focus {
+  outline: 0;
+}
+
+.container .login--btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.container .form__container {
+  display: block;
+  margin-top: 0;
+}
+
+.container .form__container .form--control {
+  padding: 1.5rem 0 2.5rem;
+  width: 18.75rem;
+  position: relative;
+}
+
+.container .form__container .form--control input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 0.9375rem 0;
+  border: 0;
+  border-bottom: 0.15rem solid #ecf0f1;
+  border-radius: .3rem;
+  color: #ecf0f1;
+  font-size: 1.125rem;
+}
+
+.container .form__container .form--control input:focus, .container .form__container .form--control input:active {
+  outline: none;
+  border-bottom: 0.15rem solid #184f85;
+}
+
+.container .form__container .form--control input:focus + label span, .container .form__container .form--control input:active + label span {
+  color: #1e8dd5;
+  -webkit-transform: translateY(-1.875rem);
+          transform: translateY(-1.875rem);
+}
+
+.container .form__container .form--control label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  font-size: 1.125rem;
+}
+
+.container .form__container .form--control label span {
+  display: inline-block;
+  font-size: inherit;
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  max-width: 5rem;
+}
+/*# sourceMappingURL=styles.css.map */

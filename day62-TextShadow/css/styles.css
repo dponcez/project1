@@ -1,0 +1,54 @@
+:root {
+    /* ========== FONTS ========== */
+    --font-stack-1: 'Abel', sans-serif;
+    --font-stack-2: 'Montserrat', sans-serif;
+    --font-weight: .95;
+    /* ========== COLORS ========== */
+    --color-dark: #2c3e50;
+    --color-light: #eef7ef;
+    /* ========== VIEWPORT ========== */
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: var(--width);
+    height: var(--height);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack-2);
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+}
+
+.heading {
+    font-size: calc(5rem * 2);
+    font-weight: 800;
+    display: block;
+    position: relative;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.heading::before {
+    content: '🚀';
+    position: absolute;
+    left: -5rem;
+    transform: translateX(-8rem)
+}

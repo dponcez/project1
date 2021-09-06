@@ -1,0 +1,199 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Ubuntu', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-blue: #3498db;
+$color-dark-blue: #184f85;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+}
+
+.container {
+    display: block;
+    position: relative;
+
+    .xmas--container {
+        width: $size;
+        min-width: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 0;
+
+        @media screen and (max-width: 850px) {
+            & {
+                flex-direction: column;
+
+                .box {
+                    width: 35rem;
+                    height: 15rem;
+
+                    &:not(:last-child) {
+                        border-block-end: $radius * .25 solid $color-light
+                    }
+
+                    & span {
+                        height: 7rem;
+                        top: $size * .5;
+                        right: 0;
+                        transform: translate(50%, 0);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 540px) {
+            & {
+                align-items: flex-start;
+
+                .box {
+                    width: 30rem;
+                    
+                    .numbs {
+                        width: 10rem;
+                        left: 19rem;
+                        padding: $padding $radius * 1.025;
+                        transition: width .7s cubic-bezier(0.075, 0.82, 0.165, 1), left .7s cubic-bezier(0.165, 0.84, 0.44, 1)
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box {
+    width: $size * .5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding;
+    position: relative;
+    background: $color-dark;
+
+    &:not(:last-child) {
+        border-inline-end: $radius * .25 solid $color-light;
+    }
+
+    & h2 {
+        color: $color-light
+    }
+
+    .heading {
+        font-size: $padding * 3;
+        font-family: $font-stack-2;
+        font-weight: 800 * $font-weight;
+        text-transform: capitalize;
+    }
+
+    & span {
+        width: 15rem;
+        display: inline-block;
+        position: absolute;
+        bottom: -5rem;
+        padding: $padding $padding * 3.25;
+        background: $color-light;
+        border-radius: $radius * .75;
+        text-align: center;
+        color: $color-dark;
+        box-shadow: 0 0 $radius * .25 0 $color-dark, $radius * .5 $radius * .5 0 rgba($color-dark, .5);
+    }
+
+    .numbs {
+        font-size: $padding * 2;
+    }
+}
+
+// Alert section
+.alert {
+    width: $size;
+    height: $size;
+    position: fixed;
+    inset: 0;
+    transform: translate(0%, 0%);
+
+    &--container {
+        height: $height;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        background: linear-gradient(45deg, $color-blue 25%, $color-dark-blue 90%);
+
+        & .box {
+            width: $size;
+            background: none;
+            border: none;
+            text-align: center;
+
+            & .paragraph,
+            & .heading {
+                margin: 0;
+                padding: $radius;
+                color: $color-light;
+            }
+
+            & .paragraph {
+                font-size: $padding * 3;
+            }
+
+            & .heading {
+                font-size: $padding * 4;
+                font-weight:  500 * $font-weight;
+            }
+        }
+
+        .close--alert {
+            padding: $padding * $font-weight $padding * 2;
+            margin-block-start: $padding * 1.75;
+            border: none;
+            border-radius: $radius * .75;
+            background: $color-dark;
+            color: $color-light;
+            font-size: $padding * 1.25;
+            font-weight: bold;
+            box-shadow: $radius * .35 $radius * .35 $radius * .5 rgba($color-dark, .5);
+
+            &:hover {
+                background: rgba($color-dark, .95);
+                box-shadow: 0 0 $radius * .45 0 $color-light inset;
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(.95);
+                box-shadow: none;
+            }
+        }
+    }
+}

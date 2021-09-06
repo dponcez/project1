@@ -1,0 +1,167 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    display: block;
+    margin: 0;
+    position: relative;
+    
+    .palette {
+        width: $size;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: $padding * .3 0;
+
+        &--container {
+            width: $width;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: $padding / 2;
+            position: relative;
+            
+            .palette--item {
+                width: 30rem;
+                max-height: 25rem;
+
+                .description--container {
+                    display: grid;
+                    place-items: center;
+                    padding: $radius 0;
+                    border: $radius / 3 * $font-weight solid transparent;
+                    border-color: transparent rgba($color-dark, .2) rgba($color-dark, .2);
+                    border-radius: 0 0 $radius $radius;
+                    .palette--color__description {
+                        font-size: $padding;
+                        font-family: $font-stack-2;
+                        font-weight: 800 * $font-weight;
+                        text-transform: capitalize;
+                    }
+                }
+                
+                .palette--color {
+                    height: $size;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: $padding * 2;
+                    border-radius: $radius $radius 0 0;
+                    background: $color-dark;
+                    
+                    .palette--info {
+                        appearance: none;
+                        width: 10rem;
+                        display: inline-block;
+                        padding: $padding / 2 $padding;
+                        margin: $radius;
+                        font-size: $padding * $font-weight + 0.25;
+                        color: $color-light;
+                        background: rgba($color-dark, .7);
+                        border-radius: $radius;
+                        border: none;
+                        text-align: center
+                    }
+                    
+                    .copy {
+                        padding: $padding / 1.5 $padding;
+                        font-size: $padding;
+                        border-radius: $radius;
+                        border: none;
+                        font-family: $font-stack-2;
+                        text-transform: capitalize;
+                        box-shadow: 0 0 $radius / 1.2 0 rgba($color-light, .6);
+                        cursor: pointer;
+                        
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 0 0 $radius / 2 rgba($color-dark, .5) inset;
+                        }
+                        
+                        &:focus:not(:foucs-visible) {
+                            outline: none;
+                        }
+                        
+                        &:active {
+                            transform: scale(.975);
+                        }
+                    }
+                }
+            }
+
+            .alert {
+                width: $padding * 8;
+                height: $padding * 5;
+                display: block;
+                position: absolute;
+                top: $padding;
+                left: $padding;
+                padding: $padding $padding + 2;
+                border-radius: $radius;
+                background: rgba($color-light, .95);
+                backdrop-filter: blur($radius);
+                box-shadow: 0 0 $radius * .4 $radius * .2 rgba($color-dark, .7);
+                .box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    top: -2.5rem;
+                    padding: .3rem;
+                    margin: 0;
+                    .message {
+                        font-size: $padding + $font-weight / 1.2;
+                        font-weight: bold;
+                        padding: 0;
+                        text-transform: capitalize;
+                    }
+                    .close {
+                        margin: $padding * -1.5 0 0 $padding * 4.5;
+                        padding: 0;
+                        font-size: $padding + 1;
+                        border: none;
+                        background: none;
+                        color: #ff0000;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #2c3e50;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+}
+
+.container .output--container {
+  padding: 1.425rem 1.5rem;
+}
+
+.container .output--container .output {
+  display: inline-block;
+  padding: 1.5rem;
+  font-size: 3.15789rem;
+  font-weight: 760;
+  background: rgba(44, 62, 80, 0.5);
+  color: #ecf0f1;
+  border-radius: 0.5rem;
+}
+
+.container .btn {
+  padding: 1.5rem 2.375rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.805rem;
+  font-weight: 760;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0.4rem 0.3rem 0.4rem 0 rgba(44, 62, 80, 0.4), 0.2rem 0.4rem 0.4rem rgba(236, 240, 241, 0.3), 0 0.2rem 0.4rem 0.3rem rgba(44, 62, 80, 0.4), 0 0.2rem 0.14rem 0.1rem rgba(44, 62, 80, 0.3);
+          box-shadow: 0.4rem 0.3rem 0.4rem 0 rgba(44, 62, 80, 0.4), 0.2rem 0.4rem 0.4rem rgba(236, 240, 241, 0.3), 0 0.2rem 0.4rem 0.3rem rgba(44, 62, 80, 0.4), 0 0.2rem 0.14rem 0.1rem rgba(44, 62, 80, 0.3);
+  cursor: pointer;
+}
+
+.container .btn:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.container .btn:focus {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(44, 62, 80, 0.4) inset, 0 0 0 0.3rem rgba(44, 62, 80, 0.3) inset;
+          box-shadow: 0 0 0 0.3rem rgba(44, 62, 80, 0.4) inset, 0 0 0 0.3rem rgba(44, 62, 80, 0.3) inset;
+}
+
+.container .btn:focus:not(:focus-visible) {
+  outline: none;
+}
+/*# sourceMappingURL=styles.css.map */

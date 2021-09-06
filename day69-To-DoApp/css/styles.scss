@@ -1,0 +1,173 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Ubuntu', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    color: $color-dark;
+    overflow: hidden;
+}
+
+.container {
+    height: inherit;
+    display: grid;
+    place-items: center;
+
+    .to--do {
+        width: $size;
+        max-width: 50rem;
+        padding: $padding * 3 $padding;
+        margin: 0;
+        border-radius: $radius;
+        border: $radius * .2 solid rgba($color-dark, .3);
+        background: $color-light;
+        box-shadow: $radius * .4 $radius * .2 $radius * .9 0 rgba($color-dark, .5);
+
+        & legend {
+            display: inline-block;
+            padding: 0 0 $padding * .5 $radius;
+            font-size: $padding * 4;
+            font-family: $font-stack-2;
+            font-weight: 700 * $font-weight;
+            text-transform: capitalize;
+
+            &::first-letter {
+                text-transform: lowercase;
+            }
+        }
+
+        &__container {
+            display: block;
+            padding: 0 $padding;
+
+            .input--container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .todo--text,
+            .submit--btn {
+                font-family: $font-stack-2;
+                font-size: $padding;
+                border: none;
+                border-radius: $radius;
+            }
+
+            .todo--text {
+                width: 30rem;
+                padding: $radius * 2 $radius;
+                background: #fff;
+                box-shadow:  0 $radius * -.2 $radius * .5 0 rgba($color-dark, .5) inset;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:focus-visible:not(:focus){
+                    box-shadow: 0 $radius * -.2 $radius * .7 rgba($color-dark, .75);
+                }
+
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+            }
+
+            .submit--btn {
+                padding: $radius * 1.5 $padding;
+                margin-inline: 1rem;
+                box-shadow: $radius * .2 $radius * .2 $radius * .75 0 rgba($color-dark, .75);
+                background: $color-dark;
+                color: $color-light;
+                font-weight: 800 * $font-weight;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(.97);
+                }
+            }
+        }
+
+        &__task {
+            display: block;
+            padding: 0;
+            margin: $padding * 2 $padding 0 $padding;
+            overflow: auto;
+            scroll-behavior: smooth;
+            list-style: none;
+
+            & li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: $padding;
+                margin: $radius;
+
+                &:nth-child(odd) {
+                    color: #fff;
+                    background: rgba($color-dark, .7);
+                    border-radius: $radius * .75;
+                    box-shadow: $radius * .5 $radius * .5 $radius * .3 rgba($color-light, .5) inset, $radius * -.5 $radius * -.5 $radius * .3 rgba($color-dark, .5) inset;
+                }
+
+                &:nth-child(even) {
+                    background: rgba($color-dark, .075);
+                    border-radius: $radius * .75;
+                    box-shadow: $radius * -.5 $radius * -.5 $radius * .3 rgba($color-dark, .5) inset, $radius * .5 $radius * .5 $radius * .3 rgba($color-light, .75) inset;
+                }
+
+                & span {
+                    display: inline-block;
+                    padding: 0;
+                    font-size: $padding * 1.25;
+                    font-weight: 600;
+                    cursor: default;
+                }
+
+                .delete {
+                    all: unset;
+                    padding: $radius $padding * 1.2;
+                    font-size: $padding * 1.15;
+                    font-weight: 800 * $font-weight;
+                    background: $color-light;
+                    color: $color-dark;
+                    border-radius: $radius * .75;
+                    box-shadow: $radius * .25 $radius * .3 $radius * .8 rgba($color-dark, .75);
+                    text-transform: capitalize;
+                    cursor: pointer;
+
+                    &:active {
+                        transform: scale(.97);
+                    }
+                }
+            }
+        }
+    }
+}

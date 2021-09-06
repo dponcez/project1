@@ -1,0 +1,127 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-dark: rgb(34, 31, 31);
+$color-light: #fff;
+$color-red: rgb(240,0,29);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+}
+
+.container  {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    & :is(.nav--btn ){
+        border: 0;
+        background: transparent;
+        font-size: 2.275rem;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: $size;
+        max-width: 14.25rem
+    }
+
+    .description {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    .open--btn {
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .nav {
+        height: $height;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+        &.visible {
+            transform: translateX(0);
+        }
+        &--black {
+            width: $size * .6;
+            max-width: 48rem;
+            min-width: 32rem;
+            background: $color-dark;
+            transition-delay: .4s;
+            &.visible {
+                transition-delay: 0s;
+            }
+        }
+        &--red {
+            width: $size * .95;
+            background: $color-red;
+            transition-delay: .2s;
+            &.visble {
+                transition-delay: .2s;
+            }
+        }
+        &--white {
+            width: $size * .95;
+            padding: 4rem;
+            position: relative;
+            background: $color-light;
+            transition-delay: 0s;
+            &.visible {
+                transition-delay: .4s
+            }
+        }
+        .close--btn {
+            position: absolute;
+            top: 4rem;
+            right: 3rem;
+            opacity: .3;
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            & li {
+                margin: 2rem 0;
+                & a {
+                    font-size: 1.5rem;
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-dark;
+                }
+            }
+            & ul {
+                list-style: none;
+                padding-left: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+:root {
+  --size: 100vw;
+  --height: 100vh;
+  --pos: 50%;
+  --percent: 100%;
+  --text-color: #ecf0f1;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: var(--size);
+  height: var(--height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body::before {
+  content: '';
+  width: var(--percent);
+  height: var(--height);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.container {
+  width: 70vw;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.15), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.15), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.25);
+}
+
+.container .buttons--container {
+  width: var(--percent);
+  height: var(--percent);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .buttons--container .arrow {
+  position: fixed;
+  background: transparent;
+  border: 0;
+  opacity: .75;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.container .buttons--container .arrow:hover {
+  opacity: 1;
+}
+
+.container .buttons--container .arrow.left {
+  left: calc( 15vw - 6.5rem);
+}
+
+.container .buttons--container .arrow.right {
+  right: calc( 15vw - 6.5rem);
+}
+
+.container .buttons--container .arrow .icon {
+  color: var(--text-color);
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.slide {
+  opacity: 0;
+  width: var(--size);
+  height: var(--height);
+  background-image: url("../images/header.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,360 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Orbitron', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+
+$px-width: 375px;
+$px-height: 67px;
+
+$padding: 1.2rem;
+// ========== COLORS
+$dark: #2c3e50;
+$color-light: #ecf0f1;
+$color-dark: hsl(255, 19%, 29%);
+$color-green1: hsl(165, 74%, 45%);
+$color-green2: hsl(167, 69%, 43%);
+$color-green3: hsl(168, 66%, 40%);
+$color-green4: hsl(170, 60%, 37%);
+$color-green5: hsl(173, 57%, 34%);
+$color-green6: hsl(177, 51%, 30%);
+$color-black: hsl(0, 0%, 0%);
+
+$gradient: 45deg, $color-green1 45.76%, $color-green2 98.48%;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    background: $color-light;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+
+.container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+
+    .mobile {
+        width: $px-width;
+        height: 60rem;
+        position: relative;
+        background: $color-dark;
+        overflow: hidden;
+        border-radius: $padding;
+        border: .2vmin solid rgba($dark, .4);
+        box-shadow: 0 .3vmin .2vmin .3vmin rgba($dark, .3), .1vmin .3vmin .4vmin 0 rgba($dark, .4), .4vmin .2vmin .3vmin .3vmin rgba($dark, .3) inset;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: $size * .5;
+            transform: translate(-50%, -30%);
+        }
+
+        &::before {
+            width: $px-width;
+            height: $px-height;
+            background: rgba($color-light, .12);
+            box-shadow: none;
+            border-radius: $padding $padding 0 0;
+        }
+        &::after {
+            width: $px-height * .4;
+            height: $px-height * .4;
+            border-radius: $size * .5;
+            background: $color-black;
+            opacity: .75;
+            top: 2.5%;
+            box-shadow: .1vmin .175vmin .675vmin .3vmin rgba($dark, .75), 0 0 .3vmin .3vmin rgba($color-light, .2) inset, 0 0 0 .3vmin rgba($color-light, .72) inset
+        }
+
+        // Header
+        .app--header {
+            width: $width;
+            height: $height;
+            position: relative;
+            overflow: hidden;
+
+            .logo {
+                width: $size;
+                height: $px-height;
+                display: flex;
+                justify-content: flex-start;
+                padding: $padding 0 0 $padding;
+                position: absolute;
+                top: $px-height / 2.5;
+                font-size: 2rem;
+                background: linear-gradient( $gradient );
+                color: $color-green6;
+                font-family: $font-stack-2;
+                font-weight: 500 * $font-weight;
+                box-shadow: .1875vmin .125vmin .675vmin rgba($dark, .3),
+                -.1875vmin -.125vmin .275vmin rgba($dark, .3) inset,
+                1.01875vmin .675vmin .375vmin rgba($color-light, .3) inset,
+                .1875vmin .1875vmin .275vmin rgba($color-light, .3);
+                & span {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    color: $color-light;
+                    &::first-letter {
+                        font-size: 3.75rem
+                    }
+                }
+            }
+
+            .nav--header {
+                width: $size;
+                height: $height;
+                display: block;
+                position: absolute;
+                top: $px-height * 1.74;
+                z-index: 1;
+
+                .nav--menu {
+                    width: $size;
+                    height: $size;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding: 0;
+                    margin: 0;
+
+                    .item {
+                        width: inherit;
+                        height: $px-height;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: relative;
+                        box-shadow: .1875vmin .125vmin .675vmin rgba($dark, .3), -.1875vmin -.125vmin .275vmin rgba($dark, .3) inset, 1.01875vmin .675vmin .375vmin rgba($color-light, .3) inset, .1875vmin .1875vmin .275vmin rgba($color-light, .3);
+
+                        &:first-child,
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5),
+                        &:last-child {
+                            height: $px-height;
+                            border-radius: 0 0 $padding 0;
+                            left: -10%;
+
+                            &.active {
+                                left: 0
+                            }
+                        }
+
+                        &:first-child {
+                            width: $px-width;
+                            left: -17.89%;
+                            background: $color-green1;
+                            transition: left 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+
+                        &:nth-child(2) {
+                            width: $px-width - 40px;
+                            left: -15.9%;
+                            background: $color-green2;
+                            transition: left 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+
+                        &:nth-child(3) {
+                            width: $px-width * .975 - $px-height;
+                            left: -14.25%;
+                            background: $color-green3;
+                            transition: left 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+
+                        &:nth-child(4) {
+                            width: $px-width * .875 - $px-height;
+                            left: -12.54%;
+                            background: $color-green4;
+                            transition: left 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+
+                        &:nth-child(5) {
+                            width: $px-width * .775 - $px-height;
+                            left: -10.8%;
+                            background: $color-green5;
+                            transition: left 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+
+                        &:last-child {
+                            width: $px-width * .675 - $px-height;
+                            left: -9%;
+                            background: $color-green6;
+                            transition: left 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+                    }
+
+                    & .link {
+                        width: $size;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        padding: $padding * 1.75;
+                        font-size: $padding * 2;
+                        text-transform: capitalize;
+                        & span {
+                            display: inline-block;
+                            opacity: 1;
+                            transition: opacity 250ms cubic-bezier(0.84, 0.16, 0.32, 0.9);
+                            &.remove {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .heading {
+                display: block;
+                position: absolute;
+                top: $size * .45;
+                left: $size * .10;
+                transform: translate(-15%, -50%);
+                font-size: 4rem;
+                color: $color-green1;
+                text-transform: uppercase;
+                font-family: $font-stack-2;
+                font-weight: 400 * $font-weight;
+
+                & span {
+                    display: inline-block;
+                    font-family: $font-stack-1;
+                    text-transform: lowercase;
+                    color: $color-light;
+
+                    &::first-letter {
+                        font-size: 7rem;
+                    }
+                }
+            }
+
+            // Toggler
+            .toggle--container {
+                position: absolute;
+                left: $size * .18;
+                bottom: 15%;
+                width: $padding * 4.75;
+                height: $padding * 4.75;
+                border-radius: $size * .5;
+                background: linear-gradient( $gradient );
+                display: grid;
+                place-items: center;
+                // box-shadow: 0 .2vmin .1vmin .3vmin rgba($color-light, .2);
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: $size * .5;
+                }
+
+                &::before {
+                    transition: background-color 100ms linear;
+                    z-index: -1;
+                }
+
+                &::after {
+                    background: $color-green2;
+                    animation: pulse 1350ms infinite;
+                    z-index: 1;
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(.95);
+                            opacity: .85;
+                        }
+                        100% {
+                            transform: scale(1.32);
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &:hover::before {
+                    background: $color-green4;
+                }
+
+                .toggle {
+                    width: 2.975rem;
+                    height: 1.75rem;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    transition: transform 350ms cubic-bezier(.75,.35,.35,.75);
+                    z-index: 10;
+                    cursor: pointer;
+
+                    .bar {
+                        width: $size;
+                        height: .375rem;
+                        background: $dark;
+                        border-radius: $padding;
+                        &.half {
+                            width: $size * .5;
+                        }
+
+                        &.start {
+                            align-self: flex-start;
+                            transform-origin: left;
+                            transition: transform 350ms cubic-bezier(.65,.96,.96,.65);
+                        }
+                        &.end {
+                            align-self: flex-end;
+                            transform-origin: right;
+                            transition: transform 350ms cubic-bezier(.65, .96, .96, .65);
+                        }
+                    }
+
+                    
+                    &.open {
+                        transform: rotate(405deg)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Animate toggle button
+.open .bar.start {
+    transform: translate(1.5rem, .7rem) rotate(270deg);
+}
+.open .bar.end {
+    transform: translate(-1.495rem, -.65rem) rotate(270deg);
+}

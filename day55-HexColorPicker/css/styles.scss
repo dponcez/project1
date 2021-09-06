@@ -1,0 +1,86 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+$vmin: 2rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: $color-dark;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding;
+
+    .output--container {
+        padding: $padding * $font-weight $padding;
+
+        .output {
+            display: inline-block;
+            padding: $padding;
+            font-size: $padding * 2 / $font-weight;
+            font-weight: 800 * $font-weight;
+            background: rgba($color-dark, .5);
+            color: $color-light;
+            border-radius: $radius;
+        }
+    }
+
+    .btn {
+        padding: $padding $padding * $font-weight + $font-weight;
+        border: none;
+        border-radius: $radius;
+        background: $color-light;
+        color: $color-dark;
+        font-family: $font-stack-2;
+        font-size: ( $padding * $font-weight ) + $font-weight / 2.5;
+        font-weight: 800 * $font-weight;
+        text-transform: capitalize;
+        box-shadow: $vmin * .2 $vmin * .15 $vmin * .2 0 rgba($color-dark, $alpha: .4), $vmin * .1 $vmin * .2 $vmin * .2 rgba($color-light, $alpha: .3), 0 $vmin * .1 $vmin * .2 $vmin * .15 rgba($color-dark, $alpha: .4), 0 $vmin * .1 $vmin * .07 $vmin * .05 rgba($color-dark, $alpha: .3);
+        cursor: pointer;
+
+        &:active {
+            transform: scale(.97);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 $vmin * .15 rgba($color-dark, $alpha: .4) inset, 0 0 0 $vmin * .15 rgba($color-dark, $alpha: .3) inset;
+
+            &:not(:focus-visible) {
+                outline: none
+            }
+        }
+    }
+}

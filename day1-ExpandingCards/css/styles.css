@@ -1,0 +1,130 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ecf0f1;
+  font-family: "Abel", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  display: block;
+}
+
+.container .header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.container .header h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.container .header h1::first-letter {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3.75rem;
+}
+
+.container .expand--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.container .expand--container .image--box {
+  padding: 0 .35rem;
+  margin: .5rem;
+  position: relative;
+  width: 13vw;
+  height: 70vh;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-box-flex .8s ease-in-out;
+  transition: -webkit-box-flex .8s ease-in-out;
+  transition: flex .8s ease-in-out;
+  transition: flex .8s ease-in-out, -webkit-box-flex .8s ease-in-out, -ms-flex .8s ease-in-out;
+  border-radius: 3.125rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .expand--container .image--box:first-child {
+  background-image: url("../images/header.jpg");
+}
+
+.container .expand--container .image--box:nth-child(2) {
+  background-image: url("../images/pet-blog4.jpg");
+}
+
+.container .expand--container .image--box:nth-child(3) {
+  background-image: url("../images/pet-blog5.png");
+}
+
+.container .expand--container .image--box:nth-child(4) {
+  background-image: url("../images/pet3.jpg");
+}
+
+.container .expand--container .image--box:last-child {
+  background-image: url("../images/pet6.jpg");
+}
+
+.container .expand--container .image--box.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.container .expand--container .image--box.active .main--description {
+  opacity: 1;
+  left: 5%;
+}
+
+.container .expand--container .image--box .main--description {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 15.625rem;
+  height: 70px;
+  position: absolute;
+  bottom: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  border-radius: .45rem;
+  opacity: 0;
+}
+
+.container .expand--container .image--box .main--description .description {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-transform: capitalize;
+}
+
+.container .expand--container .image--box .main--description .description span {
+  font-weight: 200;
+  display: inline-block;
+}
+
+.container .expand--container .image--box .main--description .description span::first-letter {
+  font-family: "Orbitron", sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */

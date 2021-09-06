@@ -1,0 +1,131 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Ubuntu', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+// ========== SIZES
+$size: 100%;
+$padding: 1.5rem;
+$radius: .5rem;
+// ========== COLORS
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$hue: 230;
+$saturation: 55.986%;
+$lightness: 90.75%;
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+    color: $color-dark;
+    background-color: hsl($hue, $saturation, $lightness);
+    overflow: hidden;
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .heading {
+        display: block;
+        padding: 0 $padding;
+        margin: $radius; 
+        font-size: $padding * 2.5;
+        text-transform: capitalize;
+        font-weight: 700 * $font-weight;
+    }
+
+    .grid {
+        &,
+        .item {
+            border: $radius * .75 solid rgba($color-dark, .75);
+        }
+
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 0;
+        padding: $padding * 3;
+        background: $color-light;
+
+        .t-row {
+            position: relative;
+
+            .item {
+                width: 10rem;
+                height: 6rem;
+                line-height: 3rem;
+                margin: $radius * .2;
+                padding: $padding;
+                text-align: center;
+                font-size: $padding * 1.25;
+                font-weight: 700 * $font-weight;
+                background: $color-dark;
+            }
+        }
+    }
+
+    .button--container {
+        padding: $padding;
+        margin: $radius;
+
+        .restart {
+            padding: $radius $padding;
+            border: 0;
+            border-radius: $radius;
+            background: linear-gradient(
+                45deg,
+                $color-dark 80.75%,
+                $color-light 25%
+            );
+            color: $color-light;
+            font-size: $padding * 1.5;
+            box-shadow: $radius * .35 $radius * .125 $radius * .7 0 rgba($color-dark, .75), 0 0 0 $radius * .3 rgba($color-dark, .9) inset;
+            text-transform: capitalize;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(.97);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 $radius * .5 rgba($color-dark, .9);
+
+                &:not(:focus-visible) {
+                    outline: none;
+                    box-shadow: none
+                }
+            }
+
+        }
+    }
+
+    .timer {
+        position: relative;
+        font-size: $padding;
+        font-weight: 800;
+    }
+}

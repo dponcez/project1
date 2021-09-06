@@ -1,0 +1,66 @@
+[
+    {
+        "color": "#2c3e50",
+        "description": "dark asphalt"
+    },
+    {
+        "color": "#3498db",
+        "description": "sky blue"
+    },
+    {
+        "color": "#ecf0f1",
+        "description": "grey cloud"
+    },
+    {
+        "color": "#ebaf92",
+        "description": "dark pink"
+    },
+    {
+        "color": "#ffb001",
+        "description": "dark yellow"
+    },
+    {
+        "color": "#aabcaa",
+        "description": "forest green"
+    },
+    {
+        "color": "#000000",
+        "description": "black"
+    },
+    {
+        "color": "#090ff0",
+        "description": "blue"
+    },
+    {
+        "color": "#ffffff",
+        "description": "white"
+    },
+    {
+        "color": "#aacbaa",
+        "description": "forest light green"
+    },
+    {
+        "color": "#12e3f9",
+        "description": "aquan"
+    },
+    {
+        "color": "#123456",
+        "description": "dark blue"
+    },
+    {
+        "color": "#d3edf3",
+        "description": "lighten blue"
+    },
+    {
+        "color": "#d3e565",
+        "description": "lighten yellow"
+    },
+    {
+        "color": "#6e2e0f3",
+        "description": "light asphalt"
+    },
+    {
+        "color": "#870d93",
+        "description": "dark violet"
+    }
+]

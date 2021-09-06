@@ -1,0 +1,77 @@
+:root {
+    /* ========== FONTS ========== */
+    --font-stack-1: 'Abel', sans-serif;
+    --font-stack-2: 'Montserrat', sans-serif;
+    --font-weight: .95;
+    /* ========== COLORS ========== */
+    --color-dark: #2c3e50;
+    --color-light: #eef7ef;
+    /* ========== VIEWPORT ========== */
+    --width: 100vw;
+    --height: 100vh;
+    --size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    width: var(--width);
+    height: var(--height);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack-1);
+    overflow: hidden;
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background {
+    background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center / cover;
+   position: absolute;
+   top: -2rem;
+   left: -2rem;
+   right: -2rem;
+   bottom: -2rem;
+   filter: blur(20px);
+   z-index: -1
+}
+
+.container > div:nth-child(2) {
+    width: var(--size);
+    max-width: 50rem;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight:  calc(700 * var(--font-weight));
+}
+
+.container p {
+    font-size: 1.75rem; 
+}
+
+.container label {
+    font-size: 1.65rem;
+}
+
+.container input {
+    font-size: 1.5rem;
+}
+
+.container button {
+    font-size: 2.15rem;
+}

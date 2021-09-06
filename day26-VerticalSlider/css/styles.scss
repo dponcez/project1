@@ -1,0 +1,147 @@
+// ========== FONTS
+$font-stack-1: 'Abel', sans-serif;
+$font-stack-2: 'Montserrat', sans-serif;
+$font-weight: .95;
+// ========== VIEWPORT
+$width: 100vw;
+$height: 100vh;
+$size: 100%;
+// ========== COLORS
+$color-bluesky: #2A86BA;
+$color-pink: #FD3555;
+$color-dark: #2c3e50;
+$color-light: #ecf0f1;
+$sunset: #FFB866;
+$darken: #252E33;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-1;
+}
+
+.slider--container {
+    position: relative;
+    width: $width;
+    height: $height;
+    overflow: hidden;
+
+    & .left--slide,
+    & .right--slide {
+        height: $size;
+        position: absolute;
+        top: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    & .left--slide {
+        width: 35%;
+        left: 0;
+
+        & .nature {
+            background: $color-pink;
+        }
+
+        & .blue--sky {
+            background: $color-bluesky;
+        }
+
+        & .castle {
+            background: $darken;
+        }
+
+        & .eagle {
+            background: $sunset;
+        }
+
+        & h1,
+        & p {
+            color: $color-light;
+            opacity: 0.85;
+        }
+
+        & h1 {
+            font-size: 4rem;
+            margin-top : -3rem;
+            margin-bottom: 1rem;
+            font-family: $font-stack-2;
+            font-weight: 500 * $font-weight;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+
+        & p {
+            font-size: 2rem
+        }
+        
+        & > div {
+            width: $size;
+            height: $size;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    & .right--slide {
+        width: 65%;
+        left: 35%;
+
+        & > div {
+            width: $size;
+            height: $size;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    & .action--buttons button {
+        position: absolute;
+        top: $size * .5;
+        left: 35%;
+        z-index: 100;
+    }
+
+    & .action--buttons {
+        & .down--btn {
+            transform: translateX(-100%);
+            border-radius: .5rem 0 0 .5rem;
+        }
+
+        & .up--btn {
+            transform: translateY(-100%);
+            border-radius: 0 .5rem .5rem 0;
+        }
+    }
+}
+
+button {
+    padding: 1.5rem;
+    border: 0;
+    background: $color-light;
+    color: $color-dark;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: #ccc;
+    }
+}

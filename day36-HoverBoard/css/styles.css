@@ -1,0 +1,40 @@
+:root {
+    --height: 100vh;
+    --color-dark: #1d1d1d;
+    --color-shadow: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: var(--height);
+    display: grid;
+    place-items: center;
+    background: var(--color-shadow);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-dark);
+    box-shadow: 0 0 .125rem var(--color-shadow);
+    margin: .125rem;
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.square:hover {
+    transition-duration: 0s;
+}

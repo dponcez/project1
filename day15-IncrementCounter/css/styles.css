@@ -1,0 +1,103 @@
+:root {
+  --size: 100vw;
+  --height: 100vh;
+  --bg-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --twitter-color: #01A5E4;
+  --facebook-color: #23559C;
+  --youtube-color: #F70000;
+  --font-stack: 'Abel', sans-serif;
+  --font-weight: .85;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: var(--size);
+  height: var(--height);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-stack);
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .counters {
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .counters .twitter {
+  color: var(--twitter-color);
+}
+
+.container .counters .youtube {
+  color: var(--youtube-color);
+}
+
+.container .counters .facebook {
+  color: var(--facebook-color);
+}
+
+.container .counters .fab {
+  font-family: 'Font Awesome 5 Brands';
+}
+
+.container .counters .fa-3x {
+  font-size: clamp(7vw, 3rem, 4vw);
+}
+
+.container .counters .count {
+  font-size: clamp(3vw, 2.5rem, 4vw);
+  margin-top: 1rem;
+  font-weight: calc( 500 * var(--font-weight, 1));
+}
+
+.container .counters > span {
+  display: inline-block;
+  font-size: clamp(2.25vw, 2rem, 4vw);
+  font-weight: calc( 800 * var(--font-weight, 1));
+  text-transform: capitalize;
+  letter-spacing: .1rem;
+}
+
+@media screen and (max-width: 50rem) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
