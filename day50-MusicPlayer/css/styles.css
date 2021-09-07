@@ -14,17 +14,24 @@ body {
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
+<<<<<<< HEAD
   position: relative;
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
   place-items: center;
   margin: 0;
   padding: 0;
   background: linear-gradient(-5deg, #f8a488 25%, #ff8882 78%);
+<<<<<<< HEAD
   background-size: cover;
   background-repeat: no-repeat;
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
   color: #2c3e50;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 body::after {
   content: '';
   width: 100%;
@@ -39,6 +46,8 @@ body::after {
   z-index: 1;
 }
 
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 .container {
   height: inherit;
   display: -webkit-box;
@@ -66,14 +75,20 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4.8rem;
+<<<<<<< HEAD
   z-index: 2;
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 }
 
 .container .header .heading {
   font-size: 4rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: 475;
+<<<<<<< HEAD
   color: #ffffff;
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 }
 
 .container .header .heading::first-letter {
@@ -85,7 +100,10 @@ body::after {
   position: relative;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   z-index: 2;
+=======
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 }
 
 .music--player .progress--box {
@@ -163,8 +181,13 @@ body::after {
 .music--player .music--container .image--container::before, .music--player .music--container .image--container::after {
   content: '';
   position: absolute;
+<<<<<<< HEAD
   width: 1.8rem;
   height: 1.8rem;
+=======
+  width: 2.14rem;
+  height: 2.14rem;
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -379,6 +402,7 @@ body::after {
   outline: 0;
 }
 
+<<<<<<< HEAD
 .music--player .music--container .base--container {
   position: relative;
   width: 1.8rem;
@@ -540,6 +564,11 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+=======
+.music--player .info {
+  width: 35rem;
+  height: 7rem;
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
   padding: 1.2rem 1.56rem;
   position: absolute;
   bottom: 0;
@@ -555,7 +584,11 @@ body::after {
 .music--player .info.active {
   -webkit-box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
           box-shadow: 0.4vmin 0.5vmin 0.5vmin 0 rgba(44, 62, 80, 0.5);
+<<<<<<< HEAD
   bottom: -8.75rem;
+=======
+  bottom: -5.75rem;
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 }
 
 .music--player .info p {

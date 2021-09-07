@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
     H1 { color: #3498db }
     H2 { color: #aacbaa }
@@ -6,6 +7,9 @@
 </style>
 
 # 📚 Learning to < code /> 
+=======
+# Learning to < code /> 📚 
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 
 <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
 
@@ -34,7 +38,11 @@ All my personal projects help me so much to grow me up to get knowledge about We
 
 <img width="60px" src="https://camo.githubusercontent.com/6872de59dac86ded0a8d5d2beb0cb20b0a9cd7e2bbd578493baa084ad5aa2700/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769742d3238324333343f6c6f676f3d676974266c6f676f436f6c6f723d463035303332"/>
 
+<<<<<<< HEAD
 ### 📚 Learning Process
+=======
+### Learning Process 📚
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 <img width="80px" src="https://camo.githubusercontent.com/d7acbbe6bd9702a2a1507f74de23919e5c1a5f9373c7b7cb94fb4074f42d1a9c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3238324333343f6c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d333339393333" />
 
 <img width="70px" src="https://camo.githubusercontent.com/d8a38a3da1b8512af061dec74f1d6613a8f3fa39c5f20179103c28196e8a56da/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3238324333343f6c6f676f3d7265616374266c6f676f436f6c6f723d363144414642" />
@@ -51,7 +59,11 @@ Note: The logos used above are from [raw.githubusercontent.com](https://raw.gith
 
 The examples below are my personal 📁 projects using **HTML5**, **CSS3** and **JS**. I also looked at some **Traversy Media** projects on twitter and decided to try to do or replicate the 50 Projects 50 Days of [Traversy Media Projects](https://50projects50days.com/), I do this on my own, because I have no way to pay a subscription to the course he directs.
 
+<<<<<<< HEAD
 |  # |    📁 Personal Projects    |
+=======
+|  # |    Personal Projects   📁  |
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 |----|-----------------|
 | 1. | 🆒   Custom Button   |
 | 2. | 💾   Floppy Disk     |
@@ -71,7 +83,11 @@ The examples below are my personal 📁 projects using **HTML5**, **CSS3** and *
 
 Here goes all projects.
 
+<<<<<<< HEAD
 |  #  |  💾   Projects    |
+=======
+|  #  |    Projects    💾 |
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 |----|--------------------|
 | 1. |  [Expanding Cards](https://github.com/dponcez/project1/tree/master/day1-ExpandingCards)     |
 | 2. | [Progress Steps](https://github.com/dponcez/project1/tree/master/day2-ProgressSteps)         |
@@ -133,7 +149,11 @@ Live User Filter project was updated! Added 'hide' class on styles.css
 
 ## New Projects
 
+<<<<<<< HEAD
 |  #  |  💾   Projects    |
+=======
+|  #  |    Projects    💾 |
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 |----|--------------------|
 | 51. | [Menu UI Design](https://github.com/dponcez/project1/tree/master/day51-MenuUIDesign)    |
 | 52. | [Image Broken](https://github.com/dponcez/project1/tree/master/day52-ImageBroken)    |
@@ -142,6 +162,7 @@ Live User Filter project was updated! Added 'hide' class on styles.css
 | 55. | [Hex Color Picker](https://github.com/dponcez/project1/tree/master/day55-HexColorPicker)    |
 | 56. | [Digital Clock](https://github.com/dponcez/project1/tree/master/day56-DigitalClock)    |
 | 57. | [Analog Clock](https://github.com/dponcez/project1/tree/master/day57-AnalogClock)    |
+<<<<<<< HEAD
 | 58. | [StopTimer Ui](https://github.com/dponcez/project1/tree/master/day58-StopTimerUi)    |
 | 59. | [Color Palette](https://github.com/dponcez/project1/tree/master/day59-ColorPalette)    |
 | 60. | [Simple Loader](https://github.com/dponcez/project1/tree/master/day60-SimpleLoader)    |
@@ -155,3 +176,6 @@ Live User Filter project was updated! Added 'hide' class on styles.css
 | 68. | [Battery Checker](https://github.com/dponcez/project1/tree/master/day68-BatteryChecker)    |
 | 69. | [To-Do App](https://github.com/dponcez/project1/tree/master/day69-To-DoApp)    |
 | 70. | [Xmas Countdown](https://github.com/dponcez/project1/tree/master/day70-XmasCountdown)    |
+=======
+| 58. | [StopTimer Ui](https://github.com/dponcez/project1/tree/master/day58-StopTimerUi)    |
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4

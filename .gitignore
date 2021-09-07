@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 # Created by https://www.toptal.com/developers/gitignore/api/windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows
 
@@ -30,7 +34,44 @@ $RECYCLE.BIN/
 # Debuggin
 debug.log
 
+<<<<<<< HEAD
 # VSCode file
 .vscode/
 
+=======
+=======
+# Created by https://www.toptal.com/developers/gitignore/api/windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Debuggin file
+debug.log
+
+>>>>>>> 47101abda5f77e4d91dc8df4500c35a4b875f04e
+>>>>>>> 8c6f60f0fdc59d87e57ac608a78e22d08f9156a4
 # End of https://www.toptal.com/developers/gitignore/api/windows
