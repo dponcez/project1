@@ -71,7 +71,7 @@ body {
   }
   .container .xmas--container .box .numbs {
     width: 10rem;
-    left: 22rem;
+    left: 19rem;
     padding: 1.5rem 0.5125rem;
     -webkit-transition: width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), left 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), left 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
