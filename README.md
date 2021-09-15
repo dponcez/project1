@@ -5,6 +5,7 @@
     P { color: #ecf0f1 }
 </style>
 
+
 # 📚 Learning to < code /> 
 
 <img src="https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="coding" width="100%" />
@@ -61,7 +62,7 @@ The examples below are my personal 📁 projects using **HTML5**, **CSS3** and *
 | 6. | 🎮   Nintendo Switch |
 | 7. | 🎧   Player          |
 | 8. | 📄   Animated Navigation          |
-|
+
 
 * El proposito de los elementos de audio y vídeo, que se encuentran en las carpeta de  audio y video respectivamente, son para uso de la creación del AUDIO PLAYER 🎧 y VIDEO PLAYER y los derechos están reservados a cada artista y/o disquera.
 
@@ -123,7 +124,7 @@ Here goes all projects.
 | 48. | [Todo App](https://github.com/dponcez/project1/tree/master/day48-TodoApp)    |
 | 49. | [Video Player](https://github.com/dponcez/project1/tree/master/day49-VideoPlayer)    |
 | 50. | [Music Player](https://github.com/dponcez/project1/tree/master/day50-MusicPlayer)    |
-|
+
 
 Note: In Live User Filter project, there's a bug or something goes wrong, when you want to filter by user name or their location this no have effect, there's no changes. 
 
