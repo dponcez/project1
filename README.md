@@ -1,10 +1,7 @@
-<style>
-    H1 { color: #3498db }
-    H2 { color: #aacbaa }
-    STRONG { color: #2c3e50 }
-    P { color: #ecf0f1 }
-</style>
-
+- H1 ![#3498db](https://via.placeholder.com/15/3498db/000000?text=+) `#3498db`
+- H2 ![#aacbaa](https://via.placeholder.com/15/aacbaa/000000?text=+) `#aacbaa`
+- STRONG ![#2c3e50](https://via.placeholder.com/15/2c3e50/000000?text=+) `#2c3e50`
+- P ![#ecf0f1](https://via.placeholder.com/15/ecf0f1/000000?text=+) `#ecf0f1`
 
 # 📚 Learning to < code /> 
 
@@ -13,6 +10,7 @@
 * Image from [pexels](https://www.pexels.com/)
 
 ---
+
 ## About Me!
 
 My name is **Damian Ponce**, from  Colombia, I started in this journey from 2019 to present day, by the way, I'm a newbie in this Web Development process or Front-end, but I try to make my best effort in this environment every single day, I don't know if I could to collaborate with my few knowledge on an 📜 Open Source Project or may be, help to translate some Open Source Project, but when I could do it, I'll do it well.
